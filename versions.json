@@ -1,8 +1,22 @@
 {
-  "current": "v1",
-  "updated": "2026-08-21",
-  "gitee": "https://gitee.com/immediate-success-upon-arrival/CodeBlock-mod-release/tree/master/downloads",
+  "current": "v2",
+  "updated": "2026-10-11",
+  "gitee": "https://gitee.com/zsxydh/CodeBlock-mod-release/tree/master/downloads",
   "versions": [
+    {
+      "id": "v2",
+      "name": "v0.1.1 · 多窗口分屏版",
+      "date": "2026-10-11",
+      "note": "26.2：新增多窗口分屏——任意多个悬浮小窗实时复刻主画面（可拖动 / 缩放 / 置顶，纯监视不抢键鼠），并支持 HUD 特写（元素级白名单，只保留快捷栏 / 血量 / 饥饿 / 护甲 / 经验条）与 F3 调试文字两种特写显示源。1.21.11 线停更，本特性仅 26.2。",
+      "files": [
+        {
+          "label": "26.2",
+          "tag": "官网直链 · 26.2",
+          "path": "assets/downloads/v2/codeblock-mod-26.2.jar",
+          "desc": "Mojang 未混淆版，新增多窗口分屏（主画面复刻 / HUD 特写 / F3 文字小窗）。丢进 26.2 实例的 mods/ 即可。"
+        }
+      ]
+    },
     {
       "id": "v1",
       "name": "v0.1.0 · Blockly 版",

@@ -1,4 +1,4 @@
-// CodeBlock Mod — download experience driven by versions.json
+﻿// CodeBlock Mod — download experience driven by versions.json
 // 下载面板 / 进度点 / 版本徽标 / 历史版本 全部由根目录 versions.json 渲染，
 // 以后发版只需改 versions.json + 往 assets/downloads/vX/ 放新 jar，无需动 HTML。
 (function () {
@@ -224,7 +224,7 @@
     panelsEl.innerHTML = "";
     progEl.innerHTML = "";
     var a = el("a", "btn btn--primary");
-    a.href = (data && data.gitee) || "https://gitee.com/immediate-success-upon-arrival/CodeBlock-mod-release";
+    a.href = (data && data.gitee) || "https://gitee.com/zsxydh/CodeBlock-mod-release";
     a.target = "_blank"; a.rel = "noopener"; a.textContent = "前往仓库下载";
     var art = el("article", "dl-panel is-active");
     art.setAttribute("data-i", "0");
@@ -251,7 +251,7 @@
     .catch(function (err) {
       console.error("versions.json 加载失败，使用 Gitee 兜底面板：", err);
       try {
-        var cached = { gitee: "https://gitee.com/immediate-success-upon-arrival/CodeBlock-mod-release" };
+        var cached = { gitee: "https://gitee.com/zsxydh/CodeBlock-mod-release" };
         fallbackGitee(cached);
         start();
       } catch (e) { /* 忽略 */ }
