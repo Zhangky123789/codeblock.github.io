@@ -1,300 +1,297 @@
-﻿<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CodeBlock Mod · 在 Minecraft 里写代码</title>
-  <meta name="description" content="CodeBlock Mod —— 一个游戏内可编程红石方块。每个方块绑定一段程序，每游戏刻执行一次，用 cin/cout 读写红石信号（强度 0–15，即十六进制 0–F）。支持 Minecraft 1.21.11 与 26.2。" />
-  <meta name="author" content="zhangky" />
-  <meta name="theme-color" content="#0c0e13" />
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="ECYQ8hD0W4qgT4UPYPm8YO"><head data-page-node-id="pEfDahjJKsDJCTY7g2LJie">
+  <meta charset="UTF-8" data-page-node-id="jWtY9uxVXL2XLHfKPyfsIG">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="3ODePnvU0ZccODdPySYaVR">
+  <title data-page-node-id="ccL4DaQSzhgnBX5EWiq5GH">CodeBlock Mod · 在 Minecraft 里写代码</title>
+  <meta name="description" content="CodeBlock Mod —— 一个游戏内可编程红石方块。每个方块绑定一段程序，每游戏刻执行一次，用 cin/cout 读写红石信号（强度 0–15，即十六进制 0–F）。支持 Minecraft 1.21.11 与 26.2。" data-page-node-id="n6wdlyxBnTdYbHqf4ToYFG">
+  <meta name="author" content="zhangky" data-page-node-id="a9mscphoLFQwUc4zmatEEp">
+  <meta name="theme-color" content="#0c0e13" data-page-node-id="VOGpLF2qFbgljYiBD4L4Fu">
 
   <!-- Open Graph / social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="CodeBlock Mod · 在 Minecraft 里写代码" />
-  <meta property="og:description" content="游戏内可编程红石方块：cin/cout 读写信号，运行时编译 Java / 解释 DSL，定时热重载。支持 1.21.11 与 26.2。" />
-  <meta property="og:image" content="assets/images/code_block.png" />
-  <meta property="og:url" content="https://codeblock.cc.cd" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:type" content="website" data-page-node-id="UoEeM6hq6ASyQIAkBjd9UZ">
+  <meta property="og:title" content="CodeBlock Mod · 在 Minecraft 里写代码" data-page-node-id="mOdn9vKKDJDAsBuNgWDSRc">
+  <meta property="og:description" content="游戏内可编程红石方块：cin/cout 读写信号，运行时编译 Java / 解释 DSL，定时热重载。支持 1.21.11 与 26.2。" data-page-node-id="WIXmVB0irt9YqXGhXdhtsU">
+  <meta property="og:image" content="assets/images/code_block.png" data-page-node-id="CGFHjOwD1uUbFOarR0FLav">
+  <meta property="og:url" content="https://codeblock.cc.cd" data-page-node-id="61uNmKCGDHICSmHO3iNo9G">
+  <meta name="twitter:card" content="summary_large_image" data-page-node-id="g2CQvpsxWVTCDH5K6ucil4">
 
-  <link rel="icon" type="image/png" href="assets/images/icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
+  <link rel="icon" type="image/png" href="assets/images/icon.png" data-page-node-id="1yIgFkFDXJEMd1U7VOjPxL">
+  <link rel="preconnect" href="https://fonts.googleapis.com" data-page-node-id="mIWrd3zqgkNP6c26U4ko2P">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" data-page-node-id="wxTjcABDBPZjFxV5veQLHa">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet" data-page-node-id="5l1aP3E4vuw35UiyjqPAgt">
+  <link rel="stylesheet" href="css/styles.css" data-page-node-id="pqgolfU6R2OGjHIuCbNBek">
+<style id="__dm_no_drag_style__">* { -webkit-user-drag: none !important; }</style><style id="__dm_bindable_badge_style__">[data-sp-bindable="database"]{outline:1px dashed #0088ff;outline-offset:2px;border-radius:4px;}[data-sp-bindable="database"] *{pointer-events:none !important;transition:none !important;animation:none !important;}[data-sp-bindable="database"]{transition:none !important;animation:none !important;}</style></head>
+<body data-page-node-id="B0kI0VJDryPaGhNAK8GF6Z" style="">
   <!-- ===== Nav ===== -->
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a class="brand" href="#top" aria-label="CodeBlock Mod 首页">
-        <img src="assets/images/icon.png" alt="" class="brand__icon" width="34" height="34" />
-        <span class="brand__name">CodeBlock<span class="brand__mod">Mod</span></span>
+  <header class="nav" id="nav" data-page-node-id="GwxCD2REb0GDCM5oWJhgir">
+    <div class="nav__inner" data-page-node-id="tLUS7WeWGQ7U9EIspLHhzI">
+      <a class="brand" href="#top" aria-label="CodeBlock Mod 首页" data-page-node-id="5c8kLUdUB743HWvAc2D2CK">
+        <img src="assets/images/icon.png" alt="" class="brand__icon" width="34" height="34" data-page-node-id="3F5mRvPQqmvUKA8DOI0Pir">
+        <span class="brand__name" data-page-node-id="oWkcbKoE8Da2ambEdEOozN">CodeBlock<span class="brand__mod" data-page-node-id="55uK8ZKjYbnFzL3yW7qjOd">Mod</span></span>
       </a>
-      <nav class="nav__links" aria-label="主导航">
-        <a href="#features">特性</a>
-        <a href="#how">玩法</a>
-        <a href="#code">代码示例</a>
-        <a href="docs.html">接口文档</a>
-        <a href="#download">下载</a>
+      <nav class="nav__links" aria-label="主导航" data-page-node-id="z8onbfXk2VqHSQ14sq3889">
+        <a href="#features" data-page-node-id="iznF3pmdn26NKujMGCmU2h">特性</a>
+        <a href="#how" data-page-node-id="EarXskJnTM1ITIsT44BLzH">玩法</a>
+        <a href="#code" data-page-node-id="RPfJiwrwQSBhoEcYAAnSf6">代码示例</a>
+        <a href="docs.html" data-page-node-id="QPQLLZSYdG3KK8rp5a9sqN">接口文档</a>
+        <a href="#download" data-page-node-id="Rha2XXRzfCZZZ0EOHDJXUY">下载</a>
       </nav>
-      <a class="btn btn--ghost nav__cta" href="https://gitee.com/zsxydh/CodeBlock-mod-release" target="_blank" rel="noopener">Gitee</a>
+      <a class="btn btn--ghost nav__cta" href="https://gitee.com/zsxydh/CodeBlock-mod-release" target="_blank" rel="noopener" data-page-node-id="dqfq2idFTTG3Jhr59xELiq">Gitee</a>
     </div>
   </header>
 
-  <main id="top">
+  <main id="top" data-page-node-id="af1GvEtJWxnqcS3wGyfpcz">
     <!-- ===== Hero ===== -->
-    <section class="hero">
-      <div class="hero__grid-bg" aria-hidden="true"></div>
-      <div class="hero__inner">
-        <div class="hero__copy">
-          <p class="eyebrow">Minecraft Fabric Mod · 1.21.11 / 26.2</p>
-          <h1 class="hero__title">在 Minecraft 里<span class="hl">写代码</span></h1>
-          <p class="hero__lead">
-            代码方块是一个游戏内可编程红石方块。每个方块绑定一段程序，每游戏刻（tick，20 次/秒）执行一次，
-            把计算结果以红石信号从 6 个面输出，并读取相邻方块朝它发出的信号作为输入。
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#download">下载最新版</a>
-            <a class="btn btn--ghost" href="#how">怎么玩</a>
+    <section class="hero" data-page-node-id="OYyC8UZE7gJHfTJWACaqvT">
+      <div class="hero__grid-bg" aria-hidden="true" data-page-node-id="PcwW8GDtgX0KhVyVkkASB5"></div>
+      <div class="hero__inner" data-page-node-id="IBKOIPoiDlMhvzmHb2y0hW">
+        <div class="hero__copy" data-page-node-id="Wb0Mcth4ibV5jz8DFfTHXd">
+          <p class="eyebrow" data-page-node-id="pU9P8hKTSpHVGBPpMYvKh6" style="">Minecraft Fabric Mod · 26.1~26.3（应该把，没试过）​</p>
+          
+          
+          <div class="hero__actions" data-page-node-id="5FhwDNcQTCaVB1weZkJR9m">
+            <a class="btn btn--primary" href="#download" data-page-node-id="Vc5gJMhqPXJlJsUkUR1Oud">下载最新版</a>
+            
           </div>
-          <ul class="hero__stats">
-            <li><span class="stat__num">0–F</span><span class="stat__label">红石强度</span></li>
-            <li><span class="stat__num">20Hz</span><span class="stat__label">每刻执行</span></li>
-            <li><span class="stat__num">~1s</span><span class="stat__label">自动热重载</span></li>
-            <li><span class="stat__num">2</span><span class="stat__label">MC 版本</span></li>
+          <ul class="hero__stats" data-page-node-id="HhcoHcir5Z9aRc3rUIUbdC">
+            
+            <li data-page-node-id="ZCs4s5sQHyLnmT8KBtWZVb"><span class="stat__num" data-page-node-id="ZmXMw2OQmOjXGDnY1MgFaP">20Hz</span><span class="stat__label" data-page-node-id="fPKdzjYOWFBvRj4NTA6U2i">每刻执行</span></li>
+            <li data-page-node-id="UnX9w3X9ic6ECEFiLpiOes"><span class="stat__num" data-page-node-id="pMKajBX5qPCLeEDgOYmsmI">~1s</span><span class="stat__label" data-page-node-id="1CIx6B02HFa0fUMBYhBPd6">自动热重载</span></li>
+            <li data-page-node-id="VtNqQMyZYflDIxNx67xK90"><span class="stat__num" data-page-node-id="MP1wVEFHLVZiMprpyByD5C">2</span><span class="stat__label" data-page-node-id="0WAhPhxZwGpFRKQKnIdZ1l">MC 版本</span></li>
           </ul>
         </div>
 
-        <div class="hero__visual">
-          <div class="terminal" role="img" aria-label="代码方块 DSL 示例：把北面输入从顶面输出">
-            <div class="terminal__bar">
-              <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
-              <span class="terminal__file">CB_3f9a1c2d.codescript</span>
+        <div class="hero__visual" data-page-node-id="ypoRZz0VozV83vAvW5xxup">
+          <div class="terminal" role="img" aria-label="代码方块 DSL 示例：把北面输入从顶面输出" data-page-node-id="ANAT1CQ0NE7F72Cd9Ba87B">
+            <div class="terminal__bar" data-page-node-id="xq8d1cS8EasRJSoOLTKfIP">
+              <span class="dot dot--r" data-page-node-id="HH4sBROiOAtcXEbBa4rmcp"></span><span class="dot dot--y" data-page-node-id="zrE2f9N3hxLF89mKEGbjG5"></span><span class="dot dot--g" data-page-node-id="WZV55CWi14VHY0qxhrnOeE"></span>
+              <span class="terminal__file" data-page-node-id="qLE3CEcazNe1ENVZa0i3p9">CB_3f9a1c2d.codescript</span>
             </div>
-            <pre class="terminal__body"><code id="hero-code"></code><span class="caret" aria-hidden="true"></span></pre>
+            <pre class="terminal__body" data-page-node-id="q59XTP7iAcrNCS3tPBBFfL"><code id="hero-code" data-page-node-id="mhrCWjRXEJwb5eKxi4jHuw"></code><span class="caret" aria-hidden="true" data-page-node-id="oV2FrsWEUfKlk1gZSLdLXC"></span></pre>
           </div>
-          <img src="assets/images/code_block.png" alt="代码方块贴图" class="hero__block" width="160" height="160" />
+          <img src="assets/images/code_block.png" alt="代码方块贴图" class="hero__block" width="160" height="160" data-page-node-id="4WpkfJcpBXiUY3m6DxaIwn">
         </div>
       </div>
     </section>
 
     <!-- ===== Features (bento) ===== -->
-    <section class="section" id="features">
-      <div class="section__head">
-        <p class="eyebrow">为什么是它</p>
-        <h2 class="section__title">把红石变成一台小电脑</h2>
-        <p class="section__sub">不是命令方块，不是 cumbersome 的函数，而是真正能跑循环、分支与运算的可编程方块。</p>
+    <section class="section" id="features" data-page-node-id="uqSS3K2jt1dLLsabx7UUOR">
+      <div class="section__head" data-page-node-id="IfAZKXz5nBnfw8smo8Kb3I">
+        <p class="eyebrow" data-page-node-id="VTPke8yHyM4dXgYpWWISGE">为什么是它</p>
+        
+        
       </div>
 
-      <div class="bento">
-        <article class="card card--wide reveal">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h10M4 17h7"/><circle cx="19" cy="14" r="2.4"/></svg>
+      <div class="bento" data-page-node-id="ffnBY7oGTYo0zPQJy8BZYs">
+        <article class="card card--wide reveal" data-page-node-id="YwiS0giI10yZ9jXmUpJ31g">
+          <div class="card__icon" aria-hidden="true" data-page-node-id="x6lWfxIKmyjD9WAcJsb8mO">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" data-page-node-id="9YlWM34fBcvuwVR0z6VIJU"><path d="M4 7h16M4 12h10M4 17h7" data-page-node-id="oqlWGG9y1zs7vNa957UsbW"></path><circle cx="19" cy="14" r="2.4" data-page-node-id="Ctk2VaEEB0ObwI6aB74r03"></circle></svg>
           </div>
-          <h3>游戏内可编程红石</h3>
-          <p>每个方块 6 个面都能读 / 写红石信号。写计算逻辑，接红石线，立刻驱动整片电路——加法器、比较器、计数器都能做。</p>
+          <h3 data-page-node-id="LHyycbuQIzJhoKMIwQFbk8">游戏内可编程红石</h3>
+          <p data-page-node-id="kkKHVc7SyZGlT3ejDfjcFv">每个方块 6 个面都能读 / 写红石信号。写计算逻辑，接红石线，立刻驱动整片电路——加法器、比较器、计数器都能做。</p>
         </article>
 
-        <article class="card reveal">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 9l-3 3 3 3M16 9l3 3-3 3M13 6l-2 12"/></svg>
+        <article class="card reveal" data-page-node-id="CvmbnCtCmTnmYjSNJ3sNMa">
+          <div class="card__icon" aria-hidden="true" data-page-node-id="zMXgMXkgWzMS8KtgFmQrmW">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" data-page-node-id="YQeaAtsEDyNMwRCC2adXgj"><path d="M8 9l-3 3 3 3M16 9l3 3-3 3M13 6l-2 12" data-page-node-id="8mHYBUqNXkeKDxkBJAOp0r"></path></svg>
           </div>
-          <h3>零依赖 DSL</h3>
-          <p>用 <code>.codescript</code> 写类 C 小语法，记事本就能编辑，不需要编译器。</p>
+          
+          
         </article>
 
-        <article class="card reveal">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v12H7l-3 3z"/></svg>
+        <article class="card reveal" data-page-node-id="aS3MoA4YPohMCEs4mTdlYG">
+          <div class="card__icon" aria-hidden="true" data-page-node-id="AtbPsDr2e74EY1ig0GfuJe">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" data-page-node-id="SgBZo6qATLwSYsStANAjQJ"><path d="M4 4h16v12H7l-3 3z" data-page-node-id="b4tpOxaBlbgDlukQIUEVjG"></path></svg>
           </div>
-          <h3>Java 实时编译</h3>
-          <p>想写完整的类？放一个 <code>.java</code>，游戏内调用 javac 实时编译（需 JDK 启动 MC）。</p>
+          <h3 data-page-node-id="uhgGSFyc4ieP5LZmSnJevP">Java 实时编译</h3>
+          <p data-page-node-id="mmc0EiTfF1U5AMlm3FFlIt">想写完整的类？放一个 <code data-page-node-id="XbLXGWJ9HTZoS1jSYxXZWS">.java</code>，游戏内调用 javac 实时编译（需 JDK 启动 MC）。</p>
         </article>
 
-        <article class="card reveal">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>
+        <article class="card reveal" data-page-node-id="gPtiC9HN0kETQoA0BcZjtn">
+          <div class="card__icon" aria-hidden="true" data-page-node-id="KrGEKTrYkeAUQk9YkEaR6h">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" data-page-node-id="lHt4oRhFZ7sF1QpMVVNwd4"><path d="M21 12a9 9 0 1 1-3-6.7" data-page-node-id="HcfcymBsYhSA4OL3hdazZ0"></path><path d="M21 4v5h-5" data-page-node-id="SFo7xOECUoQFoYJaUJc29t"></path></svg>
           </div>
-          <h3>定时热重载</h3>
-          <p>保存文件后约 1 秒自动检测到变动并重载；右键方块也能强制刷新并查看运行状态。</p>
+          <h3 data-page-node-id="B5CaIGC6p48zqUwyBc0UTU">定时热重载</h3>
+          <p data-page-node-id="Kj1ifW9FkmcA9pQPu6uxt4">保存文件后约 1 秒自动检测到变动并重载；右键方块也能强制刷新并查看运行状态。</p>
         </article>
 
-        <article class="card reveal">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <article class="card reveal" data-page-node-id="g5Io65cC6NODuLbdyUJkXX">
+          <div class="card__icon" aria-hidden="true" data-page-node-id="EAXqz2QK1fxU8sPnLuwlHr">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" data-page-node-id="K32GjMwolSuRAwaAnzDMgF"><rect x="3" y="4" width="18" height="13" rx="2" data-page-node-id="2yYiH5deNz0MWnE6XVm6pe"></rect><path d="M8 21h8M12 17v4" data-page-node-id="BLAze4mU3Ali7aWjltRTde"></path></svg>
           </div>
-          <h3>双版本支持</h3>
-          <p>同时维护 1.21.11（yarn 映射）与 26.2（开发构建）两条 Fabric 构建线，进游戏都不崩。</p>
+          <h3 data-page-node-id="l82orKavYIyBlfwOBB8Gyu" style="">目前只有26.2版本支持​</h3>
+          <p data-page-node-id="iSZQppXnZF2LQO4GgtHyks" style="">维护26.2（开发构建）单条 Fabric 构建线。​</p>
         </article>
 
-        <article class="card card--accent reveal">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 3h-6zM12 22l-3-3h6zM2 12l3-3v6zM22 12l-3 3v-6z"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+        <article class="card card--accent reveal" data-page-node-id="NrC9bpSHIlVw3UBVGFP226">
+          <div class="card__icon" aria-hidden="true" data-page-node-id="He8hjw6g1OvACwYK9eeKio">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" data-page-node-id="Mzc8Ty9cm22dNV9DoU6nP8"><path d="M12 2l3 3h-6zM12 22l-3-3h6zM2 12l3-3v6zM22 12l-3 3v-6z" data-page-node-id="7H01zkFhFE4Cr8ZYy0Vu41"></path><rect x="9" y="9" width="6" height="6" rx="1" data-page-node-id="m7ngZHl6Df6ANDElhOW0HE"></rect></svg>
           </div>
-          <h3>双标签页归位</h3>
-          <p>创造模式里，代码方块同时出现在「红石」标签页与「管理员 / 命令方块」标签页，和命令方块怼一起。</p>
+          <h3 data-page-node-id="gbVQls8jbuUuChGvS4kTGP">双标签页归位</h3>
+          <p data-page-node-id="ZM23tQEhoyHdQpSH0wUjSD">创造模式里，代码方块同时出现在「红石」标签页与「管理员 / 命令方块」标签页，和命令方块怼一起。</p>
         </article>
 
-        <article class="card card--wide reveal">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="13" height="13" rx="2"/><path d="M8 19h9a2 2 0 0 0 2-2V8"/></svg>
+        <article class="card card--wide reveal" data-page-node-id="O2HZCDXOa6Rwo950aWuAA1">
+          <div class="card__icon" aria-hidden="true" data-page-node-id="Py87Hqmf4QgEaaeH6vfHvA">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" data-page-node-id="xC8W7k4d3SXGVe2fqA1Mrv"><rect x="3" y="5" width="13" height="13" rx="2" data-page-node-id="HLrV7Z3yZOmYZdvcZeY72v"></rect><path d="M8 19h9a2 2 0 0 0 2-2V8" data-page-node-id="k7OG27X6ebsF198evVtvfa"></path></svg>
           </div>
-          <h3>多窗口分屏</h3>
-          <p>开任意多个悬浮小窗，拖动、缩放、置顶随便调；小窗纯监视不抢键鼠，主窗照常操作。显示源任选：主画面实时镜像、HUD 特写、F3 文字、快照定格。</p>
+          <h3 data-page-node-id="BIzutSBy0A3NqAIi4zUUVS">多窗口分屏</h3>
+          <p data-page-node-id="HG3qsfekUBZ6t8AzEsEeHQ">开任意多个悬浮小窗，拖动、缩放、置顶随便调；小窗纯监视不抢键鼠，主窗照常操作。显示源任选：主画面实时镜像、HUD 特写、F3 文字、快照定格。</p>
         </article>
 
-        <article class="card reveal">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>
+        <article class="card reveal" data-page-node-id="q8CP5pLsF4wUN8ORb5ZZcK">
+          <div class="card__icon" aria-hidden="true" data-page-node-id="A48czK4TRpH3Ktwz1xmMJz">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" data-page-node-id="sCkNnYcGHwDjUWARxqyfWt"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z" data-page-node-id="O9ctKa4dsmrZrg7btSPPZJ"></path><path d="M4 7.5l8 4.5 8-4.5M12 12v9" data-page-node-id="GFdBPzqtSFqxhfBtOFn8Kz"></path></svg>
           </div>
-          <h3>主画面实时镜像</h3>
-          <p>把主窗口的游戏世界 3D 画面实时复刻进小窗，走哪看哪——挂后台盯工程、多机位解说都方便。</p>
+          <h3 data-page-node-id="KSlpQ9sUaePanXAiHFTHnj">主画面实时镜像</h3>
+          <p data-page-node-id="TkSh0mXTdRDEg173NurcdX">把主窗口的游戏世界 3D 画面实时复刻进小窗，走哪看哪——挂后台盯工程、多机位解说都方便。</p>
         </article>
 
-        <article class="card reveal">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9v6M14 9v6"/></svg>
+        <article class="card reveal" data-page-node-id="BoZEgBw5qZmeqgB5F1BHb8">
+          <div class="card__icon" aria-hidden="true" data-page-node-id="7v2Z6rMoLHvywmufte9zuv">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" data-page-node-id="NynnqAo0BGLAfMd0Ocu29A"><rect x="3" y="5" width="18" height="14" rx="2" data-page-node-id="gSJIpEXYdOvbSbzkuQeXba"></rect><path d="M10 9v6M14 9v6" data-page-node-id="KwtyAWYX9yN7qcJvwJciia"></path></svg>
           </div>
-          <h3>暂停界面复刻</h3>
-          <p>按 ESC 的暂停菜单、箱子等容器界面、任意模组 GUI，全都跟着主画面复刻进小窗，照常显示不缺角。</p>
+          <h3 data-page-node-id="FggWlF82NcaitYHEwKMMaA">暂停界面复刻</h3>
+          <p data-page-node-id="DRdEg1C6ZVZSEuFBQCeDks">按 ESC 的暂停菜单、箱子等容器界面、任意模组 GUI，全都跟着主画面复刻进小窗，照常显示不缺角。</p>
         </article>
 
-        <article class="card reveal">
-          <div class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20.5C7.5 16.7 3.5 13.6 3.5 9.8 3.5 7 5.6 5 8 5c1.6 0 3.1.9 4 2.3C12.9 5.9 14.4 5 16 5c2.4 0 4.5 2 4.5 4.8 0 3.8-4 6.9-8.5 10.7z"/></svg>
+        <article class="card reveal" data-page-node-id="FGZRonvfbfbGrDzFgH9ep9">
+          <div class="card__icon" aria-hidden="true" data-page-node-id="youR0nkILyNOzDhOufdxpP">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" data-page-node-id="Qcm3Te1E05PCVwn0hDmZ8B"><path d="M12 20.5C7.5 16.7 3.5 13.6 3.5 9.8 3.5 7 5.6 5 8 5c1.6 0 3.1.9 4 2.3C12.9 5.9 14.4 5 16 5c2.4 0 4.5 2 4.5 4.8 0 3.8-4 6.9-8.5 10.7z" data-page-node-id="PLI9RsWKrJXC22RyV1KG2w"></path></svg>
           </div>
-          <h3>HUD / F3 特写小窗</h3>
-          <p>HUD 特写走元素级白名单，只保留快捷栏、血量、饥饿、护甲、经验条；F3 调试文字也能提取成独立小窗。</p>
+          <h3 data-page-node-id="ftAHJWjKgGBH6eI9r4RNEs">HUD / F3 特写小窗</h3>
+          <p data-page-node-id="stox4Av9FGbvuFDDK2c8Dw">HUD 特写走元素级白名单，只保留快捷栏、血量、饥饿、护甲、经验条；F3 调试文字也能提取成独立小窗。</p>
         </article>
       </div>
     </section>
 
     <!-- ===== How it works ===== -->
-    <section class="section" id="how">
-      <div class="section__head">
-        <p class="eyebrow">三步上手</p>
-        <h2 class="section__title">拿方块 → 写程序 → 接红石</h2>
+    <section class="section" id="how" data-page-node-id="hjChgXBk6x0Id7fWvT6e7H">
+      <div class="section__head" data-page-node-id="oB0pZIHHOeZqLgdxq1KebA">
+        <p class="eyebrow" data-page-node-id="MrM3kVrCDHIuMGZjjLoCds">三步上手</p>
+        <h2 class="section__title" data-page-node-id="FdldvWMoMHD804FPQhaB2F">拿方块 → 写程序 → 接红石</h2>
       </div>
-      <ol class="steps">
-        <li class="step reveal">
-          <span class="step__no">01</span>
-          <h3>拿到方块</h3>
-          <p>创造模式 → 物品栏「红石」标签页（或管理员标签页）→ 找到「代码方块」，放到世界里。</p>
+      <ol class="steps" data-page-node-id="fCxWESh5jsyEHHdLhibVpT">
+        <li class="step reveal" data-page-node-id="Pv12OtKDVn2vVxAYXIJ0ES">
+          <span class="step__no" data-page-node-id="9lVuLYt8AhDaLJwyODSO33">01</span>
+          <h3 data-page-node-id="LEShnRH7shYDHY0kNtVCeR">拿到方块</h3>
+          <p data-page-node-id="b2Y1ZYLu7SDEgBqg7VjX1a">创造模式 → 物品栏「红石」标签页（或管理员标签页）→ 找到「代码方块」，放到世界里。</p>
         </li>
-        <li class="step reveal">
-          <span class="step__no">02</span>
-          <h3>写程序</h3>
-          <p>右键方块，聊天栏显示它的 <code>id</code>（10 位十六进制）。到程序目录新建 <code>CB_&lt;id&gt;.codescript</code> 写逻辑。</p>
+        <li class="step reveal" data-page-node-id="xFeHCUCAiOi3g8LR1O6Qb9">
+          <span class="step__no" data-page-node-id="U6CZ3I46jeAMIi0HyyUUPS">02</span>
+          <h3 data-page-node-id="VOQqUMvwXZaYCtacWETOxF">写程序</h3>
+          <p data-page-node-id="PyK4TvJ70xN3vTQDJM08LG" style="">右键方块，聊天栏显示它的 <code data-page-node-id="Fdd2TbAbNdgoFybIzYtYSz">id</code>（10 位十六进制）。到程序目录新建 <code data-page-node-id="Y4otbfFoPi1iwlnOnOTQBU">CB_&lt;id&gt;.java</code>写逻辑。（默认无需手动创建，放下就自动创建）</p>
         </li>
-        <li class="step reveal">
-          <span class="step__no">03</span>
-          <h3>接红石</h3>
-          <p>方块 6 面自动发出红石。把红石源接它的输入面、红石线接它的输出面，保存即热重载运行。</p>
+        <li class="step reveal" data-page-node-id="PlYFJVgRvYSeBwp051Sh3g">
+          <span class="step__no" data-page-node-id="N4mpUWPDk09UmBBrprQ1tV">03</span>
+          <h3 data-page-node-id="RUKetNAmDT7XhesVfjEIwW">接红石</h3>
+          <p data-page-node-id="dZ6r8OdOSA5KNcAsJugfFJ">方块 6 面自动发出红石。把红石源接它的输入面、红石线接它的输出面，保存即热重载运行。</p>
         </li>
       </ol>
     </section>
 
     <!-- ===== Code showcase ===== -->
-    <section class="section" id="code">
-      <div class="section__head">
-        <p class="eyebrow">DSL 速览</p>
-        <h2 class="section__title">几行就能跑的代码片段</h2>
-        <p class="section__sub">通道 0=下 1=上 2=北 3=南 4=西 5=东；<code>cin(c)</code> 读、<code>cout(c,v)</code> 写，强度自动限制在 0–15。</p>
+    <section class="section" id="code" data-page-node-id="HHxeef6GIAvELn2zZdh1cb">
+      <div class="section__head" data-page-node-id="DxJxdwAxan2vFOJdavZVki">
+        <p class="eyebrow" data-page-node-id="nACC7hpwRJpDQuZl2oCAZR">DSL 速览</p>
+        <h2 class="section__title" data-page-node-id="yLGMVNuL1KEAUvWB6OXqBd">几行就能跑的代码片段</h2>
+        <p class="section__sub" data-page-node-id="nnoGt4lTSRXEeVTaCSMjsS">通道 0=下 1=上 2=北 3=南 4=西 5=东；<code data-page-node-id="W3pEjr27bRMvksxH9duhyh">cin(c)</code> 读、<code data-page-node-id="ZA1G7vh2tmHZZSVFH5YQBn">cout(c,v)</code> 写，强度自动限制在 0–15。</p>
       </div>
 
-      <div class="showcase reveal">
-        <div class="tabs" role="tablist" aria-label="代码示例">
-          <button class="tab is-active" role="tab" aria-selected="true" data-ex="passthrough">信号透传</button>
-          <button class="tab" role="tab" aria-selected="false" data-ex="threshold">阈值比较器</button>
-          <button class="tab" role="tab" aria-selected="false" data-ex="adder">加法器</button>
-          <button class="tab" role="tab" aria-selected="false" data-ex="counter">计数器(反馈)</button>
+      <div class="showcase reveal" data-page-node-id="TEwTHBmlgIWlucxItp7Vyx">
+        <div class="tabs" role="tablist" aria-label="代码示例" data-page-node-id="W1OglJudi2h2kWha8NlYY4">
+          <button class="tab is-active" role="tab" aria-selected="true" data-ex="passthrough" data-page-node-id="vSn6NHAigftmIxXmlJBumS">信号透传</button>
+          <button class="tab" role="tab" aria-selected="false" data-ex="threshold" data-page-node-id="Z2gyDUo0WyPCTB4yxepHsH">阈值比较器</button>
+          <button class="tab" role="tab" aria-selected="false" data-ex="adder" data-page-node-id="OmC7sWOuv3hGJa2KLhokc6">加法器</button>
+          <button class="tab" role="tab" aria-selected="false" data-ex="counter" data-page-node-id="urX5BvksHFT5PpjGpoWBih">计数器(反馈)</button>
         </div>
-        <pre class="showcase__code"><code id="showcase-code"></code></pre>
-        <p class="showcase__note" id="showcase-note"></p>
+        <pre class="showcase__code" data-page-node-id="gEZzS6XMpHEnCe1m4I1GW3"><code id="showcase-code" data-page-node-id="YandOxp7xrj8heNwXx5dc6"></code></pre>
+        <p class="showcase__note" id="showcase-note" data-page-node-id="wwQ07m7BpquEPBibEmHeuy"></p>
       </div>
     </section>
 
     <!-- ===== Download (Three.js scroll experience) ===== -->
-    <section class="section download" id="download">
-      <div class="section__head">
-        <p class="eyebrow">下载</p>
-        <h2 class="section__title">挑一个顺手的镜像 <span id="current-version" class="version-badge"></span></h2>
-        <p class="section__sub">滚动鼠标滚轮，方块会逐一切到下一个下载源。主源为 Gitee 镜像，官网同时自托管 1.21.11 / 26.2 两个版本与 ECJ 附加模组。下载源由版本清单自动生成，无需改页面。</p>
+    <section class="section download" id="download" data-page-node-id="aIWrU9B0DO3UhIBnAxEGR2">
+      <div class="section__head" data-page-node-id="UQc76gtlwiMkyi7aQevwPt">
+        <p class="eyebrow" data-page-node-id="unWOzTr2Ug82nnrpDBCUXL">下载</p>
+        <h2 class="section__title" data-page-node-id="8DBcwAaxMXXjXEp5m0HqiJ">挑一个顺手的镜像 <span id="current-version" class="version-badge" data-page-node-id="UPVji6aBFVo6DgDZyaVBIg"></span></h2>
+        <p class="section__sub" data-page-node-id="ntzb7jLiNMdvAK3T8LeaH0">滚动鼠标滚轮，方块会逐一切到下一个下载源。主源为 Gitee 镜像，官网同时自托管 1.21.11 / 26.2 两个版本与 ECJ 附加模组。下载源由版本清单自动生成，无需改页面。</p>
       </div>
 
-      <div class="dl3d" id="dl3d">
-        <div class="dl3d__stage">
-          <canvas class="dl3d__canvas" id="dl-canvas" aria-hidden="true"></canvas>
-          <div class="dl3d__panels" id="dl-panels"><!-- 由 versions.json 动态渲染 --></div>
-          <div class="dl3d__progress" id="dl-progress" aria-hidden="true"><!-- 由 versions.json 动态渲染 --></div>
-          <p class="dl3d__hint" aria-hidden="true">滚动滚轮切换 ↓</p>
+      <div class="dl3d" id="dl3d" data-page-node-id="TbK9NF2xPLPOd1Wv2QMeU3">
+        <div class="dl3d__stage" data-page-node-id="ipRFYqVTkFLrZrEVekdmlP">
+          <canvas class="dl3d__canvas" id="dl-canvas" aria-hidden="true" data-page-node-id="kEhwZaYYjWCJUMqCkeA4xO"></canvas>
+          <div class="dl3d__panels" id="dl-panels" data-page-node-id="yVqUZq7idUics99HQwZbNm"><!-- 由 versions.json 动态渲染 --></div>
+          <div class="dl3d__progress" id="dl-progress" aria-hidden="true" data-page-node-id="JiJsDNXIifHOkEtsPC8Brf"><!-- 由 versions.json 动态渲染 --></div>
+          <p class="dl3d__hint" aria-hidden="true" data-page-node-id="eK0UycT0cxjg6K1bsODHSs">滚动滚轮切换 ↓</p>
         </div>
-        <div class="dl3d__spacer" aria-hidden="true"></div>
+        <div class="dl3d__spacer" aria-hidden="true" data-page-node-id="IHskt4F2P0XnzMmik9niDM"></div>
       </div>
 
-      <div class="callout reveal">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
-        <p><strong>提示：</strong>把 jar 丢进对应实例的 <code>mods/</code> 文件夹即可。想用 <code>.java</code> 实时编译但不想改 JDK 启动 MC，装下方的 <strong>ECJ 附加模组</strong> 即可（JRE 环境也能编译）；否则直接用 <code>.codescript</code>。</p>
+      <div class="callout reveal" data-page-node-id="k6iIF4G47cjbdXEJgsD9zk">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" data-page-node-id="OFGXAROkJYtwEDdej4bxHc"><circle cx="12" cy="12" r="9" data-page-node-id="zUJ1zP6DFXIk5N7iKOu9gD"></circle><path d="M12 8v5M12 16h.01" data-page-node-id="Vti80I1ayf4klDX3xNnLL4"></path></svg>
+        
       </div>
 
-      <div class="companion reveal" style="margin-top: 56px;">
-        <div class="section__head" style="margin-bottom: 26px;">
-          <p class="eyebrow">可选附加模组</p>
-          <h2 class="section__title">ecj 编译环境（给 JRE 用户）</h2>
-          <p class="section__sub">官方启动器默认用 <strong>JRE</strong> 跑 MC，没有 <code>javac</code>，游戏内编译 <code>.java</code> 会失败。装这个独立小 mod（内置 Eclipse JDT&nbsp;Core / ecj 编译器）后，JRE 环境下主模组会自动调用它编译 Java——无需把 MC 改成 JDK 启动，也无需自己预编译 <code>.class</code>。可装可不装。</p>
+      <div class="companion reveal" style="margin-top: 56px;" data-page-node-id="4tJIu9B3GcQ1sjKAVx9CXu">
+        <div class="section__head" style="margin-bottom: 26px;" data-page-node-id="q5gC4o7txzAkBYKHz5j7ZY">
+          <p class="eyebrow" data-page-node-id="nsOs19eUXLbjYLdbVpxOt0">可选附加模组</p>
+          <h2 class="section__title" data-page-node-id="VE6cVjn89GqAIxvjDGQQa3">ecj 编译环境（给 JRE 用户）</h2>
+          <p class="section__sub" data-page-node-id="SGW6OxOncdAJ9aBb6GJR3c">官方启动器默认用 <strong data-page-node-id="isaxSMYoTdGAXv3rYMl0lP">JRE</strong> 跑 MC，没有 <code data-page-node-id="854tKb8eEvC8ACxIw2ZiLJ">javac</code>，游戏内编译 <code data-page-node-id="eCQSJVuasMyiIW5zKboCcx">.java</code> 会失败。装这个独立小 mod（内置 Eclipse JDT&nbsp;Core / ecj 编译器）后，JRE 环境下主模组会自动调用它编译 Java——无需把 MC 改成 JDK 启动，也无需自己预编译 <code data-page-node-id="vdq2JcCo4ZD9fdai3Ah0dF">.class</code>。可装可不装。</p>
         </div>
-        <article class="dl dl--feature" style="max-width: 640px;">
-          <div class="dl__head">
-            <h3>CodeBlock ECJ Compiler</h3>
-            <span class="tag">companion mod</span>
+        <article class="dl dl--feature" style="max-width: 640px;" data-page-node-id="G2Ai9tr9dMhAzvEMbpLY09">
+          <div class="dl__head" data-page-node-id="BrxgtdBCHmY4Pd9hHde789">
+            <h3 data-page-node-id="hjjez8uma7zdUQWlasb9ub">CodeBlock ECJ Compiler</h3>
+            <span class="tag" data-page-node-id="sCG87zmIBZ44hWT3MueSlr">companion mod</span>
           </div>
-          <ul class="dl__meta">
-            <li>作用：JRE 环境下提供完整 Java 编译能力</li>
-            <li>依赖：需先装主模组 CodeBlock Mod</li>
-            <li>版本：随主模组支持 1.21.11 / 26.2</li>
+          <ul class="dl__meta" data-page-node-id="OjChh9EAN73ghbn5hsREdy">
+            <li data-page-node-id="HMGffqjpojZBfPlmbVEg6f">作用：JRE 环境下提供完整 Java 编译能力</li>
+            <li data-page-node-id="MdbRpEVfUdJpEMUqrTm0KC">依赖：需先装主模组 CodeBlock Mod</li>
+            <li data-page-node-id="kl4FFWyhX0ZHZAEQgnfk9G">版本：随主模组支持 1.21.11 / 26.2</li>
           </ul>
-          <p class="ecj-status ecj-status--ok">✅ <strong>已发布 v0.1.0</strong>：jar 已构建并上传，JRE 用户把它丢进 <code>mods/</code> 即可在游戏内编译 Java，无需安装完整 JDK。</p>
-          <div class="ecj-links">
-            <a id="ecj-direct" class="btn btn--primary" href="assets/downloads/v1/codeblock-ecj-0.1.0.jar" target="_blank" rel="noopener">官网直链</a>
-            <a id="ecj-gitee" class="btn btn--ghost" href="https://gitee.com/zsxydh/CodeBlock-mod-release/tree/master/downloads" target="_blank" rel="noopener">Gitee 镜像</a>
+          <p class="ecj-status ecj-status--ok" data-page-node-id="pimDDtmr9dzBKVDF7GLuds">✅ <strong data-page-node-id="1lrCNw52mcNMrDFGHWW6W8">已发布 v0.1.0</strong>：jar 已构建并上传，JRE 用户把它丢进 <code data-page-node-id="Qub3bLQT7VPCRpAOX5BEEb">mods/</code> 即可在游戏内编译 Java，无需安装完整 JDK。</p>
+          <div class="ecj-links" data-page-node-id="sBSHLHV17n0sryKBdr4oGE">
+            <a id="ecj-direct" class="btn btn--primary" href="assets/downloads/v1/codeblock-ecj-0.1.0.jar" target="_blank" rel="noopener" data-page-node-id="W21FYZEKVqHOXhu4GKAVg5">官网直链</a>
+            <a id="ecj-gitee" class="btn btn--ghost" href="https://gitee.com/zsxydh/CodeBlock-mod-release/tree/master/downloads" target="_blank" rel="noopener" data-page-node-id="sGq7FYehvtFi1S7SSfvSeI">Gitee 镜像</a>
           </div>
         </article>
       </div>
 
-      <div class="history reveal" style="margin-top: 56px;">
-        <div class="section__head" style="margin-bottom: 20px;">
-          <p class="eyebrow">历史版本</p>
-          <h2 class="section__title">回退到旧版</h2>
-          <p class="section__sub">新版若有问题（比如出了 bug），可在这里切回之前的版本。当前为 v2，后续版本会依次追加，旧版 jar 会一直保留。</p>
+      <div class="history reveal" style="margin-top: 56px;" data-page-node-id="XwACrxoNaap4KCggWb90j3">
+        <div class="section__head" style="margin-bottom: 20px;" data-page-node-id="9FwHkECwGnTuwL0v5CsdYD">
+          <p class="eyebrow" data-page-node-id="1t3K6jSr2y7Heriwy4ChqV">历史版本</p>
+          <h2 class="section__title" data-page-node-id="mBQJ2d6xU3uLl3P6p2ybV2">回退到旧版</h2>
+          <p class="section__sub" data-page-node-id="iM69JdhA9nB5W6vsWnaxG5" style="">新版若有问题（比如出了 bug），可在这里切回之前的版本。当前为 v2，后续版本会依次追加，旧版 jar 会一直保留。​</p>
         </div>
-        <div class="history__bar">
-          <label for="version-select">选择版本：</label>
-          <select id="version-select" class="version-select"></select>
+        <div class="history__bar" data-page-node-id="8zLZWvW2WXjfvrjt8wUBGY">
+          <label for="version-select" data-page-node-id="TSAo9QyGKAVULGP6H8rxyF">选择版本：</label>
+          <select id="version-select" class="version-select" data-page-node-id="1EXcYVjCumn360bILNNUd2"></select>
         </div>
-        <div id="version-files" class="version-files"></div>
+        <div id="version-files" class="version-files" data-page-node-id="t90JpaGG0SYd7HlEP0KpsJ"></div>
       </div>
     </section>
   </main>
 
   <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__brand">
-        <img src="assets/images/icon.png" alt="" width="28" height="28" />
-        <span>CodeBlock Mod</span>
+  <footer class="footer" data-page-node-id="MI3cX9nnghy5a60I3aQNh5">
+    
+  <div class="footer__inner" data-page-node-id="0Bfo9peQ0UswSv5SpC1lqZ">
+      <div class="footer__brand" data-page-node-id="xqE4cjtmodI60yD1JImIUk">
+        <img src="assets/images/icon.png" alt="" width="28" height="28" data-page-node-id="r70TOm7yPyvlX6jM0fIyyT">
+        <span data-page-node-id="fuVTd7vW1kbYK6I5WXid3w">CodeBlock Mod</span>
       </div>
-      <p class="footer__copy">由 zhangky 用 ❤ 与红石制作 · MIT License</p>
-      <nav class="footer__links" aria-label="页脚链接">
-        <a href="https://gitee.com/zsxydh/CodeBlock-mod-release" rel="noopener">Gitee</a>
-        <a href="#download">下载</a>
-        <a href="docs.html">接口文档</a>
-        <a href="/admin.html">管理后台</a>
+      <p class="footer__copy" data-page-node-id="RboqVi0Itbm7I9SZzBs68z" style="">由 zhangky 用 ❤ 与红石制作 ​</p>
+      <nav class="footer__links" aria-label="页脚链接" data-page-node-id="m3MCTwAfj7InxV9gbc4sCA">
+        <a href="https://gitee.com/zsxydh/CodeBlock-mod-release" rel="noopener" data-page-node-id="tp0ULmWmBRhI6yyTF8eYAL">Gitee</a>
+        <a href="#download" data-page-node-id="FLcO9u6UPyqXxOVcDHCJIF">下载</a>
+        <a href="docs.html" data-page-node-id="d23M1jgdZEsF0UpnaCca1p">接口文档</a>
+        
       </nav>
-    </div>
-  </footer>
+    </div></footer>
 
-  <script src="assets/js/vendor/three.min.js"></script>
-  <script src="js/download3d.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
+  <script src="assets/js/vendor/three.min.js" data-page-node-id="ya0504TDe2rXjYOXUHZmYD"></script>
+  <script src="js/download3d.js" data-page-node-id="ZuESEwCRJsoaAhtDoa5JoD"></script>
+  <script src="js/main.js" data-page-node-id="w1K7cAzalUZeNuaj98yENf"></script>
+
+
+</body></html>

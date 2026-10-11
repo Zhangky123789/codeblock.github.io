@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <title>CodeBlock Mod · 接口文档（API）</title>
-  <meta name="description" content="代码方块（CodeBlock Mod）编程接口文档：红石 cin/cout、状态存储、等待、聊天与音效、自定义音频、文件命名、运行模型与线程安全。" />
-  <meta name="viewport" content="width=device-width">
-  <meta name="author" content="zhangky" />
+<html class="no-js" lang="zh-CN" data-page-node-id="yHII3TVVB5oFCF9nELSNkN"><head data-page-node-id="FwzuGDQbY4ymgO8tsskgH6">
+  <meta charset="utf-8" data-page-node-id="YcNngE3yMA8f9hDbGlydd4">
+  <title data-page-node-id="WIwD2ovFGfLKVf8C7kDpaH">CodeBlock Mod · 接口文档（API）</title>
+  <meta name="description" content="代码方块（CodeBlock Mod）编程接口文档：红石 cin/cout、状态存储、等待、聊天与音效、自定义音频、文件命名、运行模型与线程安全。" data-page-node-id="Ehn2TtVCBgz5G5pB8wKul8">
+  <meta name="viewport" content="width=device-width" data-page-node-id="PH1YpwF6AgI2x0js6wDIWd">
+  <meta name="author" content="zhangky" data-page-node-id="KpKdbgElrRrGfmj741bTnD">
 
   <!-- 模板样式（solido OnePage 主题） -->
-  <link rel="stylesheet" href="docs-assets/css/normalize.css">
-  <link rel="stylesheet" href="docs-assets/css/main.css">
-  <link rel="stylesheet" href="docs-assets/css/solido.css">
-  <link rel="stylesheet" href="docs-assets/css/responsive.css">
-  <link rel="stylesheet" href="docs-assets/css/color/blue.css">
+  <link rel="stylesheet" href="docs-assets/css/normalize.css" data-page-node-id="zFKEeyCKZAzJlqGjnNxjyl">
+  <link rel="stylesheet" href="docs-assets/css/main.css" data-page-node-id="3GwpqNonejqFMFvXV5H1wY">
+  <link rel="stylesheet" href="docs-assets/css/solido.css" data-page-node-id="D1rthvAxbgAEKPylAkZtxW">
+  <link rel="stylesheet" href="docs-assets/css/responsive.css" data-page-node-id="vCWWKisp9ix7IPce5Q109v">
+  <link rel="stylesheet" href="docs-assets/css/color/blue.css" data-page-node-id="BOEgxbpOKlQyAusnsxaUcL">
 
   <!-- 文档页专用补充样式 -->
-  <style>
+  <style data-page-node-id="KCmGiOhCbr7ijQKEvIIILc">
     body { -webkit-font-smoothing: antialiased; }
     .doc-wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
     header.header { position: fixed; top: 0; left: 0; right: 0; z-index: 60; }
@@ -51,634 +50,617 @@
     .c { color:#7c8797; font-style:italic; }
     .f { color:#ffcb6b; }
   </style>
-</head>
-<body>
+<style id="__dm_no_drag_style__">* { -webkit-user-drag: none !important; }</style><style id="__dm_bindable_badge_style__">[data-sp-bindable="database"]{outline:1px dashed #0088ff;outline-offset:2px;border-radius:4px;}[data-sp-bindable="database"] *{pointer-events:none !important;transition:none !important;animation:none !important;}[data-sp-bindable="database"]{transition:none !important;animation:none !important;}</style></head>
+<body data-page-node-id="zBweykE3J5ENY8LePwIGli" style="position: relative;">
 
-  <header class="header">
-    <div class="logo"><span><span></span></span>CodeBlock</div>
-    <nav class="menu">
-      <ul id="nav">
-        <li class="current"><a href="#sec-overview">概述</a></li>
-        <li><a href="#sec-model">运行模型</a></li>
-        <li><a href="#sec-redstone">红石 I/O</a></li>
-        <li><a href="#sec-state">状态与等待</a></li>
-        <li><a href="#sec-msg">消息与音效</a></li>
-        <li><a href="#sec-audio">自定义音频</a></li>
-      <li><a href="#sec-files">文件与命名</a></li>
-      <li><a href="#sec-advanced">进阶 API</a></li>
-      <li><a href="#sec-execute">execute 命令</a></li>
-      <li><a href="index.html">← 回官网</a></li>
+  <header class="header" data-page-node-id="UcmO2EP5Ujuxcej7ZEVQ1U">
+    <div class="logo" data-page-node-id="prgDiWKKRU9jI3Ix1lY7gT"><span data-page-node-id="fu8hVN8S2geJYZLLVL6lC6"><span data-page-node-id="giNnEFsnMEZvTLzkjfRqS8"></span></span>CodeBlock</div>
+    <nav class="menu" data-page-node-id="yGr0KvOPXlfCI3EcqZKe2M">
+      <ul id="nav" data-page-node-id="S7vg9dCHpO099aAgsNSo5K">
+        <li class="" data-page-node-id="RuK79KOYGZaYsiWuqedbmF"><a href="#sec-overview" data-page-node-id="aG9P3xBk9pCdhT1UjpBkiF">概述</a></li>
+        <li data-page-node-id="Ck8O6hfeIrJi2UU5Qs4NNk" class="current"><a href="#sec-model" data-page-node-id="Zb44a1atqPbCgT6LQlapW2">运行模型</a></li>
+        <li data-page-node-id="Nc4ALS39qkHt8pFMd16NH7" class=""><a href="#sec-redstone" data-page-node-id="4zLUBZrbXeXtpcLEgci83M">红石 I/O</a></li>
+        <li data-page-node-id="1DPcb5Rb0GFMRMepesGgtQ" class="" style=""><a href="#sec-state" data-page-node-id="TgtL3VcDaeMxGRVa1SZgcE">状态与等待</a></li>
+        <li data-page-node-id="Y6CMFiiF2H23TE2LFd1C6N" class="" style=""><a href="#sec-msg" data-page-node-id="P1qnIMdTtCA591BWJZoRS5">消息与音效</a></li>
+        <li data-page-node-id="BdPPEW6RzzdlzddwgoCd7r" class="" style=""><a href="#sec-audio" data-page-node-id="9o4DnMtAcLXIWnnDtiK9o0">自定义音频</a></li>
+      <li data-page-node-id="GhqhO6nELh2flN8fXS82Es" class=""><a href="#sec-files" data-page-node-id="F1yW34A04CAXzjyJ1YCsj6">文件与命名</a></li>
+      <li data-page-node-id="ZxqneM1IVPgDgXC7LCTd4b" class=""><a href="#sec-advanced" data-page-node-id="CX61632g2qTJFPeoBYCSaK">进阶 API</a></li>
+      <li data-page-node-id="X9R7DAiATy2O4gEYHdvSGU" class=""><a href="#sec-execute" data-page-node-id="DdfcgdJqWYJQ9cnrQYpRvU">execute 命令</a></li>
+      <li data-page-node-id="3awvwYDFHbHej3LcIb16Oz"><a href="index.html" data-page-node-id="vBsYzbofSHhCpANsxMSQGB">← 回官网</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- ============ 概述 ============ -->
-  <article id="sec-overview" class="content menu-top">
-    <div class="doc-wrap">
-      <header class="title one">接口文档（API）</header>
-      <div class="spacer"></div>
+  <article id="sec-overview" class="content menu-top" data-page-node-id="hfMii1ckBkv8Zvsd43Cc8J">
+    <div class="doc-wrap" data-page-node-id="WWOpPK9cPyj0tDyB0Lb7Up">
+      <header class="title one" data-page-node-id="FUHt8OVEWEElwA0IWPxor3">接口文档（API）</header>
+      <div class="spacer" data-page-node-id="Avhjj9S7h563Dc0DJQJwPA"></div>
       
 
-      <p class="doc-p">
+      <p class="doc-p" data-page-node-id="5C9IcEL0epXLHUv8Q5b0I7">
         代码方块把你写的 Java 程序当作一个「每 tick 跑一次的小芯片」。程序实现
-        <code class="inl">CodeBlockProgram</code> 接口的 <code class="inl">onTick(CodeContext ctx, long tick)</code>，
-        模组在合适时机调用它，并传入 <code class="inl">ctx</code>——所有跟 MC 世界打交道的能力都挂在这个上下文对象上。
+        <code class="inl" data-page-node-id="ZNo0CEdbxRbEMkfwzO5Gll">CodeBlockProgram</code> 接口的 <code class="inl" data-page-node-id="E5MueAjz9zgnEviYGriEHQ">onTick(CodeContext ctx, long tick)</code>，
+        模组在合适时机调用它，并传入 <code class="inl" data-page-node-id="kUNQmLPHXhrBjCNWcdoY1z">ctx</code>——所有跟 MC 世界打交道的能力都挂在这个上下文对象上。
       </p>
 
-      <h3 class="api-h">最小可运行程序</h3>
-      <pre class="code"><code><span class="k">import</span> codeblockmod.api.CodeBlockProgram;
-<span class="k">import</span> codeblockmod.api.CodeContext;
+      <h3 class="api-h" data-page-node-id="DMDGaoKFzAbfm9Ianf85KI">最小可运行程序</h3>
+      <pre class="code" data-page-node-id="QAYkrKq7eyQNPL1ablGf80"><code data-page-node-id="m0D1CdPHkAwChxwnD92kod"><span class="k" data-page-node-id="ZitjSsr2VIUsnR0kMR2iiH">import</span> codeblockmod.api.CodeBlockProgram;
+<span class="k" data-page-node-id="qYcqVJjc1TgOwHwpt5PQw9">import</span> codeblockmod.api.CodeContext;
 
-<span class="c">// 文件名必须与类名一致：CB_block1.java</span>
-<span class="k">public class</span> <span class="f">CB_block1</span> <span class="k">implements</span> CodeBlockProgram {
-    <span class="k">public void</span> <span class="f">onTick</span>(CodeContext ctx, <span class="k">long</span> tick) {
-        <span class="k">int</span> v = ctx.<span class="f">readInput</span>(<span class="s">4</span>);      <span class="c">// 读西面(4)的红石强度</span>
-        ctx.<span class="f">writeOutput</span>(<span class="s">5</span>, v);       <span class="c">// 原样写到东面(5)</span>
+<span class="c" data-page-node-id="SXgAnaJILOZtEOwIVDociB">// 文件名必须与类名一致：CB_block1.java</span>
+<span class="k" data-page-node-id="WTMnWolSPWTGrfcITvGynG">public class</span> <span class="f" data-page-node-id="iIzqF2Jn0aFOeVmBQZqeSm">CB_block1</span> <span class="k" data-page-node-id="9eQ18GrFYcKkOkA0ib1UvA">implements</span> CodeBlockProgram {
+    <span class="k" data-page-node-id="rFGRn2HhU9HRGEo3ZCEXir">public void</span> <span class="f" data-page-node-id="pCj6Ok5wKBWWaAiWjXBNwR">onTick</span>(CodeContext ctx, <span class="k" data-page-node-id="rr9CvPHBRUhxfoSLNcltUd">long</span> tick) {
+        <span class="k" data-page-node-id="oaJC866aNkiKTSGceSDQcT">int</span> v = ctx.<span class="f" data-page-node-id="Tuokp5DZL5ABxWfPpSOeF9">readInput</span>(<span class="s" data-page-node-id="oXclqZu0A3uutCUtl8WsqL">4</span>);      <span class="c" data-page-node-id="WnrVznMJuSWbeSgmhFGd4E">// 读西面(4)的红石强度</span>
+        ctx.<span class="f" data-page-node-id="akgeA9SAUjTpmkOJ2l3iKq">writeOutput</span>(<span class="s" data-page-node-id="6838wvterKN4UG41TmZfbw">5</span>, v);       <span class="c" data-page-node-id="McGjwk8sg6xVGZOmmKnJyN">// 原样写到东面(5)</span>
     }
 }</code></pre>
 
-      <div class="note">
-        <strong>约束：</strong>文件名、类名、方块名字三者必须一致。方块名为 <code class="inl">block1</code> 时，
-        Java 文件就是 <code class="inl">CB_block1.java</code>，类名必须是 <code class="inl">CB_block1</code>。
+      <div class="note" data-page-node-id="Q3HtqA8pGXOXqFzcRr85xG">
+        <strong data-page-node-id="hPz1CikV9uXPCA1zqtGBYT">约束：</strong>文件名、类名、方块名字三者必须一致。方块名为 <code class="inl" data-page-node-id="jl1ZcFthXsBEi0kVgNbyLf">block1</code> 时，
+        Java 文件就是 <code class="inl" data-page-node-id="dsvn857FGiYXIbpygZqi9q">CB_block1.java</code>，类名必须是 <code class="inl" data-page-node-id="Z2W740TismslyhJ9ihpqUz">CB_block1</code>。
         这是 Java「public 类名 = 文件名」的硬要求，不是模组的限制。
       </div>
     </div>
   </article>
 
   <!-- ============ 运行模型 ============ -->
-  <article id="sec-model" class="content menu-top dark">
-    <div class="doc-wrap">
-      <header class="title one">运行模型与线程安全</header>
-      <div class="spacer"></div>
-      <div class="title two">什么时候跑？在哪条线程跑？能写死循环吗？</div>
+  <article id="sec-model" class="content menu-top dark" data-page-node-id="ZwTt2c2LddN9EESkXK6q0T">
+    <div class="doc-wrap" data-page-node-id="Md4yYO9uvIVKZgqZTgHAQH">
+      <header class="title one" data-page-node-id="qLGU1OJNKpfZV0QS856k6U">运行模型与线程安全</header>
+      <div class="spacer" data-page-node-id="qaWnyNwtoCYg6DoOGKQi5t"></div>
+      
 
-      <h3 class="api-h">只有两种时机会跑程序</h3>
-      <ul class="doc-ul">
-        <li><strong>① 手动运行</strong>：首次载入方块、准星对着方块按 <code class="inl">O</code>、右键方块重载。</li>
-        <li><strong>② 检测到更改运行</strong>：程序文件 mtime 变化（每 20 tick 扫一次），或邻居红石变化（去抖 4 tick 后跑一次）。</li>
+      <h3 class="api-h" data-page-node-id="6fQWftMDY2s1PI1Mq7bCsA">只有两种时机会跑程序</h3>
+      <ul class="doc-ul" data-page-node-id="ZozAWeHUOes6m3LS0uhacc">
+        <li data-page-node-id="tsmADH5DH2XI2rKHRyAsuL" style=""><strong data-page-node-id="eePYrTdyZuq7Eo077tlldQ">① 手动运行</strong>：首次载入方块、准星对着方块按特定快捷键（默认o）&nbsp;、右键方块重载。</li>
+        <li data-page-node-id="p0Y3RDkD7hOTuAlTqeAGDw"><strong data-page-node-id="w3wjZgEAGv1zy1yRHtcFEE">② 检测到更改运行</strong>：程序文件 mtime 变化（每 20 tick 扫一次），或邻居红石变化（去抖 4 tick 后跑一次）。</li>
       </ul>
-      <div class="note note--warn">
-        <strong>模组绝不会每 tick 偷偷轮询跑你的程序。</strong>
-        没写循环 = 一次事件跑一次；写了 <code class="inl">while (true)</code> 就由你自己的代码一直循环。
-      </div>
+      
 
-      <h3 class="api-h">线程模型</h3>
-      <p class="doc-p">
-        你的 <code class="inl">onTick</code> 跑在<strong>后台守护线程</strong>里，不阻塞服务端主线程。
-        <code class="inl">ctx</code> 里凡是触碰世界的操作（读红石、写输出、发消息、放音）都会自动经
-        <code class="inl">runOnMain()</code> 调度回服务端主线程执行，所以你<strong>不需要自己加锁或调度</strong>，
-        直接在 <code class="inl">onTick</code> 里调用即可。
+      <h3 class="api-h" data-page-node-id="tMVHulMnySiypAWKtoXrJk">线程模型</h3>
+      <p class="doc-p" data-page-node-id="39rYCYeukE9xE3ZX4TyWXp">
+        你的 <code class="inl" data-page-node-id="bp6k3W41gEfhDKatsT5fUF">onTick</code> 跑在<strong data-page-node-id="l1pYMoREtQcPzlk6HsfCTv">后台守护线程</strong>里，不阻塞服务端主线程。
+        <code class="inl" data-page-node-id="wgaLBW7kHTsftLGyiKdsDj">ctx</code> 里凡是触碰世界的操作（读红石、写输出、发消息、放音）都会自动经
+        <code class="inl" data-page-node-id="tCzL5OSoWss8Asty8AUwvd">runOnMain()</code> 调度回服务端主线程执行，所以你<strong data-page-node-id="GHJYUE8y72T46TKC0JbguZ">不需要自己加锁或调度</strong>，
+        直接在 <code class="inl" data-page-node-id="Obho4MLBzTu4tvSPkTCGti">onTick</code> 里调用即可。
       </p>
 
-      <h3 class="api-h">速度上限（MC 引擎天花板）</h3>
-      <p class="doc-p">
-        服务端 20 TPS，<strong>1 tick = 50ms 就是最快速度</strong>。红石灯/红石线最快约 20Hz，
-        「隔 1ms 闪一次」物理上做不到。<code class="inl">sleepTicks(1)</code> 已经是最短等待。
-      </p>
+      
+      
 
-      <h3 class="api-h">看门狗</h3>
-      <p class="doc-p">
-        按设计，<strong>任何循环都永不自动终止</strong>。只有当程序连续 10 秒<strong>从未让出 CPU</strong>
+      <h3 class="api-h" data-page-node-id="sD32ZGYNNF1wGngvNR5SMu">看门狗</h3>
+      <p class="doc-p" data-page-node-id="no1rU3XgpuACpuUOpr06cH">
+        按设计，<strong data-page-node-id="7E6DjcOSgTF2sAYWTkqsr7">任何循环都永不自动终止</strong>。只有当程序连续 10 秒<strong data-page-node-id="UEHx44FRKKsDnnZEH3cQAO">从未让出 CPU</strong>
         （循环体内缺少「等待」的纯空转）时，才会在日志里打一条 WARN 提示——不会中断线程、不会清输出。
-        自己用 <code class="inl">sleepTicks()</code> / <code class="inl">sleep()</code> 让出 CPU 即可规避占满单核。
+        自己用 <code class="inl" data-page-node-id="SxV9fBFfE53H0BPUICDAmM">sleepTicks()</code> / <code class="inl" data-page-node-id="dsGbun1gKmXwxraEMn4btw">sleep()</code> 让出 CPU 即可规避占满单核。
       </p>
     </div>
   </article>
 
   <!-- ============ 红石 I/O ============ -->
-  <article id="sec-redstone" class="content menu-top">
-    <div class="doc-wrap">
-      <header class="title one">红石 I/O（cin / cout）</header>
-      <div class="spacer"></div>
-      <div class="title two">强度 0–15，即十六进制 0–F</div>
+  <article id="sec-redstone" class="content menu-top" data-page-node-id="ACwFXUhpIV3hguDcQ2ewLw">
+    <div class="doc-wrap" data-page-node-id="7ZQbMHEARegkSs7jEkh4c5">
+      <header class="title one" data-page-node-id="jGm7qnadRrTIO6X1kcaEpD">红石 I/O（cin / cout）</header>
+      <div class="spacer" data-page-node-id="jEbIIIZ0UzPkohOdam5nZM"></div>
+      
 
-      <h3 class="api-h">通道编号（= 方块六个面）</h3>
-      <table class="api-table">
-        <thead><tr><th style="width:90px">通道</th><th style="width:120px">方向</th><th>说明</th></tr></thead>
-        <tbody>
-          <tr><td><code>0</code></td><td>下 DOWN</td><td>方块底面</td></tr>
-          <tr><td><code>1</code></td><td>上 UP</td><td>方块顶面</td></tr>
-          <tr><td><code>2</code></td><td>北 NORTH</td><td>—Z 方向</td></tr>
-          <tr><td><code>3</code></td><td>南 SOUTH</td><td>+Z 方向</td></tr>
-          <tr><td><code>4</code></td><td>西 WEST</td><td>—X 方向</td></tr>
-          <tr><td><code>5</code></td><td>东 EAST</td><td>+X 方向</td></tr>
+      <h3 class="api-h" data-page-node-id="hUDuVxgiQC3MCsNdfqRZA9">通道编号（= 方块六个面）</h3>
+      <table class="api-table" data-page-node-id="IQIq6IP3GGsuwB1uvIS2Tr">
+        <thead data-page-node-id="Oonn6vAynsD2RoICS9PKG0"><tr data-page-node-id="DB1EwwZ4oQRRCuk2OubrVK"><th style="width:90px" data-page-node-id="OPfxGjKDANVD9pAIEP6zEt">通道</th><th style="width:120px" data-page-node-id="8f6AcRqTg6iUL94QcoOoM4">方向</th><th data-page-node-id="DYKsG1FrRCh9IP298hOcIC">说明</th></tr></thead>
+        <tbody data-page-node-id="SUbQFlD1CKi9Y6OBpilwO1">
+          <tr data-page-node-id="sNFogXqa0scVP56SybEN8S"><td data-page-node-id="zglTonfZJmBGy3JbR5YGNW"><code data-page-node-id="9nm9XIThCcEch66pBBWb9w">0</code></td><td data-page-node-id="JZ6JT7zqsGEI0t0QnIJo4V">下 DOWN</td><td data-page-node-id="sMKSfLs1HCT0pgBCvWoHwq">方块底面</td></tr>
+          <tr data-page-node-id="PCRlSC91xFrWwDInVUkqYC"><td data-page-node-id="Hi3wu9X56IjkIlvrX2hmkX"><code data-page-node-id="3dD0Q6270tVo4AHtG3CZjg">1</code></td><td data-page-node-id="hE39l3GuED6x68kx2WBO48">上 UP</td><td data-page-node-id="F3zMDjhsaMGV4nlOghZPpE">方块顶面</td></tr>
+          <tr data-page-node-id="OuOM4sqnCI7H8qxFnGQttl"><td data-page-node-id="Hm1q39WIEPxDbHaJcmTVVE"><code data-page-node-id="r4kmIkzy0hQDznCOj0BYux">2</code></td><td data-page-node-id="1edTFhPoANmMC45rECcvDJ">北 NORTH</td><td data-page-node-id="lvM1ANMlnx8mmDupWufIhH">—Z 方向</td></tr>
+          <tr data-page-node-id="FzU0jFxkfNUgI0cd1HV9a3"><td data-page-node-id="8RDvxqiLIu7V13WC6RLOen"><code data-page-node-id="Ca4Q5ax2bThHQF5vdxsNf1">3</code></td><td data-page-node-id="imlvuzIG28AFICm77GChDJ">南 SOUTH</td><td data-page-node-id="slTFHbPq5cpENBg2svsz3p">+Z 方向</td></tr>
+          <tr data-page-node-id="h4qnCnEyBQoFLcDLjN2WL0"><td data-page-node-id="PQJP2nqqh1uUFAd7iBxsbD"><code data-page-node-id="ZMg7klsBt5kGxWNuPFxdnT">4</code></td><td data-page-node-id="fLkB1YKcwsyV2jWVm4tQK1">西 WEST</td><td data-page-node-id="SDuEiTdjl3pEjpLScP3Ao4">—X 方向</td></tr>
+          <tr data-page-node-id="m8jkQIgppRjsRM6OofyGhx"><td data-page-node-id="1t0HHCspOLhHrxi85BKAxa"><code data-page-node-id="HE4bXHNA1Mbkhh4mf92FpM">5</code></td><td data-page-node-id="GVeAfO85eAgpb0h84ErVWO">东 EAST</td><td data-page-node-id="PBFNNNRQ1LcpMlw8ca2qMG">+X 方向</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">接口一览</h3>
-      <table class="api-table">
-        <thead><tr><th style="width:46%">方法</th><th>说明</th></tr></thead>
-        <tbody>
-          <tr><td><code>int readInput(int channel)</code></td><td>读某面<strong>外部</strong>输入的红石强度（0–15）。已排除本方块自身在该面发出的信号，避免自激。</td></tr>
-          <tr><td><code>void writeOutput(int channel, int value)</code></td><td>向某面输出强度，自动 clamp 到 0–15。</td></tr>
-          <tr><td><code>int readInputMax()</code></td><td>返回 6 个面中<strong>最大</strong>的输入强度。</td></tr>
-          <tr><td><code>void writeOutputAll(int value)</code></td><td>6 个面同时输出相同强度（自动 clamp）。</td></tr>
-          <tr><td><code>String debugInputs()</code></td><td>返回 6 个方向当前输入的可读字符串。接线不确定时用它确认拉杆/压力板到底接在哪一面。<span class="tag tag--ok">已实现</span></td></tr>
+      <h3 class="api-h" data-page-node-id="E5G08jLKG4uQATkPyjrPpr">接口一览</h3>
+      <table class="api-table" data-page-node-id="gn4bgo9pIRRp8g9KCEM0IF">
+        <thead data-page-node-id="8LjrMyw4NZYQdoIVt6MfvO"><tr data-page-node-id="ONjbyK2AUdV9uSQbTLP7WT"><th style="width:46%" data-page-node-id="kkE52EIvjBoicaew5qATQV">方法</th><th data-page-node-id="SNikCKaENM4QJU5tFkASZd">说明</th></tr></thead>
+        <tbody data-page-node-id="0caj783KDXyYLcg5TGrli2">
+          <tr data-page-node-id="XCPcBdVxLCoDTWPogeCU87"><td data-page-node-id="GoJoesDiGnzsEbjVvhycxa"><code data-page-node-id="atw2KJDnwP9ckXcT9kmFeD">int readInput(int channel)</code></td><td data-page-node-id="A1qPRQ72RzOncFlkjQlrGS">读某面<strong data-page-node-id="V1geOIaGkVAw5Vy3Gng0Et">外部</strong>输入的红石强度（0–15）。已排除本方块自身在该面发出的信号，避免自激。</td></tr>
+          <tr data-page-node-id="Wx0VPBbWkrgMotBmSrno5P"><td data-page-node-id="3Qjkaigc5NGnkh2mb6haII"><code data-page-node-id="cwbo7hBhfQAEmf7FD7JK27">void writeOutput(int channel, int value)</code></td><td data-page-node-id="oWTWAHi5fF5OkqRgWCBlPG">向某面输出强度，自动 clamp 到 0–15。</td></tr>
+          <tr data-page-node-id="kENGmCUgz21HSZAAl4im57"><td data-page-node-id="AV403goCedDf6De2QYm1r7"><code data-page-node-id="geW3A8nBCyzt7ToFvxMZd6">int readInputMax()</code></td><td data-page-node-id="QVJJOw2eRiwrOHwhi74i1P">返回 6 个面中<strong data-page-node-id="L7LoFJHelCpilF1b8EitVy">最大</strong>的输入强度。</td></tr>
+          <tr data-page-node-id="VYsBHGwPAW1uPJQ4D8i7rd"><td data-page-node-id="4tabpnbLlWETThT7xWnI5W"><code data-page-node-id="UHfJKCqelJs4jKuOXlYMYq">void writeOutputAll(int value)</code></td><td data-page-node-id="daNFR2OwvfPJg1fYjeiatY">6 个面同时输出相同强度（自动 clamp）。</td></tr>
+          <tr data-page-node-id="0GsybSe0X0LLl1A90GvufJ"><td data-page-node-id="vPeu4eapvOKxBgq20NxqSq"><code data-page-node-id="3C3266YrfE9gFZxYIN9py3">String debugInputs()</code></td><td data-page-node-id="9pS2XVVCGVYyA6kJWCig6O">返回 6 个方向当前输入的可读字符串。接线不确定时用它确认拉杆/压力板到底接在哪一面。<span class="tag tag--ok" data-page-node-id="R4xeJVHCykwLBYCxCtiA9B">已实现</span></td></tr>
         </tbody>
       </table>
 
-      <div class="note">
-        <strong>接线铁律：输入端与输出端物理分离。</strong>
-        例如「读西面、写东面」。若把输出和读取接到<strong>同一段红石粉</strong>，自己的信号会反馈回来被自己读到（物理自激），
-        表现就是 0/1 反复跳。<code class="inl">readInput</code> 只排除本方块自身发射量，排除不了同一段红石线的反射。
+      <div class="note" data-page-node-id="futSyhCrujAX7tzrDqKaIc">
+        <strong data-page-node-id="q6JwF3rhjWkFhc76ly0kAS">接线铁律：输入端与输出端物理分离。</strong>
+        例如「读西面、写东面」。若把输出和读取接到<strong data-page-node-id="NjbElybMloHxar7vRSTF9K">同一段红石粉</strong>，自己的信号会反馈回来被自己读到（物理自激），
+        表现就是 0/1 反复跳。<code class="inl" data-page-node-id="Ql1NA1jJImbeu4CCYs7rfI">readInput</code> 只排除本方块自身发射量，排除不了同一段红石线的反射。
       </div>
 
-      <h3 class="api-h">例：阈值比较器</h3>
-      <pre class="code"><code><span class="k">public void</span> <span class="f">onTick</span>(CodeContext ctx, <span class="k">long</span> tick) {
-    <span class="k">int</span> v = ctx.<span class="f">readInput</span>(<span class="s">4</span>);              <span class="c">// 读西面</span>
-    ctx.<span class="f">writeOutput</span>(<span class="s">5</span>, v &gt;= <span class="s">8</span> ? <span class="s">15</span> : <span class="s">0</span>);   <span class="c">// 东面：够强就满输出</span>
+      <h3 class="api-h" data-page-node-id="2zycHSIDUeQK0VFaX0FQgT">例：阈值比较器</h3>
+      <pre class="code" data-page-node-id="Sx31Jd0PBw6bRD4F55UMcj"><code data-page-node-id="de8U6RiaVBxWfXC0SXeMUG"><span class="k" data-page-node-id="PVqk84d2YV4lfAzZlrDD4l">public void</span> <span class="f" data-page-node-id="DVHRVN59tH7toJwvl1YEzb">onTick</span>(CodeContext ctx, <span class="k" data-page-node-id="dZDry9YKw4YArTu4AEzI82">long</span> tick) {
+    <span class="k" data-page-node-id="QrnD2XnFpagUnMnd2byn5M">int</span> v = ctx.<span class="f" data-page-node-id="KgJcTiKbSO6qn7xWSI6GPF">readInput</span>(<span class="s" data-page-node-id="GJwad0YCvrWcVz57lLTHvJ">4</span>);              <span class="c" data-page-node-id="duSj9AZs5gntCAlQCtsy2w">// 读西面</span>
+    ctx.<span class="f" data-page-node-id="Wa6CVAH10U9GSBXG8uFrYg">writeOutput</span>(<span class="s" data-page-node-id="KJCpeErmxvkDMR7nrm0H6u">5</span>, v &gt;= <span class="s" data-page-node-id="JGEfuLXozykc4hHGDi41Gp">8</span> ? <span class="s" data-page-node-id="K0GAktF3fqDhCA1CE0sjq9">15</span> : <span class="s" data-page-node-id="4mqKUTzRCxE2l9D73UEwPt">0</span>);   <span class="c" data-page-node-id="DIbnf3C7ZXAsPoIWozlnlC">// 东面：够强就满输出</span>
 }</code></pre>
     </div>
   </article>
 
   <!-- ============ 状态与等待 ============ -->
-  <article id="sec-state" class="content menu-top dark">
-    <div class="doc-wrap">
-      <header class="title one">跨 tick 状态与等待</header>
-      <div class="spacer"></div>
-      <div class="title two">计数器、计时器、延时</div>
+  <article id="sec-state" class="content menu-top dark" data-page-node-id="HHxD5rGhcg0fpz0aSEXl5H">
+    <div class="doc-wrap" data-page-node-id="HfngddWlbN7gkUU8BcPWwn">
+      <header class="title one" data-page-node-id="PI6vaBcUUwShQ88WdAJGGT">跨 tick 状态与等待</header>
+      <div class="spacer" data-page-node-id="widcrf5Iz8CeaWIcVatzus"></div>
+      <div class="title two" data-page-node-id="E6wrC2ozRgKKKJXci3Nbx0">计数器、计时器、延时</div>
 
-      <table class="api-table">
-        <thead><tr><th style="width:46%">方法</th><th>说明</th></tr></thead>
-        <tbody>
-          <tr><td><code>int getStateInt(String key)</code></td><td>读取跨 tick 持久化的整数状态（计数器/计时器/标志位）。key 不存在返回 0。</td></tr>
-          <tr><td><code>void setState(String key, int value)</code></td><td>写入整数状态。每个代码方块有<strong>自己独立</strong>的状态表。</td></tr>
-          <tr><td><code>void sleepTicks(long n)</code></td><td>真阻塞 n 个游戏 tick（1 tick ≈ 50ms），期间让出 CPU。用于延时/降频。</td></tr>
-          <tr><td><code>void sleep(long millis)</code></td><td>真阻塞指定毫秒。在 <code>while(true)</code> 里用它让出 CPU 降频。</td></tr>
+      <table class="api-table" data-page-node-id="QHjQHW2CDnWetUiosspeOq">
+        <thead data-page-node-id="DlKGbZgqRYXEGMVcDkIHPx"><tr data-page-node-id="sOhHMSxqbmShAbICSAHvBu"><th style="width:46%" data-page-node-id="HF402tUE79yxHiWZbGcwHB">方法</th><th data-page-node-id="NBPf4a9IKgSSJtL3pqfvDI">说明</th></tr></thead>
+        <tbody data-page-node-id="vQTTNwAfXbb48hVXSyHnGY">
+          <tr data-page-node-id="oHEvOPMtXB3fO4nBgwvJwS"><td data-page-node-id="uVj2JNVdDTlKbHFbqEsmbs"><code data-page-node-id="LpZkGen7zRI3sgg4aEQUrh">int getStateInt(String key)</code></td><td data-page-node-id="1FugdNtVJtzp2W4bb9rFZe">读取跨 tick 持久化的整数状态（计数器/计时器/标志位）。key 不存在返回 0。</td></tr>
+          <tr data-page-node-id="ER7TSHlGWlVQMSW7r98DDu"><td data-page-node-id="itqgcL0yGyXDYrk5UgQFRr"><code data-page-node-id="fBqmbarWpD5C4sDqbDUBi0">void setState(String key, int value)</code></td><td data-page-node-id="eyCE7a9O6ogFZMz54FphYc">写入整数状态。每个代码方块有<strong data-page-node-id="MDSwt5AwFEEluDghvxoftB">自己独立</strong>的状态表。</td></tr>
+          <tr data-page-node-id="GS438bIFu9SWW6uDjcI5uK"><td data-page-node-id="Es1jUh0fg6l8oNz07dK02E"><code data-page-node-id="rK1imSEH05bkC1UpCltQxJ">void sleepTicks(long n)</code></td><td data-page-node-id="TrNCsOaU38y6FVU2FZXJAn">真阻塞 n 个游戏 tick（1 tick ≈ 50ms），期间让出 CPU。用于延时/降频。</td></tr>
+          <tr data-page-node-id="RIgxoCnGOaXEEYHFzlh5PR"><td data-page-node-id="BWlOmgLnqNI1pAUbrEBTyC"><code data-page-node-id="uIHyGC1K8cDH6gjauQWaOv">void sleep(long millis)</code></td><td data-page-node-id="NPxpDPyD4ib3KpJivBxAye">真阻塞指定毫秒。在 <code data-page-node-id="glSkUAorZs1yvz9tDzn08P">while(true)</code> 里用它让出 CPU 降频。</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">例：每 20 tick 计一次数</h3>
-      <pre class="code"><code><span class="k">public void</span> <span class="f">onTick</span>(CodeContext ctx, <span class="k">long</span> tick) {
-    <span class="k">int</span> n = ctx.<span class="f">getStateInt</span>(<span class="s">"count"</span>);
-    ctx.<span class="f">setState</span>(<span class="s">"count"</span>, n + <span class="s">1</span>);
-    ctx.<span class="f">writeOutput</span>(<span class="s">5</span>, n % <span class="s">16</span>);   <span class="c">// 0–F 循环输出</span>
-    ctx.<span class="f">sleepTicks</span>(<span class="s">20</span>);              <span class="c">// 约 1 秒一次，同时让出 CPU</span>
+      <h3 class="api-h" data-page-node-id="qQHbLTx9UrwFBCSoTz5bKx">例：每 20 tick 计一次数</h3>
+      <pre class="code" data-page-node-id="VG51L0WW33vyEGbhCGPZ2n"><code data-page-node-id="AtwsPw42scmkUYmRdc8DJb"><span class="k" data-page-node-id="mLLdDnVrKLNUMwRnJa4W6F">public void</span> <span class="f" data-page-node-id="iHlZr8eN7MMcKeCiFKzdQp">onTick</span>(CodeContext ctx, <span class="k" data-page-node-id="zaZbnJPe87xA4n9z2YzOkV">long</span> tick) {
+    <span class="k" data-page-node-id="qUEYvB5YE5wSVmGh4JOEh4">int</span> n = ctx.<span class="f" data-page-node-id="Z6dQ9XGe7q8HjbICxJuLJ0">getStateInt</span>(<span class="s" data-page-node-id="V6hg4pFBkOFld6BbDF9opt">"count"</span>);
+    ctx.<span class="f" data-page-node-id="ebQ3jPS30mGa42R10yBMQG">setState</span>(<span class="s" data-page-node-id="RJGNoUriODFAoUKLvaFFDr">"count"</span>, n + <span class="s" data-page-node-id="gZQBarpCYlaFPwhNme43nY">1</span>);
+    ctx.<span class="f" data-page-node-id="6YAo0F7mIkCC4j6QZ4Kgxc">writeOutput</span>(<span class="s" data-page-node-id="1WxYHjjH07Gb7ZldEbphBz">5</span>, n % <span class="s" data-page-node-id="O48q105VLw6vknDJeAI0Rb">16</span>);   <span class="c" data-page-node-id="TacJrnAJU7GKnVXaLGbhhj">// 0–F 循环输出</span>
+    ctx.<span class="f" data-page-node-id="nEhoCDFsKbCjlYOUQ4zR9k">sleepTicks</span>(<span class="s" data-page-node-id="TXFOakmZlIE99V4O34BkfY">20</span>);              <span class="c" data-page-node-id="n2xusagK8mJheVJxx0AnR2">// 约 1 秒一次，同时让出 CPU</span>
 }</code></pre>
-      <div class="note note--warn">
-        <strong>死循环务必带等待。</strong><code class="inl">while(true)</code> 里如果没有
-        <code class="inl">sleepTicks()</code> 或 <code class="inl">sleep()</code>，会纯空转占满一个 CPU 核心（看门狗只会打日志，不会帮你停）。
-      </div>
+      
     </div>
   </article>
 
   <!-- ============ 消息与音效 ============ -->
-  <article id="sec-msg" class="content menu-top">
-    <div class="doc-wrap">
-      <header class="title one">消息、音效与屏幕提示</header>
-      <div class="spacer"></div>
-      <div class="title two">跟玩家沟通</div>
+  <article id="sec-msg" class="content menu-top" data-page-node-id="dYakYOs7JFcumYVXNAGBJX">
+    <div class="doc-wrap" data-page-node-id="KNLmGe2Ee4DFGptInIWPr2">
+      <header class="title one" data-page-node-id="UpA9R7sJpAMOxRv458baWV">消息、音效与屏幕提示</header>
+      <div class="spacer" data-page-node-id="bBx871ccs08FF2HHuB5sVT"></div>
+      <div class="title two" data-page-node-id="nVSm1rkX658Y81XKTpTHGt">跟玩家沟通</div>
 
-      <table class="api-table">
-        <thead><tr><th style="width:46%">方法</th><th>说明</th></tr></thead>
-        <tbody>
-          <tr><td><code>void sendMessage(String text)</code></td><td>聊天框发一条消息，<strong>方圆 64 格</strong>内玩家可见。支持 <code>§</code> 颜色码。同文本 1 秒内去重。</td></tr>
-          <tr><td><code>void sendClickable(String text, String url)</code></td><td>可点击消息（悬停下划线）。以 <code>http</code> 开头＝打开链接，否则当作 MC 命令执行。3 秒去重。</td></tr>
-          <tr><td><code>void playSound(String soundId)</code></td><td>播放原版音效，<strong>方圆 16 格</strong>可听到。例：<code>block.note_block.harp</code>、<code>entity.player.levelup</code>。ID 无效时回退竖琴音。</td></tr>
-          <tr><td><code>void sendActionBar(String text)</code></td><td>物品栏上方短暂文字（Action Bar），约 3 秒消失。</td></tr>
-          <tr><td><code>void sendTitle(String text)</code></td><td>屏幕中央大标题。</td></tr>
+      <table class="api-table" data-page-node-id="yCaH7dIEjHUTjrCXNSSpEx">
+        <thead data-page-node-id="IwfyIlw58e6hXvTPy8THaj"><tr data-page-node-id="leE1YLeZMpeDoqpFXMIr3D"><th style="width:46%" data-page-node-id="uO3O7O0WeA2B2wo1FzvXHu">方法</th><th data-page-node-id="mK7YnvqNiTJKu5RxSFfLGU">说明</th></tr></thead>
+        <tbody data-page-node-id="hEKclxpBs3h7OqYGOB6GcO">
+          <tr data-page-node-id="VODKO6qpHh5wuzYai8AeSX"><td data-page-node-id="nxPVe2E4WhwIAdCF4Va0bx"><code data-page-node-id="pwU7EKBuoBUHdAz54kRz8u">void sendMessage(String text)</code></td><td data-page-node-id="mk0JwPsNOzUq6r4odyVsun">聊天框发一条消息，<strong data-page-node-id="HQsZT5IOKd6R90AllzOxAU">方圆 64 格</strong>内玩家可见。支持 <code data-page-node-id="JZIrNU4z5E9AJRo6Jp0oq3">§</code> 颜色码。同文本 1 秒内去重。</td></tr>
+          <tr data-page-node-id="LHI62cpdEi6grKGThdFsqR"><td data-page-node-id="oKlFq6W3nFcNN85H33SC5C"><code data-page-node-id="aDhRhrVNkR0wIfxQlFHeja">void sendClickable(String text, String url)</code></td><td data-page-node-id="beRzdeTdl9Joot7SUhAXJD">可点击消息（悬停下划线）。以 <code data-page-node-id="tjcqSI0fz1Fs2v9kz8QDTf">http</code> 开头＝打开链接，否则当作 MC 命令执行。3 秒去重。</td></tr>
+          <tr data-page-node-id="i1awpIbOL5tkwAhEnRqhiL"><td data-page-node-id="pnQsGkSjgG2gdzcvd7qxNF"><code data-page-node-id="bj1Yv3SPWBbHcXr7F737Gs">void playSound(String soundId)</code></td><td data-page-node-id="tlmJPch9KNBFQOmvvki4H2">播放原版音效，<strong data-page-node-id="dymUFdjAlJOYzEDF9i5J3d">方圆 16 格</strong>可听到。例：<code data-page-node-id="iIfWrCGDqnZjzeCGUj2gjg">block.note_block.harp</code>、<code data-page-node-id="QDIuVglmYUKnqvzDsx1paC">entity.player.levelup</code>。ID 无效时回退竖琴音。</td></tr>
+          <tr data-page-node-id="qi2r3jUTNq8RLkPQpRD3KQ"><td data-page-node-id="ZlBfw6fqyohN2rIB8E0EDF"><code data-page-node-id="Ex1ZyFoy5XEIrJX8sXMELO">void sendActionBar(String text)</code></td><td data-page-node-id="c6FqvrHl6WjVpIUso4OsFL">物品栏上方短暂文字（Action Bar），约 3 秒消失。</td></tr>
+          <tr data-page-node-id="EHXVUSPmxqnnLmYApY0EJR"><td data-page-node-id="0hw4gHAKtCu5Sn261ztgUK"><code data-page-node-id="oLbhsFpxRYMu8XF8OgdAED">void sendTitle(String text)</code></td><td data-page-node-id="ByyAYNgkkDN0YUFa1XvAGV">屏幕中央大标题。</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">例：可点击链接</h3>
-      <pre class="code"><code>ctx.<span class="f">sendClickable</span>(<span class="s">"§b点我打开文档"</span>, <span class="s">"https://codeblock.cc.cd/docs.html"</span>);
-ctx.<span class="f">sendClickable</span>(<span class="s">"§a点我回到出生点"</span>, <span class="s">"/spawn"</span>);</code></pre>
+      <h3 class="api-h" data-page-node-id="3tX2nRRctfIb989yUd7uWL">例：可点击链接</h3>
+      <pre class="code" data-page-node-id="78AF602NeeW003afd5cpSR"><code data-page-node-id="tku1952vaDL2jz8WbMn0Mu">ctx.<span class="f" data-page-node-id="8newsKt31Bl3FP92McCx8m">sendClickable</span>(<span class="s" data-page-node-id="V3aWhfePIJpil8PFmCMB3Y">"§b点我打开文档"</span>, <span class="s" data-page-node-id="VrLklQZfqjHL8UnqNYDTCn">"https://codeblock.cc.cd/docs.html"</span>);
+ctx.<span class="f" data-page-node-id="RYMDThqHxcXCwPFiE8i0Sm">sendClickable</span>(<span class="s" data-page-node-id="A4HffA6YshgAF11YuX1GD3">"§a点我回到出生点"</span>, <span class="s" data-page-node-id="F8zZLowVbvtVWvslho6DXG">"/spawn"</span>);</code></pre>
     </div>
   </article>
 
   <!-- ============ 自定义音频 ============ -->
-  <article id="sec-audio" class="content menu-top dark">
-    <div class="doc-wrap">
-      <header class="title one">自定义音频</header>
-      <div class="spacer"></div>
-      <div class="title two">播放你自己的 mp3 / wav / ogg</div>
+  <article id="sec-audio" class="content menu-top dark" data-page-node-id="RpCETHpdokDoczNMvFPDiD">
+    <div class="doc-wrap" data-page-node-id="YGIBNCHeIzjwskyrYVn3Sz">
+      <header class="title one" data-page-node-id="yEH3FagZ8I1XxATfzzlvZY">自定义音频</header>
+      <div class="spacer" data-page-node-id="QW5YRMO3uxMABohTw0v7VX"></div>
+      <div class="title two" data-page-node-id="9ALBaCuRfE2RQwbeocPW6a">播放你自己的 mp3 / wav / ogg</div>
 
-      <p class="doc-p">
-        音频文件放在存档目录的 <code class="inl">res/media/</code> 下，用文件名直接播放（流式 SourceDataLine，mp3 已内置解码）。
+      <p class="doc-p" data-page-node-id="QoNGDAyD8mf2PLLnIHLcYX">
+        音频文件放在存档目录的 <code class="inl" data-page-node-id="r4VB7pnJZYdMIIhHofsw1D">res/media/</code> 下，用文件名直接播放（流式 SourceDataLine，mp3 已内置解码）。
       </p>
 
-      <table class="api-table">
-        <thead><tr><th style="width:46%">方法</th><th>说明</th></tr></thead>
-        <tbody>
-          <tr><td><code>void playAudio(String filename, float volume)</code></td><td>播放 <code>res/media/</code> 下的音频。<strong>调一次播一次</strong>，次数完全由你的代码决定。音量 <code>&gt;1</code> 视为百分比（100=满音量），否则按 0.0–1.0。</td></tr>
-          <tr><td><code>void stopAudio()</code></td><td>停止该方块正在播放的<strong>所有</strong>自定义音频。</td></tr>
-          <tr><td><code>void stopAudio(String filename)</code></td><td>停止指定文件名的音频。</td></tr>
+      <table class="api-table" data-page-node-id="DFAdo2MFik0P5c6fktStda">
+        <thead data-page-node-id="MQNWH44S74uPG3mpC06ewb"><tr data-page-node-id="u4CvWWPisrpJiQt95PJcUQ"><th style="width:46%" data-page-node-id="0oIPQbqcqjVGeh2diSorY7">方法</th><th data-page-node-id="D4X6yhRgc5mNSm4uGSjFqn">说明</th></tr></thead>
+        <tbody data-page-node-id="5RpsiYYpyapBfN3VzpXPnV">
+          <tr data-page-node-id="02oZjcD4JFU2jGEHb3QeU9"><td data-page-node-id="eIQ4ran779CUAPbD6CahvU"><code data-page-node-id="XM1vNJZxK03B1aiGJwmG26">void playAudio(String filename, float volume)</code></td><td data-page-node-id="eeyrqyMQBpegzNPhRu0Cov">播放 <code data-page-node-id="EQfi28Mb2Y8Ei0Q72QxDSE">res/media/</code> 下的音频。<strong data-page-node-id="qRcf9UggEgEPzUNPCD9ofO">调一次播一次</strong>，次数完全由你的代码决定。音量 <code data-page-node-id="uW4QAZYFBcLmZAQqqrIfCC">&gt;1</code> 视为百分比（100=满音量），否则按 0.0–1.0。</td></tr>
+          <tr data-page-node-id="g4u9LR0kD8NAJgHGjHBpjP"><td data-page-node-id="oLGg4GJ3S5gMFgVzFN8euw"><code data-page-node-id="UvprZs3psw9iutwDkMmnHH">void stopAudio()</code></td><td data-page-node-id="VodhRpiQwE4FsUw3FOYhVF">停止该方块正在播放的<strong data-page-node-id="HkMA1FM0mW379JtKtDVHNZ">所有</strong>自定义音频。</td></tr>
+          <tr data-page-node-id="5uVuRFtiGW0LlJrhvNvPHu"><td data-page-node-id="9FiRZ7xfrmCZiPsCysgDqv"><code data-page-node-id="ec57RMveqCXivYdqBQE0DF">void stopAudio(String filename)</code></td><td data-page-node-id="8TuxzuSxHN8E6EWDISZAkS">停止指定文件名的音频。</td></tr>
         </tbody>
       </table>
 
-      <pre class="code"><code>ctx.<span class="f">playAudio</span>(<span class="s">"ding.mp3"</span>, <span class="s">80</span>);   <span class="c">// 80% 音量</span>
-<span class="c">// ...</span>
-ctx.<span class="f">stopAudio</span>(<span class="s">"ding.mp3"</span>);        <span class="c">// 只停这一首</span></code></pre>
+      <pre class="code" data-page-node-id="AofAPtk9ZSoIMT03TNa69X"><code data-page-node-id="QYR3dl5Ejwobh0kuLXpLto">ctx.<span class="f" data-page-node-id="GnfBQEUr4dvvAu1JXpdRSp">playAudio</span>(<span class="s" data-page-node-id="dlaXnjmwui3DsRCBnJwpJV">"ding.mp3"</span>, <span class="s" data-page-node-id="IBa06cqhzOxAGCb11kM0DB">80</span>);   <span class="c" data-page-node-id="Kndl6wJWI63eQI4lDuynJ4">// 80% 音量</span>
+<span class="c" data-page-node-id="ffioUdF6AMD3KkAGNnSAco">// ...</span>
+ctx.<span class="f" data-page-node-id="DAUoz4OfWZnTLzykEeflS0">stopAudio</span>(<span class="s" data-page-node-id="ZzEDnbgPPoJ3FIWUj9AcOk">"ding.mp3"</span>);        <span class="c" data-page-node-id="vmW38LGNpJdYAJAQ99AH9i">// 只停这一首</span></code></pre>
 
-      <div class="note">
-        并发上限为每方块 <strong>8</strong> 条音频线路（防止资源耗尽），超出的播放请求会被丢弃。文件不存在时会回退一声竖琴提示音。
+      <div class="note" data-page-node-id="Ri8AFiBzCMCFXeEnMIDAhW">
+        并发上限为每方块 <strong data-page-node-id="P3DfqSEiC637d8Isy0DbOt">8</strong> 条音频线路（防止资源耗尽），超出的播放请求会被丢弃。文件不存在时会回退一声竖琴提示音。
       </div>
     </div>
   </article>
 
   <!-- ============ 文件与命名 ============ -->
-  <article id="sec-files" class="content menu-top">
-    <div class="doc-wrap">
-      <header class="title one">文件、目录与命名</header>
-      <div class="spacer"></div>
-      <div class="title two">程序存在哪、叫什么、怎么改名</div>
+  <article id="sec-files" class="content menu-top" data-page-node-id="uG0upsnCC8iBOzj5HiOfmj">
+    <div class="doc-wrap" data-page-node-id="U6jqdXWOFLxgS9PisI7ZWN">
+      <header class="title one" data-page-node-id="ro775PoLdFByt37MWkxlDS">文件、目录与命名</header>
+      <div class="spacer" data-page-node-id="DkCnCT9uFJyOhhRlB974AD"></div>
+      <div class="title two" data-page-node-id="XUshBoWhZHLC9MNR3qXABD">程序存在哪、叫什么、怎么改名</div>
 
-      <table class="api-table">
-        <thead><tr><th style="width:34%">路径 / 文件</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td><code>&lt;存档&gt;/res/program/</code></td><td>程序目录（随存档走）</td></tr>
-          <tr><td><code>CB_&lt;名字&gt;.java</code></td><td>Java 源码（游戏内 javac 实时编译；JRE 用户需装 ECJ 附加模组）</td></tr>
-          <tr><td><code>CB_&lt;名字&gt;.class</code></td><td>编译产物。存在且不旧于源码时<strong>直接加载、跳过编译</strong>（编译缓存）</td></tr>
-          <tr><td><code>CB_&lt;名字&gt;.codescript</code></td><td>零依赖 DSL 脚本（记事本即可写，无需编译器）</td></tr>
-          <tr><td><code>CB_&lt;名字&gt;.blocks</code></td><td>Blockly 图形积木 XML，供图形编辑器还原</td></tr>
-          <tr><td><code>&lt;存档&gt;/res/media/</code></td><td>音频文件（<code>playAudio</code> 从这里取）</td></tr>
+      <table class="api-table" data-page-node-id="2KYOxFKhpDYwpTZWST6P7H">
+        <thead data-page-node-id="1XqdpEaw1NPus3QMIAqRdt"><tr data-page-node-id="Tp4V3ORZJHxc4Sc7IQauGd"><th style="width:34%" data-page-node-id="xMFEq5u3L9kgLHeZOd5X9T">路径 / 文件</th><th data-page-node-id="NycA34cShHZJyabaTZCfuf">用途</th></tr></thead>
+        <tbody data-page-node-id="zIVYRMultxzwcbUqUINRd6">
+          <tr data-page-node-id="VVPuRHKyUoK1tnrT3edkQU"><td data-page-node-id="EUvce74pb0dSRcd09ny4F3"><code data-page-node-id="JFwgyG4YeXB7O6nvJdX1AC">&lt;存档&gt;/res/program/</code></td><td data-page-node-id="3SAV8qrVkcWZZEGGfUeo5o">程序目录（随存档走）</td></tr>
+          <tr data-page-node-id="gaOntyES6ATMLju9ywqBzT"><td data-page-node-id="waD2z3fYgXgETPDI0JgGLL"><code data-page-node-id="ZTjlKf6XLfrYajVY0QbLQ1">CB_&lt;名字&gt;.java</code></td><td data-page-node-id="8OdAeK6VbNo94Ye0zqqA8g">Java 源码（游戏内 javac 实时编译；JRE 用户需装 ECJ 附加模组）</td></tr>
+          <tr data-page-node-id="xopnablojxiZVaNSgiyuYp"><td data-page-node-id="U2L4QNgz3HWtjGi8AeqyYS"><code data-page-node-id="gqT5D4P7EIRIBh6iCYGt0a">CB_&lt;名字&gt;.class</code></td><td data-page-node-id="wQxCzSkps8M1npN8zEs2ih">编译产物。存在且不旧于源码时<strong data-page-node-id="truiP8HXgF8wjykkmhYomB">直接加载、跳过编译</strong>（编译缓存）</td></tr>
+          <tr data-page-node-id="MptXmJxrVXEDV1BRQrK0T0"><td data-page-node-id="fKa0cW6zNNu6JOj9OE8MPE"><code data-page-node-id="5HgZwarluRaVppvPZkVf9T">CB_&lt;名字&gt;.codescript</code></td><td data-page-node-id="YuH1vFjzy9LpOkQ82jNdIJ">零依赖 DSL 脚本（记事本即可写，无需编译器）</td></tr>
+          <tr data-page-node-id="XfFE5tuFA1l0CQ9dSKUCYm"><td data-page-node-id="8FKy40OWoE4g3hIJN3Pbt4"><code data-page-node-id="ifeluWC5k4c4TZ4Sr9LHCO">CB_&lt;名字&gt;.blocks</code></td><td data-page-node-id="2AzQBVHUnQCelgVlo1hDKh">Blockly 图形积木 XML，供图形编辑器还原</td></tr>
+          <tr data-page-node-id="L49ZoL3sRZny8fKHvpGeOX"><td data-page-node-id="6fjb7UXoz19Qjxz1MRFlOt"><code data-page-node-id="xOdR7B1bUpieNwDVmpQydN">&lt;存档&gt;/res/media/</code></td><td data-page-node-id="RDTXSKBBsGi3Z542Dt1mv5">音频文件（<code data-page-node-id="W20vM2JZektR6IATwNmB4x">playAudio</code> 从这里取）</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">命名规则<span class="tag tag--ok">已实现</span></h3>
-      <ul class="doc-ul">
-        <li>方块名 <code class="inl">block1</code> → 代码文件固定为 <code class="inl">CB_block1.java</code>，<strong>名字与代码绑定</strong>。</li>
-        <li>名字只允许<strong>字母 / 数字 / 下划线 / 中文</strong>；禁止为空、禁止与别的方块重名。</li>
-        <li>改名会同步重命名整套 <code class="inl">CB_&lt;旧名&gt;.*</code> 文件，并自动改写 <code class="inl">.java</code> 里的类名、删除陈旧 <code class="inl">.class</code>（下次编译重建）。</li>
+      <h3 class="api-h" data-page-node-id="MmrZOA2y1Y4uP3PYLqxHaX">命名规则<span class="tag tag--ok" data-page-node-id="Nxoy1jSrqEd3RVRy9JqbkN">已实现</span></h3>
+      <ul class="doc-ul" data-page-node-id="M3QhFJNb43nsO9NWXBcwd1">
+        <li data-page-node-id="bAdTaIImLSzvt5n1iw96K2">方块名 <code class="inl" data-page-node-id="bA7oSIPBD7wcNLFs4YcEzc">block1</code> → 代码文件固定为 <code class="inl" data-page-node-id="pAsBy3RxmcOxTFpTpVR5DM">CB_block1.java</code>，<strong data-page-node-id="X0HE1PkOSFT9QzE0L7Cn9t">名字与代码绑定</strong>。</li>
+        <li data-page-node-id="HIXxmnaHdFCDf7fzjjO2rk">名字只允许<strong data-page-node-id="TMfeEJDgrXBEAmsUbf0gn0">字母 / 数字 / 下划线 / 中文</strong>；禁止为空、禁止与别的方块重名。</li>
+        <li data-page-node-id="UGq3OE1onWhV4FOgGcQ9Va">改名会同步重命名整套 <code class="inl" data-page-node-id="yVtnFJSRmPglpUCzmwuT4b">CB_&lt;旧名&gt;.*</code> 文件，并自动改写 <code class="inl" data-page-node-id="LEjhgFEHhX6sA4X7e2zDHX">.java</code> 里的类名、删除陈旧 <code class="inl" data-page-node-id="bbmjHo4gTWPHiz4qNNMQ5l">.class</code>（下次编译重建）。</li>
       </ul>
-      <div class="note note--ok">
-        <strong>改名界面已改为游戏内</strong>（右 Shift + 右键代码方块，弹出游戏内 Screen，支持中文输入法），
-        不再使用浏览器弹窗。
+      <div class="note note--ok" data-page-node-id="VE4zrS9aHOREkhrz8PJlzG" style="">
+        <strong data-page-node-id="knYO2BlWBcR8M7ccYfwYp0">改名界面已改为游戏内</strong>（右 Shift + 右键代码方块，弹出游戏内 Screen）。
       </div>
 
-      <h3 class="api-h">编辑器里的快捷操作<span class="tag tag--ok">已实现</span></h3>
-      <ul class="doc-ul">
-        <li><strong>📄 用默认应用打开 Java 代码</strong>：用系统默认程序打开当前方块的 <code class="inl">CB_&lt;名字&gt;.java</code>。</li>
-        <li><strong>📂 打开代码文件夹</strong>：在文件管理器打开 <code class="inl">res/program/</code>。</li>
+      <h3 class="api-h" data-page-node-id="ZHNq4UtkKtFgKfHFqr9683">编辑器里的快捷操作<span class="tag tag--ok" data-page-node-id="IN1sZOVWwh2AZydqgz0Qor">已实现</span></h3>
+      <ul class="doc-ul" data-page-node-id="GmRb7qJDkOpwQDGDriLI9P">
+        <li data-page-node-id="4Nyx6KF6hgwdFVG41HHr3e"><strong data-page-node-id="jRj8ddMa12xyi61ew6ijp9">📄 用默认应用打开 Java 代码</strong>：用系统默认程序打开当前方块的 <code class="inl" data-page-node-id="0YWXVg7anwXVuVq9yqTALe">CB_&lt;名字&gt;.java</code>。</li>
+        <li data-page-node-id="0DQLJgCmpper1JUqDJmrpQ"><strong data-page-node-id="Ykqv1bDBuiN2GM3DkAH1Vk">📂 打开代码文件夹</strong>：在文件管理器打开 <code class="inl" data-page-node-id="tHJ7n4L9SUhblKZpgOCjm9">res/program/</code>。</li>
       </ul>
     </div>
   </article>
 
   <!-- ============ 进阶 API ============ -->
-  <article id="sec-advanced" class="content menu-top dark">
-    <div class="doc-wrap">
-      <header class="title one">进阶 API</header>
-      <div class="spacer"></div>
-      <div class="title two">代码 API 与编辑器积木完整参考</div>
-      <p class="doc-p">本页分两部分：<strong>① 代码 API</strong>（直接写 Java 用的方法清单）、<strong>② 编辑器积木</strong>（图形化拖拽对应的积木清单）。两者一一对应。</p>
+  <article id="sec-advanced" class="content menu-top dark" data-page-node-id="jrWpcj3oTHjUF2htjuRgCM">
+    <div class="doc-wrap" data-page-node-id="1ls1XL8sFfnkAyAlqcLUGz">
+      <header class="title one" data-page-node-id="bWYn01WWyRmADkQxxAOO8x">进阶 API</header>
+      <div class="spacer" data-page-node-id="EiPMeDL5JmyEsSuszpRRYS"></div>
+      <div class="title two" data-page-node-id="uDIUsTxaDzWgnQThyu0Hnh">代码 API 与编辑器积木完整参考</div>
+      <p class="doc-p" data-page-node-id="NHu19YfYmnnRxEWayn9ZmG">本页分两部分：<strong data-page-node-id="tQFyoAldQttKsAswqN6PBA">① 代码 API</strong>（直接写 Java 用的方法清单）、<strong data-page-node-id="JS28T7iwREtoZTTF9KUGws">② 编辑器积木</strong>（图形化拖拽对应的积木清单）。两者一一对应。</p>
 
       <!-- ==================== 第一部分：代码 API ==================== -->
-      <h2 class="api-h" style="color:#4fc3f7;">一、代码 API（Java 方法）</h2>
+      <h2 class="api-h" style="color:#4fc3f7;" data-page-node-id="t22qOMIYC7wCOtYM4kWbkg">一、代码 API（Java 方法）</h2>
 
-      <h3 class="api-h">字符串数组（一维）<span class="tag tag--ok">已实现</span></h3>
-      <p class="doc-p"><strong>怎么创建名单？</strong>不用显式创建。直接用 <code class="inl">arrayAdd("名单名", "值")</code> 调用，模组发现这个"名单名"还不存在就自动建一个空数组。每个方块各自独立，跨 tick 持久化（存档退出再进还在）。key 支持中文。</p>
-      <table class="api-table">
-        <thead><tr><th style="width:46%">方法</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td><code>void arrayAdd(key, v)</code></td><td>往名单末尾加一个值，允许重复。</td></tr>
-          <tr><td><code>void arrayAddOnce(key, v)</code></td><td>只在名单里没有这个值时才加（去重），最常用于"白名单/已领奖名单"。</td></tr>
-          <tr><td><code>void arrayRemove(key, v)</code></td><td>从名单里删掉第一个匹配的值。</td></tr>
-          <tr><td><code>void arrayClear(key)</code></td><td>清空整个名单。</td></tr>
-          <tr><td><code>int arraySize(key)</code></td><td>名单里有几个元素。</td></tr>
-          <tr><td><code>String arrayGet(key, i)</code></td><td>取第 i 个元素（从 0 开始数），越界返回空字符串。</td></tr>
-          <tr><td><code>int arrayFind(key, v)</code></td><td>找这个值在第几位（0 起），找不到返回 -1。<strong>判断"在不在名单里"就用 <code>arrayFind(...) >= 0</code></strong>。</td></tr>
-          <tr><td><code>String arrayJoin(key, sep)</code></td><td>把名单所有元素用分隔符拼成一个字符串，方便 sendMessage 打印。</td></tr>
-          <tr><td><code>void setString(key, v)</code> / <code>String getString(key)</code></td><td>存/取单个字符串状态（不是数组，就是一个 key→一个字符串）。</td></tr>
+      <h3 class="api-h" data-page-node-id="JE4cfqGrmQuoCiBI5SAgUo">字符串数组（一维）<span class="tag tag--ok" data-page-node-id="rvIU1kJi3P0SPWxKQrqOv0">已实现</span></h3>
+      <p class="doc-p" data-page-node-id="LcoKhF0tHBRcgJfxHMyGUJ"><strong data-page-node-id="mT9NaBuHHfip6w5QnIyEef">怎么创建名单？</strong>不用显式创建。直接用 <code class="inl" data-page-node-id="KZ7PUnGqGRBWgFgTmZJDif">arrayAdd("名单名", "值")</code> 调用，模组发现这个"名单名"还不存在就自动建一个空数组。每个方块各自独立，跨 tick 持久化（存档退出再进还在）。key 支持中文。</p>
+      <table class="api-table" data-page-node-id="xz2tK4hLcJiEgIz7BdNDsP">
+        <thead data-page-node-id="BYzDPEpwIQ0VlEm1K7wqxt"><tr data-page-node-id="vRQD2x80xt1djOS1n8Nsya"><th style="width:46%" data-page-node-id="EP22kQiKgtux46RibiDg1M">方法</th><th data-page-node-id="KxrXDfIx5oJ0Odw89PjtR9">用途</th></tr></thead>
+        <tbody data-page-node-id="Blj7e1JhCiLGzUZqJkKbBQ">
+          <tr data-page-node-id="ZQDQhheflxvK4qP9PKCCnh"><td data-page-node-id="ch1yjqdnhzCrnnJbi5PUbe"><code data-page-node-id="CDQvwlMpBJ5ZXwal2CU0hL">void arrayAdd(key, v)</code></td><td data-page-node-id="OzUt3BRu4w3ZzLTpIlcZBw">往名单末尾加一个值，允许重复。</td></tr>
+          <tr data-page-node-id="r05SVey48BqcdhU8VA9lOA"><td data-page-node-id="kx8hIMnjC2LzmsB7O0RDp9"><code data-page-node-id="JRj35Kim22kqNU4qr2dycr">void arrayAddOnce(key, v)</code></td><td data-page-node-id="QHJHJhe8oaTDreyfPHukAv">只在名单里没有这个值时才加（去重），最常用于"白名单/已领奖名单"。</td></tr>
+          <tr data-page-node-id="Zm444tDobEHaFVNCMjLtLh"><td data-page-node-id="1t1DwsBCYgAdW5OX3q9rCQ"><code data-page-node-id="8j4aX0rMMocGYezcBG1Dxi">void arrayRemove(key, v)</code></td><td data-page-node-id="ceu5cNalCTfQ1SfdwAk3Gp">从名单里删掉第一个匹配的值。</td></tr>
+          <tr data-page-node-id="tFbCdKAImt0ferbWBY9VAo"><td data-page-node-id="9nla8htEMUmdR8nHJQgHcD"><code data-page-node-id="k2GKX2Mzj34XFzHLEK1Hc1">void arrayClear(key)</code></td><td data-page-node-id="ZPYCeaYjjmFfMug2zjZQPb">清空整个名单。</td></tr>
+          <tr data-page-node-id="5kLiGCKDmuZCMEnY5x9Hhs"><td data-page-node-id="sPlTHtNDRBXHgM1X61ZRR8"><code data-page-node-id="9bfOxO2CPwS4oWzwfySfuB">int arraySize(key)</code></td><td data-page-node-id="yraFahXuvhCqUGTduJJS25">名单里有几个元素。</td></tr>
+          <tr data-page-node-id="svSf9k2ZeRmoW3dbSUiyds"><td data-page-node-id="Ynd7uiGQfZdtEhByPXofiu"><code data-page-node-id="K4wgVFPIFc910l67fJSjZq">String arrayGet(key, i)</code></td><td data-page-node-id="mtunQqmTcEAxYCj0ATQbaA">取第 i 个元素（从 0 开始数），越界返回空字符串。</td></tr>
+          <tr data-page-node-id="vyCfiAd3LWAJgULcNASdky"><td data-page-node-id="v0RPpO4nlgpVo8nBq8ndlO"><code data-page-node-id="cfFI5q7ypcl0mTclgfxchy">int arrayFind(key, v)</code></td><td data-page-node-id="GyIVTaNwt8uCDWEVwI2Xws">找这个值在第几位（0 起），找不到返回 -1。<strong data-page-node-id="1GGA4cYj4UtihlH2CXSGwj">判断"在不在名单里"就用 <code data-page-node-id="9DnSoUzGZ89HE2JHYZXEwu">arrayFind(...) &gt;= 0</code></strong>。</td></tr>
+          <tr data-page-node-id="lCo4kJq9EbVksC6Eb8kb4R"><td data-page-node-id="DWcI5uAKxYjkHLEJHQF8sO"><code data-page-node-id="xGS3kPeKFUA1KvpI1nGDHw">String arrayJoin(key, sep)</code></td><td data-page-node-id="wQKswEFAudBn2MBoCirxhG">把名单所有元素用分隔符拼成一个字符串，方便 sendMessage 打印。</td></tr>
+          <tr data-page-node-id="2SLhElD1wTETxAI1JAmIsQ"><td data-page-node-id="m22E86mqgr8uHDiLiVb2Gi"><code data-page-node-id="Qu4ZFWcWFhtSu0LYBao1La">void setString(key, v)</code> / <code data-page-node-id="iM4WK51B72llSDxVTcW1ZK">String getString(key)</code></td><td data-page-node-id="SywEy2Fc3yYGuw7JACMUqP">存/取单个字符串状态（不是数组，就是一个 key→一个字符串）。</td></tr>
         </tbody>
       </table>
-      <div class="note">
-        <strong>替代记分板：</strong>判断"某玩家是否属于某组"（白名单/黑名单/已领奖），不要用记分板，直接 <code class="inl">arrayFind("vip", playerName) >= 0</code> 一行搞定，无需建 objective。
+      <div class="note" data-page-node-id="LVw14Ik7Nb0HgXT7xQ7FyA">
+        <strong data-page-node-id="8s2n88DHsutvTiWwDGBRSQ">替代记分板：</strong>判断"某玩家是否属于某组"（白名单/黑名单/已领奖），不要用记分板，直接 <code class="inl" data-page-node-id="4KGPBdnyPQCI9wXmUH8wRh">arrayFind("vip", playerName) &gt;= 0</code> 一行搞定，无需建 objective。
       </div>
 
-      <h3 class="api-h">二维字符串数组（表格）<span class="tag tag--ok">已实现</span></h3>
-      <p class="doc-p">行 × 列的表格，存成绩表 / 配置矩阵。同样用 key 自动创建。编辑器里「创建二维数组」积木直接填行数和列数，下面自动长方格。</p>
-      <table class="api-table">
-        <thead><tr><th style="width:46%">方法</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td><code>void array2DSet(key, r, c, v)</code></td><td>写第 r 行第 c 列（都从 0 起），行/列不够自动补空行。</td></tr>
-          <tr><td><code>String array2DGet(key, r, c)</code></td><td>读第 r 行第 c 列，越界返回空字符串。</td></tr>
-          <tr><td><code>int array2DRows(key)</code> / <code>int array2DCols(key)</code></td><td>表格有几行 / 几列。</td></tr>
-          <tr><td><code>int array2DFind(key, v)</code></td><td>全表找这个值在第几行，找不到 -1。</td></tr>
-          <tr><td><code>String array2DRowJoin(key, r, sep)</code></td><td>把某一行用分隔符拼成字符串。</td></tr>
-          <tr><td><code>void array2DClear(key)</code></td><td>清空整张表。</td></tr>
+      <h3 class="api-h" data-page-node-id="osG9U72WVi2UMGasp2i4Mk">二维字符串数组（表格）<span class="tag tag--ok" data-page-node-id="oivo79HHD2quWDO0jZBJWD">已实现</span></h3>
+      <p class="doc-p" data-page-node-id="fAWxwxYWlfTErwDS46W8jD">行 × 列的表格，存成绩表 / 配置矩阵。同样用 key 自动创建。编辑器里「创建二维数组」积木直接填行数和列数，下面自动长方格。</p>
+      <table class="api-table" data-page-node-id="ziNGHkIdAyaTlbHm76ExHV">
+        <thead data-page-node-id="acMrggAxqfmxQTAkVEmoby"><tr data-page-node-id="ozQVtDXUkpuHXLRNZaxbAx"><th style="width:46%" data-page-node-id="6xwlANOMn3JlK5dXYkN0cQ">方法</th><th data-page-node-id="7To1psbwmKcSaRXaL6iXNu">用途</th></tr></thead>
+        <tbody data-page-node-id="yVHcwzACY5Z7HLAWvrwiV1">
+          <tr data-page-node-id="dnPzlyuD4kwbY1UrBQd5kE"><td data-page-node-id="3lMe8qesh1ky46GAGcc5hc"><code data-page-node-id="jIT7TWCzx8iAbZdV8gmreG">void array2DSet(key, r, c, v)</code></td><td data-page-node-id="5UX6QgU39XyKcsWOG1de0L">写第 r 行第 c 列（都从 0 起），行/列不够自动补空行。</td></tr>
+          <tr data-page-node-id="TpGKeHxAkmUhYZXTgeTncl"><td data-page-node-id="ZHNf5JNE6tlk31AKvxIyMs"><code data-page-node-id="5HztUS4E458J7DUEWSGUn5">String array2DGet(key, r, c)</code></td><td data-page-node-id="vvRgkXfh7e9U5KIXdQjQSQ">读第 r 行第 c 列，越界返回空字符串。</td></tr>
+          <tr data-page-node-id="6L5nNDA6EJ41qz1VaXzJIi"><td data-page-node-id="9h0tCNdEogyHjV0YrMNkR7"><code data-page-node-id="LpJUM0iwcMojFhmsYRE2AU">int array2DRows(key)</code> / <code data-page-node-id="iUkdhpTSe7CgHbARNxHI8M">int array2DCols(key)</code></td><td data-page-node-id="SdKhHvHxyKj08kXESEXmZy">表格有几行 / 几列。</td></tr>
+          <tr data-page-node-id="JCumkxVz70ALCI4t1MaVZf"><td data-page-node-id="hRT5sdmvGkJ8hmjH3VhaRL"><code data-page-node-id="gGQWoZi428liUqXTir3uCi">int array2DFind(key, v)</code></td><td data-page-node-id="CtBGMOm14KHDBZ7GNSto0Z">全表找这个值在第几行，找不到 -1。</td></tr>
+          <tr data-page-node-id="PprYzDtDZmBTJFhZGSLtdR"><td data-page-node-id="50Sa7OQwZrLtOekkiHebIf"><code data-page-node-id="fJNfFdWGSB5MIutX97APEe">String array2DRowJoin(key, r, sep)</code></td><td data-page-node-id="AYFAu2orSIAULhdcLBWnbF">把某一行用分隔符拼成字符串。</td></tr>
+          <tr data-page-node-id="4bOoaWWBEhgiwGeeGRxggl"><td data-page-node-id="HEz479AIItzQP0EFHvZm8K"><code data-page-node-id="zjCrlC08FnrbHx32oatMIZ">void array2DClear(key)</code></td><td data-page-node-id="slZQzD2dP6W1QhZKtIfnlM">清空整张表。</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">红石输入/输出<span class="tag tag--ok">已实现</span></h3>
-      <table class="api-table">
-        <thead><tr><th style="width:46%">方法</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td><code>int readInput(channel)</code></td><td>读某一面接收到的红石强度（0-15）。channel：0=下 1=上 2=北 3=南 4=西 5=东。</td></tr>
-          <tr><td><code>int readInputMax()</code></td><td>6 个面里最大的红石强度。</td></tr>
-          <tr><td><code>void writeOutput(channel, v)</code></td><td>往某一面输出红石强度（自动 clamp 0-15）。</td></tr>
-          <tr><td><code>void writeOutputAll(v)</code></td><td>6 个面同时输出相同强度。</td></tr>
-          <tr><td><code>boolean inputChanged(channel)</code></td><td>某一面的红石值跟上一次比有没有变。<strong>按钮去抖用这个</strong>——按下瞬间变一次返回 true，按住不放持续返回 false。</td></tr>
-          <tr><td><code>boolean valueChanged(key, value)</code></td><td>通用边沿检测：跟上次同 key 记录的值比，变了返回 true。不限红石，任意整数都行（比如变量、计算结果）。</td></tr>
+      <h3 class="api-h" data-page-node-id="VAV6ZLLvPDQe93gBFsMtSy">红石输入/输出<span class="tag tag--ok" data-page-node-id="x5CZVvrASDxbMJFTwKLDze">已实现</span></h3>
+      <table class="api-table" data-page-node-id="sP9dNsBSz8K7AKUbn5XSX6">
+        <thead data-page-node-id="akXeY5bEmOINNcxvXZqViB"><tr data-page-node-id="N7qHHKFXrfYGXuADXr7czG"><th style="width:46%" data-page-node-id="ZEbOEEFLUp04PHULZm7L2m">方法</th><th data-page-node-id="5uCNqXpyi0EZ6AJemcqW4P">用途</th></tr></thead>
+        <tbody data-page-node-id="Iewcf3XXeFCcg4ivYiCfVO">
+          <tr data-page-node-id="vehfd2CaVlCaUCccg16Gyn"><td data-page-node-id="LqccCCJiXWydqtyBV2kBdt"><code data-page-node-id="oC5JsfeyyuAU5Er8e905xG">int readInput(channel)</code></td><td data-page-node-id="FjLnDcaA5A3IkcVhD0pwlO">读某一面接收到的红石强度（0-15）。channel：0=下 1=上 2=北 3=南 4=西 5=东。</td></tr>
+          <tr data-page-node-id="udMJioMaKc8bNa7ctJeQPu"><td data-page-node-id="PWvdCWgPWsilSXuY7m0l7d"><code data-page-node-id="rtb6GRzL5r3xOXEYjZpIC2">int readInputMax()</code></td><td data-page-node-id="ldurAVBqy9QFI9mXCeerjc">6 个面里最大的红石强度。</td></tr>
+          <tr data-page-node-id="9yHgaovV1e8NOLAzrFjeL6"><td data-page-node-id="eGIiAibDiBu7fAh7lPjH6d"><code data-page-node-id="dFi2lerXjBKtn2csCra4Gc">void writeOutput(channel, v)</code></td><td data-page-node-id="HE9bPOo32leIvtEC9A2wyT">往某一面输出红石强度（自动 clamp 0-15）。</td></tr>
+          <tr data-page-node-id="VrzehC4d6TpDYa5tHyXKzf"><td data-page-node-id="xaYG2HfitnF00jgnHlWF7p"><code data-page-node-id="0Zwpc3zVnEqjc40HHS03HC">void writeOutputAll(v)</code></td><td data-page-node-id="ADqaVKgvlrOzyMBGo3yqpT">6 个面同时输出相同强度。</td></tr>
+          <tr data-page-node-id="AIQ9P2nh9sDiPylEhF8ykz"><td data-page-node-id="QLVYY7FGLAau9nN9AtgL2z"><code data-page-node-id="K4S7UGxewZ5EU1FQqw9Pkq">boolean inputChanged(channel)</code></td><td data-page-node-id="9QSc9BGRKNkJije4ANqRBZ">某一面的红石值跟上一次比有没有变。<strong data-page-node-id="YvATeAeAntCgfgnve1lFvB">按钮去抖用这个</strong>——按下瞬间变一次返回 true，按住不放持续返回 false。</td></tr>
+          <tr data-page-node-id="R0GAPi5BVaXvOJipBHWaIi"><td data-page-node-id="1FzvGf3RsdahTL4jz7gXhf"><code data-page-node-id="ohSW3PtaoIwYcG4b8u6CyS">boolean valueChanged(key, value)</code></td><td data-page-node-id="BCJI6cHMcbqAvYemDY4NvE">通用边沿检测：跟上次同 key 记录的值比，变了返回 true。不限红石，任意整数都行（比如变量、计算结果）。</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">状态 / 计时<span class="tag tag--ok">已实现</span></h3>
-      <table class="api-table">
-        <thead><tr><th style="width:46%">方法</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td><code>int getStateInt(key)</code></td><td>读一个跨 tick 持久化的整数（计数器/标志位），不存在返回 0。</td></tr>
-          <tr><td><code>void setState(key, v)</code></td><td>存一个跨 tick 持久化的整数。</td></tr>
-          <tr><td><code>void sleepTicks(n)</code></td><td>等 n 个游戏刻（1 刻=50ms）。<strong>while 循环里必须加这个，否则卡死游戏</strong>。</td></tr>
-          <tr><td><code>void sleep(ms)</code></td><td>等指定毫秒数（真阻塞）。</td></tr>
+      <h3 class="api-h" data-page-node-id="FAHPHG1PBY0nG7Ev4iqjgi">状态 / 计时<span class="tag tag--ok" data-page-node-id="5Wu3x8UJ7YK57yaluOF5F6">已实现</span></h3>
+      <table class="api-table" data-page-node-id="kzUpyRzxvlLVNjb4sAXfFJ">
+        <thead data-page-node-id="keqobWQoZmu389LefAsrsF"><tr data-page-node-id="LhBpGxohpNU3HLrUXhHHUp"><th style="width:46%" data-page-node-id="dvEvhhMhzTWF95EYTOT5Bj">方法</th><th data-page-node-id="Rq8g4DD61TsZFxsc8cSedg">用途</th></tr></thead>
+        <tbody data-page-node-id="5TrtFLCzS0gneHVYisCj3u">
+          <tr data-page-node-id="xGyi5M15Juh7ySvGzPtixW"><td data-page-node-id="d601RLZGzczMfZu4s3GAhH"><code data-page-node-id="SOAJ4bMAvQlEDIsH9g7zTM">int getStateInt(key)</code></td><td data-page-node-id="1MFTcUOai3OcFL1aGKOS7f">读一个跨 tick 持久化的整数（计数器/标志位），不存在返回 0。</td></tr>
+          <tr data-page-node-id="j0L2MAsXmNjBxfRRY39oOo"><td data-page-node-id="zLevwC8L3AQrtOBF6l3sTR"><code data-page-node-id="q7Yd7punrHRITavbYhXErK">void setState(key, v)</code></td><td data-page-node-id="vLDXbhTc3FqpBDdKSzrZGn">存一个跨 tick 持久化的整数。</td></tr>
+          <tr data-page-node-id="FjuximeohI9iDjPe0CHHQy"><td data-page-node-id="SLzgeMZ0YwwLoGAFAcAPat"><code data-page-node-id="SEZnoXqUsmkPQXoiwSaHdW">void sleepTicks(n)</code></td><td data-page-node-id="h3GuOylG5FulfGUUGEsWDH">等 n 个游戏刻（1 刻=50ms）。<strong data-page-node-id="kV3MCBgI6qpOXLWaVopmJn">while 循环里必须加这个，否则卡死游戏</strong>。</td></tr>
+          <tr data-page-node-id="Xem8yohOqnGIPqDRrs9fbv"><td data-page-node-id="VWIhCNRYOHPZ9F3IG3Qhru"><code data-page-node-id="RQAYIePU3I8CFCpXM7bF1U">void sleep(ms)</code></td><td data-page-node-id="EapC2heQQcuU3nCO54EDrJ">等指定毫秒数（真阻塞）。</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">精确识别"是谁按的按钮"<span class="tag tag--ok">已实现</span></h3>
-      <p class="doc-p">监听玩家右键交互，不靠"谁离得近"猜——多人围在一起时，只有真正按下去的人会被记到。</p>
-      <table class="api-table">
-        <thead><tr><th style="width:46%">方法</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td><code>String whoUsed(dx, dy, dz)</code></td><td>谁最后按过相对本方块 (dx,dy,dz) 处的方块。按钮在西面一格 → <code>whoUsed(-1,0,0)</code>。默认只认 1 秒内的操作。</td></tr>
-          <tr><td><code>String whoUsed(dx, dy, dz, withinTicks)</code></td><td>同上，自定义时间窗（tick 数）；0 或负数=不限时间。</td></tr>
-          <tr><td><code>String whoUsedNearby(radius)</code></td><td>不想算坐标时用：半径内最近交互过的人。</td></tr>
-          <tr><td><code>String nearestPlayer()</code> / <code>nearestPlayer(r)</code></td><td>兜底：最近的玩家名。</td></tr>
-          <tr><td><code>int playerCount()</code></td><td>当前在线玩家数。</td></tr>
+      <h3 class="api-h" data-page-node-id="dsCAi8i64FiWJNXq9OXKGi">精确识别"是谁按的按钮"<span class="tag tag--ok" data-page-node-id="fbOMGxg6kEHguaq6f3hPwX">已实现</span></h3>
+      
+      <table class="api-table" data-page-node-id="gpRok02JeAriNgGR6DXZin">
+        <thead data-page-node-id="pXbtvf0iJBiYbPpfiIvBfy"><tr data-page-node-id="Aru82JyypJxUzVY38UwJ6n"><th style="width:46%" data-page-node-id="jfmFt0n3zOYt8UsXbyqAoG">方法</th><th data-page-node-id="dMMr15mqleTA8GsTC7kchf">用途</th></tr></thead>
+        <tbody data-page-node-id="uaKYzsbDXoz0vBF7cIQjer">
+          <tr data-page-node-id="L7wSrrTyZ8JEOL6dVihZlI"><td data-page-node-id="SxeT8QV4T5aleMiMtF3PXz"><code data-page-node-id="X7wGMMxTyMosmIoVBYtRJ6">String whoUsed(dx, dy, dz)</code></td><td data-page-node-id="aX03HmeWcEo2YStjnZzXEF">谁最后按过相对本方块 (dx,dy,dz) 处的方块。按钮在西面一格 → <code data-page-node-id="5yEQS56QprrtIaWYDDduRc">whoUsed(-1,0,0)</code>。默认只认 1 秒内的操作。</td></tr>
+          <tr data-page-node-id="ZscPoEQeFGYd1dJrq64Hj3"><td data-page-node-id="e1ZrHtwkHnVdlEY5mboNEa"><code data-page-node-id="5GOA9R9kMKBIpXlruDSTz5">String whoUsed(dx, dy, dz, withinTicks)</code></td><td data-page-node-id="hBbpZwwR2tIlKvSmQ43nj3">同上，自定义时间窗（tick 数）；0 或负数=不限时间。</td></tr>
+          <tr data-page-node-id="Q2vQJ4CJEWHv4oinTXGnBA"><td data-page-node-id="N29PXiBhgQFODgJ33XkBsA"><code data-page-node-id="AwN08iADspWMTKJygunbVa">String whoUsedNearby(radius)</code></td><td data-page-node-id="4FW3eygzLCfJhTDMckDuiI">不想算坐标时用：半径内最近交互过的人。</td></tr>
+          <tr data-page-node-id="dcj36fQMcDKzxCzSaEgaZh"><td data-page-node-id="pDYfWixitTCJj1EzeG118b"><code data-page-node-id="O0lbE22YMjCewfgX73wDIL">String nearestPlayer()</code> / <code data-page-node-id="XCDDPsvSL2BKN5c36c3Ft2">nearestPlayer(r)</code></td><td data-page-node-id="WuSwS2hXx89IlKxz92oAfF">兜底：最近的玩家名。</td></tr>
+          <tr data-page-node-id="6YuE15UaPzso5nisBFTYhf"><td data-page-node-id="M5k2bFCQwyLIGeYm6xDxaR"><code data-page-node-id="9M6g0bHl065bAAlvcfr9NB">int playerCount()</code></td><td data-page-node-id="JDgtPYLFIGb0nTRKejgF2D">当前在线玩家数。</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">命令执行（最高权限）<span class="tag tag--ok">已实现</span></h3>
-      <p class="doc-p">所有命令都在<strong>最高权限</strong>下跑——服务器关了命令、玩家不是 OP 也能执行。位置默认在方块中心。</p>
-      <table class="api-table">
-        <thead><tr><th style="width:46%">方法</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td><code>void executeCommand(cmd)</code></td><td>执行一条命令。<code>/execute</code> 的各种子命令（if/as/at/store 等）直接写在 cmd 字符串里即可，无需专门 API。</td></tr>
-          <tr><td><code>void executeCommandAs(player, cmd)</code></td><td>以指定玩家身份执行，命令里的 <code>@s</code> 指向他，仍最高权限。</td></tr>
-          <tr><td><code>int executeCommandResult(cmd)</code></td><td>执行并拿到返回值：0=失败/条件不成立，1=成功，其他=命令本身的返回值（如 <code>/list</code> 人数、<code>data get</code> 取到的数）。</td></tr>
-          <tr><td><code>boolean executeCommandTest(cmd)</code></td><td>等价于 <code>executeCommandResult(cmd) > 0</code>，专门给 <code>/execute if</code> 条件判断用，放进 if 更顺手。</td></tr>
-          <tr><td><code>int executeCommandResultAs(player, cmd)</code></td><td>以玩家身份执行并取返回值。</td></tr>
+      <h3 class="api-h" data-page-node-id="WpKpM0I2NVVHLUTEuANzmH">命令执行（最高权限）<span class="tag tag--ok" data-page-node-id="XnsQODCXOmtq0fF9kN20J9">已实现</span></h3>
+      <p class="doc-p" data-page-node-id="vSQhYbzEcHqwm8HEwLGGAl">所有命令都在<strong data-page-node-id="os8LRoF7DDvHWfA3xiGAJg">最高权限</strong>下跑——服务器关了命令、玩家不是 OP 也能执行。位置默认在方块中心。</p>
+      <table class="api-table" data-page-node-id="xZk7BYVhML1zhcS2CBOTz5">
+        <thead data-page-node-id="OwiGuHzwpCoiHQzoI4UIpO"><tr data-page-node-id="CxbzgaiE1guR1G6DBJC6lr"><th style="width:46%" data-page-node-id="h972TdqGd46TE3GaoZHMUu">方法</th><th data-page-node-id="kOFoRQvVFfGPZeEmCaCvM5">用途</th></tr></thead>
+        <tbody data-page-node-id="GCOELF0Dd48AYIvmqCuhSO">
+          <tr data-page-node-id="1bS9t5Rzht3fZSpLat1B1d"><td data-page-node-id="Mz59EwT1Pmh1NL3IzrihAA"><code data-page-node-id="o7WqecABtDA5ScHo0BGHH7">void executeCommand(cmd)</code></td><td data-page-node-id="d8jPBdHjYBb0Qpo8YDfQ92">执行一条命令。<code data-page-node-id="nXUFSaLRloTiB7G97eYfRZ">/execute</code> 的各种子命令（if/as/at/store 等）直接写在 cmd 字符串里即可，无需专门 API。</td></tr>
+          <tr data-page-node-id="AdTwZmccgpME4uqBKdcjXm"><td data-page-node-id="zQ5842x5CyalsU0LPHumYJ"><code data-page-node-id="kOcslxK3ggsCqXnGRT61T2">void executeCommandAs(player, cmd)</code></td><td data-page-node-id="dwzKoOXs9isRyLmGukcL8v">以指定玩家身份执行，命令里的 <code data-page-node-id="GS9lGn1477kBGFHOJVsvLf">@s</code> 指向他，仍最高权限。</td></tr>
+          <tr data-page-node-id="7wx1QTBizXDkxXyGsIRdBK"><td data-page-node-id="RiR34wxgZbrrLveJdEul7w"><code data-page-node-id="oKFqxCvxGB2v0YRlJeSXLE">int executeCommandResult(cmd)</code></td><td data-page-node-id="Sf28zfM8At5cOXLR2d6zSx">执行并拿到返回值：0=失败/条件不成立，1=成功，其他=命令本身的返回值（如 <code data-page-node-id="HnsTowMnaNz2Pqx1dxOUZh">/list</code> 人数、<code data-page-node-id="RS0i8n29Y3MLrNlh0MZMFx">data get</code> 取到的数）。</td></tr>
+          <tr data-page-node-id="JxCAR6AolVOjuC48MLdelI"><td data-page-node-id="KhMhWnJ0HiYLvrEW3CWHjU"><code data-page-node-id="EZOoglniEuaiZYYlQoEVjZ">boolean executeCommandTest(cmd)</code></td><td data-page-node-id="v7Nf2O6KAJINM78DMCGc1b">等价于 <code data-page-node-id="pIFOEBBCGenRw5OE76JCWy">executeCommandResult(cmd) &gt; 0</code>，专门给 <code data-page-node-id="qPg11JBrlASOZ4MKCCQBbC">/execute if</code> 条件判断用，放进 if 更顺手。</td></tr>
+          <tr data-page-node-id="NVDo18lE924SFhmjPstAIf"><td data-page-node-id="XUZMo4LZ11UMVySlqcqHB1"><code data-page-node-id="VLxDqmEagBB8ksC7cy2NYE">int executeCommandResultAs(player, cmd)</code></td><td data-page-node-id="PHxLCj8Bf6RBdVfvAGELPq">以玩家身份执行并取返回值。</td></tr>
         </tbody>
       </table>
-      <div class="note note--warn">
-        <strong>/execute if 不成立 ≠ 返回 0。</strong>MC 底层条件不成立会抛异常，模组已统一捕获并归一为 0，你直接判断返回值就行，不用 try-catch。
-      </div>
+      
 
-      <h3 class="api-h">记分板读写<span class="tag tag--ok">已实现</span></h3>
-      <p class="doc-p">需要存数值（如金币数、击杀数）时用。目标不存在时自动创建 dummy 目标，开箱即用。<strong>纯判断"在不在组里"用字符串数组更简单，不必用记分板。</strong></p>
-      <table class="api-table">
-        <thead><tr><th style="width:46%">方法</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td><code>int getScore(objective, player)</code></td><td>读某玩家在某记分板目标上的分数，查不到返回 0。</td></tr>
-          <tr><td><code>void setScore(objective, player, v)</code></td><td>直接设分数。</td></tr>
-          <tr><td><code>void addScore(objective, player, delta)</code></td><td>加/减分数（负数即减）。</td></tr>
+      <h3 class="api-h" data-page-node-id="Tr4AGTcB6DDvLengEfWpAm">记分板读写<span class="tag tag--ok" data-page-node-id="JDvzMcKHiqo2ztP7LxSByw">已实现</span></h3>
+      <p class="doc-p" data-page-node-id="xWUd0qyQIKwKcMM0rGZELg">需要存数值（如金币数、击杀数）时用。目标不存在时自动创建 dummy 目标，开箱即用。<strong data-page-node-id="CURRrfnrFk0UaywFA33E1E">纯判断"在不在组里"用字符串数组更简单，不必用记分板。</strong></p>
+      <table class="api-table" data-page-node-id="DNA4aZIMmT5EITb10Rokm1">
+        <thead data-page-node-id="3670gARL9Dg5lVUjdBR1l8"><tr data-page-node-id="iXWkTl2tTvn0CHXbrtZDOD"><th style="width:46%" data-page-node-id="EXGI14GkHMjRYMBsjHsiwd">方法</th><th data-page-node-id="Els7X7OGa3BkqYYIiPuF10">用途</th></tr></thead>
+        <tbody data-page-node-id="yGqkDECiMXbikfDzuev7nL">
+          <tr data-page-node-id="v29rnZ3QiCWQd8reoQtcJU"><td data-page-node-id="Ce29QOEKYM6lj3KNDmcIFp"><code data-page-node-id="lQo9Rje1w2guhIkxjeVglB">int getScore(objective, player)</code></td><td data-page-node-id="rC3nsgkIHXQEEKWY3ZLGXu">读某玩家在某记分板目标上的分数，查不到返回 0。</td></tr>
+          <tr data-page-node-id="KMx2ArbQ42myrVqe6tmYQm"><td data-page-node-id="DyfTNjvqeBEASog5FASFxI"><code data-page-node-id="kWMJthaR1x40BeK2AoBXHb">void setScore(objective, player, v)</code></td><td data-page-node-id="QT9FZp5B0T9kC87vuevsDL">直接设分数。</td></tr>
+          <tr data-page-node-id="UFPCfWc9hyBg0D75GQccFG"><td data-page-node-id="lfbKL4WGyelnpadUaiSzwU"><code data-page-node-id="kzOnDnbpLLLVH1NrN2RQpJ">void addScore(objective, player, delta)</code></td><td data-page-node-id="KV6cOaBGaVvOQroHiGx1RS">加/减分数（负数即减）。</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">聊天 / 音效 / 音频<span class="tag tag--ok">已实现</span></h3>
-      <table class="api-table">
-        <thead><tr><th style="width:46%">方法</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td><code>void sendMessage(text)</code></td><td>聊天框发文字（方圆 64 格可见），支持 § 颜色代码。</td></tr>
-          <tr><td><code>void sendActionBar(text)</code></td><td>物品栏上方显示短文字（约 3 秒消失）。</td></tr>
-          <tr><td><code>void sendTitle(text)</code></td><td>屏幕中央大标题。</td></tr>
-          <tr><td><code>void sendClickable(text, url)</code></td><td>可点击聊天消息（url 以 http 开头=开链接，否则=执行命令）。</td></tr>
-          <tr><td><code>void playSound(soundId)</code></td><td>播放原版音效，如 <code>block.note_block.harp</code>、<code>entity.player.levelup</code>。</td></tr>
-          <tr><td><code>void playAudio(filename, volume)</code></td><td>播放存档 <code>res/media/</code> 目录下的自定义音频文件（mp3/wav/ogg）。</td></tr>
-          <tr><td><code>void stopAudio()</code> / <code>stopAudio(filename)</code></td><td>停止所有/指定自定义音频。</td></tr>
+      <h3 class="api-h" data-page-node-id="vDimqSbgv0eI9205Yp8chH">聊天 / 音效 / 音频<span class="tag tag--ok" data-page-node-id="jqOlcOuKEw2qgfjCYFhRFn">已实现</span></h3>
+      <table class="api-table" data-page-node-id="RvepPvUP4CqCfhuugVZxMw">
+        <thead data-page-node-id="hw0mRXAbSw39HGcs1SAI94"><tr data-page-node-id="TA9ip0qOuDplMd6P9TSvEL"><th style="width:46%" data-page-node-id="sY7YoA7QTjswWLJIRENmhQ">方法</th><th data-page-node-id="2F6OoxEK6w4EGwgNp3VrA4">用途</th></tr></thead>
+        <tbody data-page-node-id="9lQHps0nTND5rulctwync0">
+          <tr data-page-node-id="R3Fbi12fUGPapsVT4FC6L5"><td data-page-node-id="cC0w5i6mzUidJShHgyENvC"><code data-page-node-id="6qiInraGbFKTTVgBQVlWIg">void sendMessage(text)</code></td><td data-page-node-id="62BHfAjEjC8uSpnCfNN455">聊天框发文字（方圆 64 格可见），支持 § 颜色代码。</td></tr>
+          <tr data-page-node-id="RyLwuawjV7BGBD7QDLLcfw"><td data-page-node-id="Cuo2BljOio4l3rEK0hHVwB"><code data-page-node-id="mdMFsFPKhdHa4RRJsmWOd2">void sendActionBar(text)</code></td><td data-page-node-id="ZLc859u3IpZReFow6pWQmP">物品栏上方显示短文字（约 3 秒消失）。</td></tr>
+          <tr data-page-node-id="dmjgOK9EFhv1fjCbk6D3b8"><td data-page-node-id="aB5WvwEqUm2rwMhcVS8SjA"><code data-page-node-id="DoScl1JvOBt2JaGtMiOw8S">void sendTitle(text)</code></td><td data-page-node-id="ifuid9m3XHwTUKWAhGuAHl">屏幕中央大标题。</td></tr>
+          <tr data-page-node-id="2b1LdGnCHZ947wR8vezTrl"><td data-page-node-id="3RWRwYgkst5R8MWNiYWiey"><code data-page-node-id="QOlWv1oXNBr16OwItaDzZ9">void sendClickable(text, url)</code></td><td data-page-node-id="0kGhV6GQWptdbhTxHCCphm">可点击聊天消息（url 以 http 开头=开链接，否则=执行命令）。</td></tr>
+          <tr data-page-node-id="tBXEGYS9W0EtXi0JKEkSXz"><td data-page-node-id="aHeLMaWJUvmBEvQP3fVOc0"><code data-page-node-id="ACPJ4WlQWyiGOXNcerDA7B">void playSound(soundId)</code></td><td data-page-node-id="dIbYz1YXPUVLRdzyhlHC6B">播放原版音效，如 <code data-page-node-id="ly5DRl5lrYDbEzjXlpnzzR">block.note_block.harp</code>、<code data-page-node-id="AzYOg82o9s5jfikABNdV1n">entity.player.levelup</code>。</td></tr>
+          <tr data-page-node-id="eiSOlqZ4wCooN7htz3C6KI"><td data-page-node-id="04n3CDzET0YEM9Xilw0AYC"><code data-page-node-id="Mpq5CCFTAUVtKtUhrmQsyq">void playAudio(filename, volume)</code></td><td data-page-node-id="UJTKiC1llEJlIAr0DQBzsn">播放存档 <code data-page-node-id="JaUgcGpPpFFsqZz4Eey6F1">res/media/</code> 目录下的自定义音频文件（mp3/wav/ogg）。</td></tr>
+          <tr data-page-node-id="sE4H9iVvDbJayFsbkZbv3t"><td data-page-node-id="jxnLJ5rNVnXADEZc7HJpVl"><code data-page-node-id="WvSwFEGCrOPBXZrvKVH1Cr">void stopAudio()</code> / <code data-page-node-id="5gFEfPb9oGrwHKTQ6ZgD66">stopAudio(filename)</code></td><td data-page-node-id="umd6rrWjEvnhlpPXPd8hxD">停止所有/指定自定义音频。</td></tr>
         </tbody>
       </table>
 
       <!-- ==================== 第二部分：编辑器积木 ==================== -->
-      <h2 class="api-h" style="color:#4fc3f7;">二、编辑器积木（图形化）</h2>
-      <p class="doc-p">积木按工具箱分类排列，每个积木的 Java 生成代码在括号里标注。</p>
+      <h2 class="api-h" style="color:#4fc3f7;" data-page-node-id="1ZWBKwS4Y9IvAQYZ2RfISg">二、编辑器积木（图形化）</h2>
+      <p class="doc-p" data-page-node-id="jHIG6VdjCYRBKDcFoj0JMR">积木按工具箱分类排列，每个积木的 Java 生成代码在括号里标注。</p>
 
-      <h3 class="api-h">[I/O] 输入/输出</h3>
-      <table class="api-table">
-        <thead><tr><th style="width:30%">积木</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td>读取某面强度</td><td><code>ctx.readInput(面)</code>，0-15。</td></tr>
-          <tr><td>读取所有面最大值</td><td><code>ctx.readInputMax()</code>。</td></tr>
-          <tr><td>输入变化?</td><td><code>ctx.inputChanged(面)</code>，边沿检测，按钮去抖。</td></tr>
-          <tr><td>值变化? 键 □ 当前值 □</td><td><code>ctx.valueChanged(key, value)</code>，通用边沿检测（任意整数）。</td></tr>
-          <tr><td>输出到 □ 强度 □</td><td><code>ctx.writeOutput(面, 值)</code>。</td></tr>
-          <tr><td>向所有面输出 □</td><td><code>ctx.writeOutputAll(值)</code>。</td></tr>
-          <tr><td>调试: 打印所有输入</td><td>聊天框打印 6 个面的红石强度，排查接线用。</td></tr>
+      <h3 class="api-h" data-page-node-id="HWr1DjiSIqFhrWjt2jlSTM">[I/O] 输入/输出</h3>
+      <table class="api-table" data-page-node-id="0hrkTxKzrxpxKeDXyH0Y4M">
+        <thead data-page-node-id="D4ut3oaiwQY5f8dfRb1yCS"><tr data-page-node-id="krVuCLCABEIcCrq4yKC5Fe"><th style="width:30%" data-page-node-id="8PdtSd1wCMscTT8bAfEG1Z">积木</th><th data-page-node-id="OMzcStCQJ3PjoBfKDMgyTB">用途</th></tr></thead>
+        <tbody data-page-node-id="07Nls0MsGqBeDNoD87p9S0">
+          <tr data-page-node-id="YsV2ogH2SImzsH8xlHnIwt"><td data-page-node-id="peGypHjXB4kFwmHXKEnKcF">读取某面强度</td><td data-page-node-id="8Z7f53gdEZ1CDXcqn5V8r0"><code data-page-node-id="NnUnY7F0mk8hqFiFgaBI3a">ctx.readInput(面)</code>，0-15。</td></tr>
+          <tr data-page-node-id="lfdOXbS5Ck3cvakAd15F6W"><td data-page-node-id="fGcB3afsNisytNZWHRVg3c">读取所有面最大值</td><td data-page-node-id="tIqJHgavchMUtRn1fUKZGG"><code data-page-node-id="L6btehlP1nxpZFx0Q0VF9E">ctx.readInputMax()</code>。</td></tr>
+          <tr data-page-node-id="wPhzH1RPMYGF1X5egyLE8A"><td data-page-node-id="a2Z30QAH27B03SZX5L6TGX">输入变化?</td><td data-page-node-id="QZi3kv0cpjSQQuuHncHyrl"><code data-page-node-id="KXMQxF2zBOxXGvIlPjLpNT">ctx.inputChanged(面)</code>，边沿检测，按钮去抖。</td></tr>
+          <tr data-page-node-id="MytmI5Yu7tSUqBY7sz3QAe"><td data-page-node-id="BvPkOVZ6TpVPJHpJ9UcnyL">值变化? 键 □ 当前值 □</td><td data-page-node-id="vdSm8vXvEkKJ0KgEZgZUPw"><code data-page-node-id="VAsKCnBzvJLFIjPEXlyBGY">ctx.valueChanged(key, value)</code>，通用边沿检测（任意整数）。</td></tr>
+          <tr data-page-node-id="4kPkRoxqIZBhEScGItfZDA"><td data-page-node-id="uKkFHshNAWoCpN1AQpoprQ">输出到 □ 强度 □</td><td data-page-node-id="Sw2z46Vih1j9ZF2yg45xAM"><code data-page-node-id="al4L1XM3KecIFRFQ9eSBak">ctx.writeOutput(面, 值)</code>。</td></tr>
+          <tr data-page-node-id="OzLO35gZvS4jD8Njiagrq0"><td data-page-node-id="yVd8zEEi6CrZ1aCp4YEUxI">向所有面输出 □</td><td data-page-node-id="GodIKwakVYpRDmnYH3hCGq"><code data-page-node-id="cCYsi5MuJPD4ehVshzTQjw">ctx.writeOutputAll(值)</code>。</td></tr>
+          <tr data-page-node-id="dX0CZK9OazHDyBpJnghQ2t"><td data-page-node-id="j6hPLVM1ITcWLoIE5fBXv4">调试: 打印所有输入</td><td data-page-node-id="VcMGvCOKNYHgWD8sFV0prk">聊天框打印 6 个面的红石强度，排查接线用。</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">[Exec] 执行/判断命令</h3>
-      <table class="api-table">
-        <thead><tr><th style="width:30%">积木</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td>执行命令 □</td><td><code>ctx.executeCommand(cmd)</code>，原始执行任意命令。</td></tr>
-          <tr><td>以玩家 □ 身份执行命令 □</td><td><code>ctx.executeCommandAs(玩家, cmd)</code>，@s 指向该玩家。</td></tr>
-          <tr><td>命令成立? □</td><td><code>ctx.executeCommandTest(cmd)</code>，execute 条件判断，返回真/假。</td></tr>
-          <tr><td>执行命令 □ 取结果</td><td><code>ctx.executeCommandResult(cmd)</code>，拿返回值（数字）。</td></tr>
-          <tr><td>以玩家 □ 执行命令 □ 取结果</td><td><code>ctx.executeCommandResultAs(玩家, cmd)</code>。</td></tr>
-          <tr><td>execute 若方块 相对 x y z 是 □ 则运行 □</td><td><code>execute if block ~x ~y ~z 方块 run cmd</code>。</td></tr>
-          <tr><td>execute 若存在实体 □ 则运行 □</td><td><code>execute if entity 选择器 run cmd</code>。</td></tr>
-          <tr><td>execute 若不存在实体 □ 则运行 □</td><td><code>execute unless entity 选择器 run cmd</code>。</td></tr>
-          <tr><td>execute 若实体 □ 槽位 □ 含物品 □ 则运行 □</td><td><code>execute if items entity 选择器 槽位 物品 run cmd</code>。</td></tr>
-          <tr><td>execute 若谓词 □ 成立 则运行 □</td><td><code>execute if predicate 谓词 run cmd</code>。</td></tr>
-          <tr><td>execute 以 □ 身份 在其位置运行 □</td><td><code>execute as 选择器 at @s run cmd</code>，as+at 合体。</td></tr>
-          <tr><td>execute 以 □ 身份运行 □</td><td><code>execute as 选择器 run cmd</code>，只改执行者。</td></tr>
-          <tr><td>execute 在 □ 位置运行 □</td><td><code>execute at 选择器 run cmd</code>，只改位置。</td></tr>
-          <tr><td>execute 在坐标 x y z 运行 □</td><td><code>execute positioned x y z run cmd</code>。</td></tr>
-          <tr><td>execute 存结果到 玩家 □ 记分板 □ 运行 □</td><td><code>execute store result score 玩家 目标 run cmd</code>。</td></tr>
-          <tr><td>execute 若 玩家 □ 记分板 □ 比较符 □ 值 □ 则运行 □</td><td><code>execute if score 玩家 目标 比较符 值 run cmd</code>，记分板条件。</td></tr>
-          <tr><td>execute 若玩家 □ 在名单 □ 里 则运行 □</td><td>字符串数组做白名单判断（替代记分板）。</td></tr>
-          <tr><td>execute 若名单 □ 包含 □ 则运行 □</td><td>通用版，值不限玩家名。</td></tr>
-          <tr><td>execute 若名单 □ 不包含 □ 则运行 □</td><td>反向判断（黑名单）。</td></tr>
-          <tr><td>对名单 □ 中每个元素存入变量 □ 执行 □</td><td>遍历名单逐个处理，替代 <code>@a[scores=...]</code> 批量执行。</td></tr>
-          <tr><td>名单 □ 包含 □ ?</td><td><code>ctx.arrayFind(key,值) >= 0</code>，返回真/假，直接接 if。</td></tr>
+      <h3 class="api-h" data-page-node-id="tbacZyF70k87fPf0c8hzSs">[Exec] 执行/判断命令</h3>
+      <table class="api-table" data-page-node-id="7ewrGWsLRM4Ar82TIgDWyO">
+        <thead data-page-node-id="yTt05hfCDw8vS6IHwP7j37"><tr data-page-node-id="PSy0SfNOEWAwG0K6cNG3ia"><th style="width:30%" data-page-node-id="DoXtzeQGx9uT67lDGOmjJb">积木</th><th data-page-node-id="JmBm6KA3cy2INadbFlPqeD">用途</th></tr></thead>
+        <tbody data-page-node-id="uK1ANPRBWCgy4HpuVCRqdf">
+          <tr data-page-node-id="9Nck0CQJMHszhzcQTSJMTq"><td data-page-node-id="CmLVUKROUPTz1po1CavRks">执行命令 □</td><td data-page-node-id="bE3cXAID41b3EBCvGkJexS"><code data-page-node-id="Ezc1jMpSCEyJZkKN2UUnZY">ctx.executeCommand(cmd)</code>，原始执行任意命令。</td></tr>
+          <tr data-page-node-id="UitxxVpLO10DLjlN2IHGPt"><td data-page-node-id="lcsRRVCamj8gaJk0eOLfAi">以玩家 □ 身份执行命令 □</td><td data-page-node-id="YC7TTOjMEYSdYU9EmeEJKh"><code data-page-node-id="otPK2MGH7j2yMn3wpouehb">ctx.executeCommandAs(玩家, cmd)</code>，@s 指向该玩家。</td></tr>
+          <tr data-page-node-id="HooR1LjSK5YBH4cpjMAnd0"><td data-page-node-id="aktk8ph0zmqedN62laUrFO">命令成立? □</td><td data-page-node-id="RbawEY0iM5ViTHopD4RWZb"><code data-page-node-id="WIBz8xFaAlMv3tClC2GFKz">ctx.executeCommandTest(cmd)</code>，execute 条件判断，返回真/假。</td></tr>
+          <tr data-page-node-id="gQWQ2CaVYKrB5SR4QQu2tF"><td data-page-node-id="FHRsVGEzP4eGvonmjRWpf6">执行命令 □ 取结果</td><td data-page-node-id="nSEDf0hrPUJJGhZG983b15"><code data-page-node-id="sOxp9pfDVpeFc4RUqR9FtO">ctx.executeCommandResult(cmd)</code>，拿返回值（数字）。</td></tr>
+          <tr data-page-node-id="4QBAQrPtV2fKZXmIwizaKS"><td data-page-node-id="f1XMC5YX1JmduEluNwbOCo">以玩家 □ 执行命令 □ 取结果</td><td data-page-node-id="wq29e7g7v63jUdFZXQyu5U"><code data-page-node-id="LTjMumhxZCeIgdUIyoS4LA">ctx.executeCommandResultAs(玩家, cmd)</code>。</td></tr>
+          <tr data-page-node-id="nTNdnDPkOEvgNnpXB9nRPg"><td data-page-node-id="is6X2IvxYS65sFx4nzjKOi">execute 若方块 相对 x y z 是 □ 则运行 □</td><td data-page-node-id="ht8Dx897lGQLmGRvSfeH26"><code data-page-node-id="jglx5nFkH1X8pvU9uwD4jR">execute if block ~x ~y ~z 方块 run cmd</code>。</td></tr>
+          <tr data-page-node-id="AaiewMvGso6jNnGgloBbRI"><td data-page-node-id="UN5nQrBXthTMSoTm7u0d4c">execute 若存在实体 □ 则运行 □</td><td data-page-node-id="yE8sLlVB3sSVpkHzSBW1qz"><code data-page-node-id="UJkJycoc1vdCObuVKDE9Bw">execute if entity 选择器 run cmd</code>。</td></tr>
+          <tr data-page-node-id="cMPk6h3fFxacQU6h9t2KFb"><td data-page-node-id="OBAw8nQNWCExDTjMnbRzlf">execute 若不存在实体 □ 则运行 □</td><td data-page-node-id="qQaGYpMjh5z3tkNCdrcscO"><code data-page-node-id="p5UceaEEeVGo8KreZ6Rm2M">execute unless entity 选择器 run cmd</code>。</td></tr>
+          <tr data-page-node-id="xJtxzW9qYxqgQljyhDkCP8"><td data-page-node-id="RTg2dXNJGBdq7BZKF5CMZ0">execute 若实体 □ 槽位 □ 含物品 □ 则运行 □</td><td data-page-node-id="gibBOJXjFjBt5ocN2wOOsX"><code data-page-node-id="qcUjroAZfpPNDkQhg60xRo">execute if items entity 选择器 槽位 物品 run cmd</code>。</td></tr>
+          <tr data-page-node-id="n9HZjR5BjlPaEOIzJpNRvc"><td data-page-node-id="h9ZREkC5x3jQi2wygOVshX">execute 若谓词 □ 成立 则运行 □</td><td data-page-node-id="IXBj7812XyLGAaHjbRpnNR"><code data-page-node-id="aXCCHTQMM2FHz4qu5QUDdG">execute if predicate 谓词 run cmd</code>。</td></tr>
+          <tr data-page-node-id="p6ptd75eLPWERsSnJzVMGy"><td data-page-node-id="xIBokmjI0CJ8BkeGl3jq1X">execute 以 □ 身份 在其位置运行 □</td><td data-page-node-id="0Ks14BA2SEm9vfxCCMFtB9"><code data-page-node-id="vDKvf09zD505wObacRMKy3">execute as 选择器 at @s run cmd</code>，as+at 合体。</td></tr>
+          <tr data-page-node-id="F6aZjQCI97ICmyQ1rM5PS4"><td data-page-node-id="Fpm03tG68VDMxlfGcrEhAw">execute 以 □ 身份运行 □</td><td data-page-node-id="NneQuynpeIFBukT6RLGCo2"><code data-page-node-id="BlXY5gfcnRT1Vn7EtExlZD">execute as 选择器 run cmd</code>，只改执行者。</td></tr>
+          <tr data-page-node-id="qJqmksH6CfJviNR6QARWXs"><td data-page-node-id="SDwDEiwfn4THBbIAyZPgJz">execute 在 □ 位置运行 □</td><td data-page-node-id="2hNxo70Z2MBsV6XRNws20S"><code data-page-node-id="q4eHRAHzA9Bh1jUUFI9AEI">execute at 选择器 run cmd</code>，只改位置。</td></tr>
+          <tr data-page-node-id="ou5AMQzSvTr8DEwfQSmiY2"><td data-page-node-id="FYuV48OsAb0grCsHgWmgRa">execute 在坐标 x y z 运行 □</td><td data-page-node-id="eWCrthq5ftjOpUTrd5jCYx"><code data-page-node-id="tD2wOk4daOkIwR6bErKdTp">execute positioned x y z run cmd</code>。</td></tr>
+          <tr data-page-node-id="ICDgDz2VKqA5I3yqGIROLr"><td data-page-node-id="tJnI0QyTYBHANkax9MUTOF">execute 存结果到 玩家 □ 记分板 □ 运行 □</td><td data-page-node-id="Rx4LHYJGJ7ZW6DI170ZtMC"><code data-page-node-id="kxH23DUbQQeo9sjGK6kmGb">execute store result score 玩家 目标 run cmd</code>。</td></tr>
+          <tr data-page-node-id="UXX4UHP0RIsSmYodPyz7iz"><td data-page-node-id="mU5dNaSNij0pMu61p6aeS0">execute 若 玩家 □ 记分板 □ 比较符 □ 值 □ 则运行 □</td><td data-page-node-id="hdLa9cwW7FuTZd3hcVc0HI"><code data-page-node-id="FezjCWGZfJ2Yjwx7cMNyDP">execute if score 玩家 目标 比较符 值 run cmd</code>，记分板条件。</td></tr>
+          <tr data-page-node-id="KGwscH633pDRoWH4icTFDV"><td data-page-node-id="uxOB95XAEoUHSUysfumGHX">execute 若玩家 □ 在名单 □ 里 则运行 □</td><td data-page-node-id="rigSNA6hvlCy33o3OjF5bV">字符串数组做白名单判断（替代记分板）。</td></tr>
+          <tr data-page-node-id="Y2HmLmnj03WJ21sU6LOy7d"><td data-page-node-id="sPKlENF5FY8puXttRHGmuM">execute 若名单 □ 包含 □ 则运行 □</td><td data-page-node-id="DPoprWWmpCVhMXANafOT7a">通用版，值不限玩家名。</td></tr>
+          <tr data-page-node-id="dOGPJ4ZeG88H82XS6kx0TW"><td data-page-node-id="oT3jt4MiAfuYq4HB6v0H9g">execute 若名单 □ 不包含 □ 则运行 □</td><td data-page-node-id="dCduVohvHbp6YDEiLgupdA">反向判断（黑名单）。</td></tr>
+          <tr data-page-node-id="rrFz47HYisTqhCXOw6KkBD"><td data-page-node-id="IpSUcGm9Fc9RRmzcr6H6LF">对名单 □ 中每个元素存入变量 □ 执行 □</td><td data-page-node-id="RrJlxcCvxuzXqLTjpWOhai">遍历名单逐个处理，替代 <code data-page-node-id="S1akFklFaJHbkgthk1L6aC">@a[scores=...]</code> 批量执行。</td></tr>
+          <tr data-page-node-id="8m4TVnGsUEeHSg5dkbL6gi"><td data-page-node-id="cIAa98bl4jO147BVO9dzEN">名单 □ 包含 □ ?</td><td data-page-node-id="fx4ZStm2XDaFPCL1ulzura"><code data-page-node-id="FgxddQxjZ4zvv4elusqpFb">ctx.arrayFind(key,值) &gt;= 0</code>，返回真/假，直接接 if。</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">[Array1] 字符串数组</h3>
-      <table class="api-table">
-        <thead><tr><th style="width:30%">积木</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td>往名单 □ 追加 □</td><td><code>ctx.arrayAdd(key, 值)</code>，允许重复。</td></tr>
-          <tr><td>往名单 □ 追加（去重）□</td><td><code>ctx.arrayAddOnce(key, 值)</code>，已存在就不加。</td></tr>
-          <tr><td>从名单 □ 删除 □</td><td><code>ctx.arrayRemove(key, 值)</code>。</td></tr>
-          <tr><td>清空名单 □</td><td><code>ctx.arrayClear(key)</code>。</td></tr>
-          <tr><td>名单 □ 长度</td><td><code>ctx.arraySize(key)</code>，元素个数。</td></tr>
-          <tr><td>名单 □ 取第 □ 个</td><td><code>ctx.arrayGet(key, 下标)</code>，0 起。</td></tr>
-          <tr><td>名单 □ 查找 □</td><td><code>ctx.arrayFind(key, 值)</code>，返回位置，找不到 -1。</td></tr>
-          <tr><td>名单 □ 用 □ 拼接</td><td><code>ctx.arrayJoin(key, 分隔符)</code>。</td></tr>
-          <tr><td>设置字符串 □ = □</td><td><code>ctx.setString(key, 值)</code>，存单个字符串。</td></tr>
-          <tr><td>读取字符串 □</td><td><code>ctx.getString(key)</code>。</td></tr>
+      <h3 class="api-h" data-page-node-id="Ah5GXNJP8fx24Isr0N2C4j">[Array1] 字符串数组</h3>
+      <table class="api-table" data-page-node-id="XP7tp5SvcVtKh0xT4J8QrN">
+        <thead data-page-node-id="Gi0vPGkr54D6YqhKWFDU3l"><tr data-page-node-id="8AxXHbkRJPzOo55BLOpPn2"><th style="width:30%" data-page-node-id="9sGUAFO7agnzh7uK62UJOG">积木</th><th data-page-node-id="J4g36qEjkr1fxgl5BcOnpY">用途</th></tr></thead>
+        <tbody data-page-node-id="8qpyXbcKIxgbN8F4BkcXWb">
+          <tr data-page-node-id="5FoQIVHzP4GBv6c5C3Ra5s"><td data-page-node-id="bXIsPitlj00yHRoiBs7kUf">往名单 □ 追加 □</td><td data-page-node-id="oN9SgsjkIVvU8YALu7KdcA"><code data-page-node-id="U7ilf8SJXKqtf9Jo1EBLLE">ctx.arrayAdd(key, 值)</code>，允许重复。</td></tr>
+          <tr data-page-node-id="f7OznXANrXyKJGBpYtEedb"><td data-page-node-id="TSC1sqimp0MpMNw9yaIHGr">往名单 □ 追加（去重）□</td><td data-page-node-id="FNILbsZ4GUsrFNDkSgU96P"><code data-page-node-id="p24So6nrkLQ2igZ4Mvyrsq">ctx.arrayAddOnce(key, 值)</code>，已存在就不加。</td></tr>
+          <tr data-page-node-id="z9206dp09e7gSCoRVdnXC5"><td data-page-node-id="f4jP75cFbgCJtGLzOvJZRv">从名单 □ 删除 □</td><td data-page-node-id="FTgkeWb2BfZXodtRJ25MiD"><code data-page-node-id="us8VOgbMGuPIpSiAWnkZhh">ctx.arrayRemove(key, 值)</code>。</td></tr>
+          <tr data-page-node-id="Q35nzfcSnwZjakhjjPhhLD"><td data-page-node-id="L0XVESuf2A4tkt1NXdZSuO">清空名单 □</td><td data-page-node-id="KNzuTPDqorpGwRCh0QMIhz"><code data-page-node-id="7nXON5YcPiiO6fghvgBkFS">ctx.arrayClear(key)</code>。</td></tr>
+          <tr data-page-node-id="bcgMMcAupt57r0MrrtsAGz"><td data-page-node-id="509GBK3qvr0YPMeaedCCwS">名单 □ 长度</td><td data-page-node-id="NS9CFPTjSNQvrPIpMfDSsN"><code data-page-node-id="GCfDBUAIsSCv4Up2i77Sxs">ctx.arraySize(key)</code>，元素个数。</td></tr>
+          <tr data-page-node-id="1z28VWB5YeQnWV6dEixyv4"><td data-page-node-id="9sC0LWmvoK67tV0nLoS7i5">名单 □ 取第 □ 个</td><td data-page-node-id="EnM6AxSYosjDgXh0JFtAJp"><code data-page-node-id="I8ugSSvGBDXTo6hCUPEalM">ctx.arrayGet(key, 下标)</code>，0 起。</td></tr>
+          <tr data-page-node-id="WlV8y7kQGmB3owAISLzDUb"><td data-page-node-id="UYdGrt5KMFuxxqqWGvqetk">名单 □ 查找 □</td><td data-page-node-id="2StQ0wpqw6mFNI9HadLsdi"><code data-page-node-id="wv0N06FJ5Ce2dVNAnQlfgm">ctx.arrayFind(key, 值)</code>，返回位置，找不到 -1。</td></tr>
+          <tr data-page-node-id="4mwYdtvm8CGGv1VBYYN4uz"><td data-page-node-id="aLsYla8IC8MEqVhieKVOzH">名单 □ 用 □ 拼接</td><td data-page-node-id="UHyUFPd3EcZAe7GrVjJglU"><code data-page-node-id="UWptDDWBoPV1WHXAjRtCWD">ctx.arrayJoin(key, 分隔符)</code>。</td></tr>
+          <tr data-page-node-id="11Ugu1CCqOL26dIyVgvqu6"><td data-page-node-id="mG97V9jyDkEC8WILiZMdOv">设置字符串 □ = □</td><td data-page-node-id="QmAVtb887qPDM8t5fRHV4I"><code data-page-node-id="JQw3ehTefHsEWjSeEJkjVy">ctx.setString(key, 值)</code>，存单个字符串。</td></tr>
+          <tr data-page-node-id="m8ixfHji0SUNeO6GHtzQlF"><td data-page-node-id="aBmAoZgiaUlqVjcZesIraA">读取字符串 □</td><td data-page-node-id="kUmGdRGcr8RljJZpFvsMcc"><code data-page-node-id="DWmlqSp6OlK4ui03lZn8gO">ctx.getString(key)</code>。</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">[State] 状态/计时 · [Player] 玩家 · [CMD] 命令 · [Chat] 聊天 · [Audio] 音频</h3>
-      <table class="api-table">
-        <thead><tr><th style="width:30%">积木</th><th>用途</th></tr></thead>
-        <tbody>
-          <tr><td colspan="2" style="opacity:.7;font-weight:bold;">[State] 状态/计时</td></tr>
-          <tr><td>读状态 □</td><td><code>ctx.getStateInt(key)</code>。</td></tr>
-          <tr><td>写状态 □ = □</td><td><code>ctx.setState(key, 值)</code>。</td></tr>
-          <tr><td>等待 □ 刻 / 秒 / 毫秒</td><td><code>ctx.sleepTicks(n)</code> / <code>sleep(ms)</code>。<strong>while 循环必须加</strong>。</td></tr>
-          <tr><td>当前 tick 数</td><td>程序启动后经过的游戏刻数。</td></tr>
-          <tr><td colspan="2" style="opacity:.7;font-weight:bold;">[Player] 玩家</td></tr>
-          <tr><td>谁按过 相对 x y z 的方块</td><td><code>ctx.whoUsed(dx,dy,dz)</code>，精确识别。</td></tr>
-          <tr><td>谁按过 半径 □ 内的方块</td><td><code>ctx.whoUsedNearby(r)</code>。</td></tr>
-          <tr><td>最近玩家 / 最近玩家(半径)</td><td><code>ctx.nearestPlayer()</code>。</td></tr>
-          <tr><td>在线玩家数</td><td><code>ctx.playerCount()</code>。</td></tr>
-          <tr><td colspan="2" style="opacity:.7;font-weight:bold;">[CMD] 普通命令积木（直接生成命令字符串）</td></tr>
-          <tr><td>给予 / 传送 / 说 / 召唤 / 效果 / 放方块 / 填充 / 击杀 / 游戏模式 / 时间 / 天气 / 标题</td><td>图形化填参数 → 自动拼命令 → <code>ctx.executeCommand(...)</code>。</td></tr>
-          <tr><td>原始命令 □</td><td>直接写完整命令文本。</td></tr>
-          <tr><td>读分数 / 设分数 / 改分数</td><td><code>ctx.getScore/setScore/addScore</code>。</td></tr>
-          <tr><td colspan="2" style="opacity:.7;font-weight:bold;">[Chat] 聊天</td></tr>
-          <tr><td>发消息 / 可点击消息 / 音效 / ActionBar / Title</td><td>对应 <code>sendMessage</code> / <code>sendClickable</code> / <code>playSound</code> / <code>sendActionBar</code> / <code>sendTitle</code>。</td></tr>
-          <tr><td colspan="2" style="opacity:.7;font-weight:bold;">[Audio] 自定义音频</td></tr>
-          <tr><td>播放音频 □ 音量 □</td><td><code>ctx.playAudio(文件名, 音量)</code>，文件放存档 <code>res/media/</code>。</td></tr>
-          <tr><td>停止所有音频 / 停止 □</td><td><code>ctx.stopAudio()</code> / <code>stopAudio(文件名)</code>。</td></tr>
+      <h3 class="api-h" data-page-node-id="ogwi0nr6s4XJpTvRkm2VmS">[State] 状态/计时 · [Player] 玩家 · [CMD] 命令 · [Chat] 聊天 · [Audio] 音频</h3>
+      <table class="api-table" data-page-node-id="Mu44TueF1NIPehLnCbIF1A">
+        <thead data-page-node-id="rZcVIXIIuxRX2gqnhWqZIx"><tr data-page-node-id="rGtpzsKmYS6o8TQbSvnzb6"><th style="width:30%" data-page-node-id="HwEcYrfySZPmvRYcHYh1cC">积木</th><th data-page-node-id="0PjwgCjDZWOqlH9kT7bAFS">用途</th></tr></thead>
+        <tbody data-page-node-id="5gEUwAV6EqnyTaIrOpoFc9">
+          <tr data-page-node-id="lTiqSHcovKvKppVeZzlaio"><td colspan="2" style="opacity:.7;font-weight:bold;" data-page-node-id="sBjxQ0gzwkA54wde9GBoQn">[State] 状态/计时</td></tr>
+          <tr data-page-node-id="qTCC0l1KSnJ4SFnIO2uIyA"><td data-page-node-id="FTGAsIDhvI1VwBhE2TggPw">读状态 □</td><td data-page-node-id="VvUukcRF7ZRIImUtbPrp4K"><code data-page-node-id="sV3JUi119uKp3wFkPPQpcZ">ctx.getStateInt(key)</code>。</td></tr>
+          <tr data-page-node-id="Z7054sInYEDSzaaUJId9zZ"><td data-page-node-id="17JEM3m0Pl65UsYlPmYC7A">写状态 □ = □</td><td data-page-node-id="cgrF2eqwrWDGLeBL7wrf2u"><code data-page-node-id="WaAsj3EyFVbNHvCrGH4EG7">ctx.setState(key, 值)</code>。</td></tr>
+          <tr data-page-node-id="aujs0RFZ0BCMA3GXPXXXYC"><td data-page-node-id="OhWZuw5r9WOCz26at2cJun">等待 □ 刻 / 秒 / 毫秒</td><td data-page-node-id="CsATefyKNfN6FcDhtf7LoS"><code data-page-node-id="t9OtbpXW4Fw4DbSZq6MVW9">ctx.sleepTicks(n)</code> / <code data-page-node-id="hKsAN0K9MVSx7YmX8iXwSC">sleep(ms)</code>。<strong data-page-node-id="sxdNytW8TLpkAI6bIZ8pAU">while 循环必须加</strong>。</td></tr>
+          <tr data-page-node-id="0qqR0oC5OrBw46oJ2VZDVx"><td data-page-node-id="MAhYHFLe9hZkVAhOucplAx">当前 tick 数</td><td data-page-node-id="YhiA5qJ5ohapUT5nMPd7VH">程序启动后经过的游戏刻数。</td></tr>
+          <tr data-page-node-id="vgBxUKFD6VCDILCtl95BKw"><td colspan="2" style="opacity:.7;font-weight:bold;" data-page-node-id="WhxMSjWHxX3DgjhIMVWlyB">[Player] 玩家</td></tr>
+          <tr data-page-node-id="hKo7aSkp91EWVYRUpTwVXX"><td data-page-node-id="3UAqwBcH4cnlCnjF9AWQH3">谁按过 相对 x y z 的方块</td><td data-page-node-id="A71aOnNyWQjFHmp9C83Z00"><code data-page-node-id="u6xXtZ2jWqoEb9IzJ0aZjf">ctx.whoUsed(dx,dy,dz)</code>，精确识别。</td></tr>
+          <tr data-page-node-id="O7NrB6J749qob9MgchGJtD"><td data-page-node-id="dUrN76TB1K4n7RVsZSMHJs">谁按过 半径 □ 内的方块</td><td data-page-node-id="t7Gom92U09bbi6TC2RYCGE"><code data-page-node-id="jygyaK5HrZ9irHLFSff52N">ctx.whoUsedNearby(r)</code>。</td></tr>
+          <tr data-page-node-id="Kdz9gMKgp2k3PAibuNyRhL"><td data-page-node-id="hS3epE6dwpiTHq32peBVBF">最近玩家 / 最近玩家(半径)</td><td data-page-node-id="wEKd3M1Q1Jm0o0EsHHXcz0"><code data-page-node-id="tDc7jhFkAKG8SFMjxdw449">ctx.nearestPlayer()</code>。</td></tr>
+          <tr data-page-node-id="XCGzCPo5CFFd5EAYjTCBOA"><td data-page-node-id="slxNKJ6gakrKl010BfusCG">在线玩家数</td><td data-page-node-id="BaqjlUgZC3ydrUZWDwrLCQ"><code data-page-node-id="U5qm7LYe7i4TRAb01cQNQm">ctx.playerCount()</code>。</td></tr>
+          <tr data-page-node-id="RnPGuwUhhFbSHvZ1xA8CLd"><td colspan="2" style="opacity:.7;font-weight:bold;" data-page-node-id="7FhQNFpEyxIe9JVE8QrfBs">[CMD] 普通命令积木（直接生成命令字符串）</td></tr>
+          <tr data-page-node-id="c2mqXbw7eF4TVtOAHTpUdk"><td data-page-node-id="AkDmcQfA6PBFxYubXFlAWd">给予 / 传送 / 说 / 召唤 / 效果 / 放方块 / 填充 / 击杀 / 游戏模式 / 时间 / 天气 / 标题</td><td data-page-node-id="KGxq1ibb8sagSkOI3DgZWS">图形化填参数 → 自动拼命令 → <code data-page-node-id="pdgpGTCGUys52EuUEerIDi">ctx.executeCommand(...)</code>。</td></tr>
+          <tr data-page-node-id="Hr8goArXRouQvGtbmxd0Dr"><td data-page-node-id="1nsBagvLWJUfC5EjCMyOJF">原始命令 □</td><td data-page-node-id="K6tgqP5PGIn1SJBUzMKyOS">直接写完整命令文本。</td></tr>
+          <tr data-page-node-id="QyAK9arw8tw5CWjHzzUmOl"><td data-page-node-id="IgwVGnTOHuNJevzLAKUWjM">读分数 / 设分数 / 改分数</td><td data-page-node-id="sTOsv0KwQWz3uJi4mCoDU9"><code data-page-node-id="LzE2UVgnPRTRCt0ahDs5QW">ctx.getScore/setScore/addScore</code>。</td></tr>
+          <tr data-page-node-id="6ZmYe689AZBmEzjGbNppEN"><td colspan="2" style="opacity:.7;font-weight:bold;" data-page-node-id="QkotRseTFz1lMQnLjL3SL1">[Chat] 聊天</td></tr>
+          <tr data-page-node-id="kEdaLRpfhoIhbthM4lPcQP"><td data-page-node-id="RxseqeYJjnJbp7lgTBmqUw">发消息 / 可点击消息 / 音效 / ActionBar / Title</td><td data-page-node-id="3H0lNEeU0LOFNHCYeTb2A9">对应 <code data-page-node-id="nqHWZaoXVX7puJdcpOdu9t">sendMessage</code> / <code data-page-node-id="5dSKgJrepDWJjrGmF4MyKT">sendClickable</code> / <code data-page-node-id="OggwDntiVwAyYGVPJEzXmN">playSound</code> / <code data-page-node-id="GG0Lt3ImuTYIj6J03uic7s">sendActionBar</code> / <code data-page-node-id="MGVLrvYeAg8zVHU2ntKXJx">sendTitle</code>。</td></tr>
+          <tr data-page-node-id="XlTRyXJbRQwNK4MRWfZbSY"><td colspan="2" style="opacity:.7;font-weight:bold;" data-page-node-id="nNsgEhM74SnvJz754FBaoM">[Audio] 自定义音频</td></tr>
+          <tr data-page-node-id="UybsBWwnxJIzYe6TnEX1BF"><td data-page-node-id="PsPIokn40tKVFf1oTee3xO">播放音频 □ 音量 □</td><td data-page-node-id="1ntKktFuVdEIEEpm9twLJC"><code data-page-node-id="iEbIl7FNXlQl14NctYWmSG">ctx.playAudio(文件名, 音量)</code>，文件放存档 <code data-page-node-id="ZxNbowFogzQ5lOFRSKdVHo">res/media/</code>。</td></tr>
+          <tr data-page-node-id="lTg0SensFsBtiDPRm6aMHO"><td data-page-node-id="tACYdS4n8itZH7AmwvvYqd">停止所有音频 / 停止 □</td><td data-page-node-id="axeEHNgNAwq51HAJVcqboa"><code data-page-node-id="rqmxlWDHBPpLSGAxmKAQOc">ctx.stopAudio()</code> / <code data-page-node-id="1QknAH5Hg8Ao5mCPBBnzFh">stopAudio(文件名)</code>。</td></tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">例：按钮按了 → 记人名进名单 → 判断 → 执行命令</h3>
-      <pre class="code"><code><span class="c">// 西面按钮按下时</span>
-<span class="k">if</span> (ctx.<span class="f">inputChanged</span>(<span class="s">4</span>) &amp;&amp; ctx.<span class="f">readInput</span>(<span class="s">4</span>) &gt; <span class="s">0</span>) {
-    String p = ctx.<span class="f">whoUsed</span>(<span class="s">-1</span>, <span class="s">0</span>, <span class="s">0</span>);          <span class="c">// 是谁按的</span>
-    <span class="k">if</span> (!p.isEmpty()) {
-        <span class="k">if</span> (ctx.<span class="f">arrayFind</span>(<span class="s">"vip"</span>, p) &gt;= <span class="s">0</span>) {              <span class="c">// 在 VIP 名单里？</span>
-            ctx.<span class="f">executeCommand</span>(<span class="s">"give "</span> + p + <span class="s">" diamond 1"</span>);  <span class="c">// 发钻石</span>
-        } <span class="k">else</span> {
-            ctx.<span class="f">arrayAddOnce</span>(<span class="s">"vip"</span>, p);                   <span class="c">// 不在就加入名单</span>
+      <h3 class="api-h" data-page-node-id="ebwMBqs1UXophDGVahHVUG">例：按钮按了 → 记人名进名单 → 判断 → 执行命令</h3>
+      <pre class="code" data-page-node-id="9YCLn5uhqUXrVCHDUlf2E4"><code data-page-node-id="VHawHamFOaJwMmUR3hCVXg"><span class="c" data-page-node-id="BkGXrc7IxyUJWxUleKzDuV">// 西面按钮按下时</span>
+<span class="k" data-page-node-id="ZvuDxGhBdSZH7uCZCqJHXy">if</span> (ctx.<span class="f" data-page-node-id="TXA83o45cJFNhPetTNPdCz">inputChanged</span>(<span class="s" data-page-node-id="z28COpvo3oBxMFwnyeM6X7">4</span>) &amp;&amp; ctx.<span class="f" data-page-node-id="Tmxr7gbpW1Aml65wMOopKx">readInput</span>(<span class="s" data-page-node-id="96bGAKEoH6UUn3RpZCkuDV">4</span>) &gt; <span class="s" data-page-node-id="cvBscl4Ql88Mpt1FDr0Ncr">0</span>) {
+    String p = ctx.<span class="f" data-page-node-id="AXWcNoIZAp1kypCkUTWOC5">whoUsed</span>(<span class="s" data-page-node-id="GdmE98ksVlfMpLbNLAmMDK">-1</span>, <span class="s" data-page-node-id="SF32jaFCB4S8Br5YA9yiOZ">0</span>, <span class="s" data-page-node-id="go6r75XG3MPA8nASNAxI1u">0</span>);          <span class="c" data-page-node-id="jlJg3Es1XNdrGHjFmcZ1Hj">// 是谁按的</span>
+    <span class="k" data-page-node-id="voJpe9MnrkDkambpe8oo5F">if</span> (!p.isEmpty()) {
+        <span class="k" data-page-node-id="kRstv4ocUwVhZ6DLDwCcyz">if</span> (ctx.<span class="f" data-page-node-id="27yBSPz8V8iKpToPPzWX3y">arrayFind</span>(<span class="s" data-page-node-id="6owh0QLugrMikH3jEEIN8w">"vip"</span>, p) &gt;= <span class="s" data-page-node-id="LEjyWu9a55WeE2Tn3AcPaF">0</span>) {              <span class="c" data-page-node-id="Q1sModG11jVQMuYchhVrP8">// 在 VIP 名单里？</span>
+            ctx.<span class="f" data-page-node-id="VFCCeDAD0NpnBjfsbqmDPT">executeCommand</span>(<span class="s" data-page-node-id="poDxFpAudOvb3pPSpqZZ0N">"give "</span> + p + <span class="s" data-page-node-id="QxV3KPNAuqMlJvkOfo7A0i">" diamond 1"</span>);  <span class="c" data-page-node-id="tWFuZXhyNoMUuDFdJVG1h6">// 发钻石</span>
+        } <span class="k" data-page-node-id="no0mN4M5DCwJi6OAuia5qk">else</span> {
+            ctx.<span class="f" data-page-node-id="KqkXVaDJkHblGtW0hFGY7F">arrayAddOnce</span>(<span class="s" data-page-node-id="S0Ys8AyaqDQQ4NdTf4zs6b">"vip"</span>, p);                   <span class="c" data-page-node-id="yZneMb9ByvCEyipNLdWDvc">// 不在就加入名单</span>
         }
     }
 }</code></pre>
-      <div class="note note--ok">
-        <strong>典型链路</strong>：inputChanged 边沿检测 → whoUsed 精确识别 → arrayFind 名单判断 → executeCommand 执行命令。全程无需记分板。
+      <div class="note note--ok" data-page-node-id="D1hUeA1IScgBVFmcVALDZT" style="">
+        <strong data-page-node-id="Tiymg6lx3YPComz1LUIoVU">典型链路</strong>：inputChanged 边沿检测 → whoUsed 精确识别 → arrayFind 名单判断 → executeCommand 执行命令。
       </div>
     </div>
   </article>
 
   <!-- ============ execute 命令详解 ============ -->
-  <article id="sec-execute" class="content menu-top dark">
-    <div class="doc-wrap">
-      <header class="title one">execute 命令详解</header>
-      <div class="spacer"></div>
-      <div class="title two">/execute 子命令语法、用途与示例</div>
-      <p class="doc-p"><code class="inl">/execute</code> 是 MC 最强大的命令——改执行者、改位置、加条件、存结果，一条命令全搞定。代码方块里所有 execute 积木最终都是拼出 <code class="inl">execute ... run ...</code> 字符串交给 <code class="inl">ctx.executeCommand()</code> 执行。</p>
+  <article id="sec-execute" class="content menu-top dark" data-page-node-id="FHSBndu91soFcSnbttoEOO">
+    <div class="doc-wrap" data-page-node-id="p7XJ4ywwMOULSrzIRNlAfj">
+      <header class="title one" data-page-node-id="HdJ8FnywWSNw6pKkKQCTKs">execute 命令详解</header>
+      <div class="spacer" data-page-node-id="FSAT53lAGOfI9d3rMWXBI8"></div>
+      <div class="title two" data-page-node-id="klE9fUL5V06khnKCjifZcK">/execute 子命令语法、用途与示例</div>
+      <p class="doc-p" data-page-node-id="RmNKOit249TSL0ZENBnPAK"><code class="inl" data-page-node-id="LEFBeSNOhk3incsv7FGzLH">/execute</code> 是 MC 最强大的命令——改执行者、改位置、加条件、存结果，一条命令全搞定。代码方块里所有 execute 积木最终都是拼出 <code class="inl" data-page-node-id="MluCI8KHTrnlyhpmiRzX0L">execute ... run ...</code> 字符串交给 <code class="inl" data-page-node-id="PmXrBEraHZ9jD052eGGG1c">ctx.executeCommand()</code> 执行。</p>
 
-      <h3 class="api-h">基本结构</h3>
-      <pre class="code"><code>execute [修饰子命令] [条件子命令] [store子命令] run &lt;要执行的命令&gt;</code></pre>
-      <p class="doc-p">子命令从左到右依次生效，<code class="inl">run</code> 只能放最后。除 <code class="inl">run</code> 外，其他子命令可多个串联、可重复。</p>
+      <h3 class="api-h" data-page-node-id="6uLT8SX7d1iFGDSyyu25cO">基本结构</h3>
+      <pre class="code" data-page-node-id="GlkLp3RrRGu8pplUvHO9O2"><code data-page-node-id="n4EqALlwmPMQtk0lhA1wOz">execute [修饰子命令] [条件子命令] [store子命令] run &lt;要执行的命令&gt;</code></pre>
+      <p class="doc-p" data-page-node-id="NSdb5ZuGbrL69aTSpG6WEl">子命令从左到右依次生效，<code class="inl" data-page-node-id="1Jnd8crimKF7ev8FdG55lw">run</code> 只能放最后。除 <code class="inl" data-page-node-id="q9CPYa6U6KXzjV7cf2McBc">run</code> 外，其他子命令可多个串联、可重复。</p>
 
-      <h3 class="api-h">一、修饰子命令（改「在哪跑、以谁的身份跑」）</h3>
-      <table class="api-table">
-        <thead><tr><th style="width:30%">子命令</th><th>用途 + 示例</th></tr></thead>
-        <tbody>
-          <tr>
-            <td><code>as &lt;选择器&gt;</code></td>
-            <td>改<strong>执行者</strong>（命令里的 <code>@s</code> 指向它），不改位置。<br>例：<code>execute as @a run say 你好</code> → 每个玩家都说"你好"。</td>
+      <h3 class="api-h" data-page-node-id="qozhR6fXIfus3LklRKd3iF">一、修饰子命令（改「在哪跑、以谁的身份跑」）</h3>
+      <table class="api-table" data-page-node-id="XjIk0DOT5rjW1TEEbqTR1g">
+        <thead data-page-node-id="O7kb4F3XI5bb7E1LM6Dlms"><tr data-page-node-id="G7a8H60og0fTq8jXjZizLN"><th style="width:30%" data-page-node-id="EwBweSkHlzGH8wq2lwkaFB">子命令</th><th data-page-node-id="dGJrDrDEXeSA11wzovrlBh">用途 + 示例</th></tr></thead>
+        <tbody data-page-node-id="9qXCHxhCMibWHqUbD7rz5h">
+          <tr data-page-node-id="FUBBOu1wWlBdCwh8GjnUDL">
+            <td data-page-node-id="SBVA7o19ybwtCc0AuhvGQf"><code data-page-node-id="UYoafPxLLnJTiZuW9bBOIR">as &lt;选择器&gt;</code></td>
+            <td data-page-node-id="4ktuIBqFopm2167msJFkvE">改<strong data-page-node-id="17OZfRX3tcmlobr0CGHUk8">执行者</strong>（命令里的 <code data-page-node-id="AF6woBZROKk8f7T7bERntB">@s</code> 指向它），不改位置。<br data-page-node-id="ke3NhWF6HEazwmPw9e59Zm">例：<code data-page-node-id="GtbeDZOmdnykV1pSkKzC4I">execute as @a run say 你好</code> → 每个玩家都说"你好"。</td>
           </tr>
-          <tr>
-            <td><code>at &lt;选择器&gt;</code></td>
-            <td>改<strong>执行位置/朝向/维度</strong>，不改执行者。<br>例：<code>execute at @p run setblock ~ ~ ~ stone</code> → 在最近玩家脚下放石头。</td>
+          <tr data-page-node-id="uKhCCL70FIRDr5XqyG2UXW">
+            <td data-page-node-id="6bWCA92gnDJ6DHMxmPG5P3"><code data-page-node-id="uPaGNP7Q4QGsr9csCXofx1">at &lt;选择器&gt;</code></td>
+            <td data-page-node-id="JHfm7vUCifwAaihLwDqqwn">改<strong data-page-node-id="D5OJwjo7L68mBL9bJ4ejF4">执行位置/朝向/维度</strong>，不改执行者。<br data-page-node-id="kDBIVj8cHGUnvnj1fFO8gM">例：<code data-page-node-id="DHEK1p9dI6ZUjp6ckXgn25">execute at @p run setblock ~ ~ ~ stone</code> → 在最近玩家脚下放石头。</td>
           </tr>
-          <tr>
-            <td><code>as &lt;选择器&gt; at @s</code></td>
-            <td>执行者+位置一起改（最常用）。<br>例：<code>execute as @a at @s run particle flame ~ ~1 ~</code> → 每个玩家头上冒火焰粒子。</td>
+          <tr data-page-node-id="bwZdCTvwFwwOFEEUuxIvcE">
+            <td data-page-node-id="664TPljmGTGS5E3To9b59l"><code data-page-node-id="i0qJMV6CTdzrCGG646cBO5">as &lt;选择器&gt; at @s</code></td>
+            <td data-page-node-id="h8zBhZ6mNuOE6cBQAV8QWy">执行者+位置一起改（最常用）。<br data-page-node-id="7IvZ0CLjar9q3pp5RiS2kp">例：<code data-page-node-id="svdrrvPe5DR1nIB6nkPQxR">execute as @a at @s run particle flame ~ ~1 ~</code> → 每个玩家头上冒火焰粒子。</td>
           </tr>
-          <tr>
-            <td><code>positioned &lt;x&gt; &lt;y&gt; &lt;z&gt;</code></td>
-            <td>指定绝对/相对坐标。<code>~</code> = 相对当前位置，<code>^</code> = 相对朝向。<br>例：<code>execute positioned ~ ~1 ~ run setblock ~ ~ ~ diamond_block</code> → 头顶放钻石块。</td>
+          <tr data-page-node-id="VH5EYn4kF7dOYl5jEVzlYC">
+            <td data-page-node-id="VHbADH4DOhuFHVc35erWYL"><code data-page-node-id="6VDN5mPdvjAXp1eKxTpWiM">positioned &lt;x&gt; &lt;y&gt; &lt;z&gt;</code></td>
+            <td data-page-node-id="MyjVUutuvjrZ1Vh70NXZCv">指定绝对/相对坐标。<code data-page-node-id="yaocxjqMguHxHwj9dH0QwU">~</code> = 相对当前位置，<code data-page-node-id="3QrZHiR8w3wRKUucaMz0Gk">^</code> = 相对朝向。<br data-page-node-id="K3tSsczjurguegYdtLF9UI">例：<code data-page-node-id="fzCX6cfMtjnK2FD3FoOkBe">execute positioned ~ ~1 ~ run setblock ~ ~ ~ diamond_block</code> → 头顶放钻石块。</td>
           </tr>
-          <tr>
-            <td><code>in &lt;维度&gt;</code></td>
-            <td>切换执行维度：<code>minecraft:overworld</code> / <code>the_nether</code> / <code>the_end</code>。</td>
+          <tr data-page-node-id="mDoZPQFr3QqBGJZCZFkAgw">
+            <td data-page-node-id="b7vRK34IsHnsQQSamPKiWh"><code data-page-node-id="nKg1v68jCI2QdfcQiT9qbE">in &lt;维度&gt;</code></td>
+            <td data-page-node-id="KD6RNmAk2akWJLmRGhaHQL">切换执行维度：<code data-page-node-id="fqF4WSUpR81w3zQbKt9xoG">minecraft:overworld</code> / <code data-page-node-id="LkReFNj1CyHFfiZN4xkFxz">the_nether</code> / <code data-page-node-id="DgoUB0o6nCeibNxgmTGv4S">the_end</code>。</td>
           </tr>
         </tbody>
       </table>
 
-      <h3 class="api-h">二、条件子命令（if 成立 / unless 不成立才继续）</h3>
-      <table class="api-table">
-        <thead><tr><th style="width:30%">子命令</th><th>用途 + 示例</th></tr></thead>
-        <tbody>
-          <tr>
-            <td><code>if/unless entity &lt;选择器&gt;</code></td>
-            <td>实体存在/不存在。<br>例：<code>execute if entity @e[type=zombie,r=10] run say 附近有僵尸！</code></td>
+      <h3 class="api-h" data-page-node-id="PMYO2GSYQoSapEfuprynEa">二、条件子命令（if 成立 / unless 不成立才继续）</h3>
+      <table class="api-table" data-page-node-id="G4tdICRv8t2BXOZkv0DRn8">
+        <thead data-page-node-id="i4UKJP8Q5sEnwkOgfMjlhJ"><tr data-page-node-id="YAmDxRFcbojaLi6Vj95zlb"><th style="width:30%" data-page-node-id="qsWirXgyukfWIOLIfebfck">子命令</th><th data-page-node-id="m1haFpXU3ZuR8LzhctJSY2">用途 + 示例</th></tr></thead>
+        <tbody data-page-node-id="ERxOGmCEktrnC23xeVYY48">
+          <tr data-page-node-id="PVYUnTucfqclmtfI5PmYY6">
+            <td data-page-node-id="RHzaYg8ibh4hePFOp6I3CU"><code data-page-node-id="EfBrAETPrCjxJWGmkwVrDq">if/unless entity &lt;选择器&gt;</code></td>
+            <td data-page-node-id="vJqr8vzP5ZTmzEYDIQMOGt">实体存在/不存在。<br data-page-node-id="hMO55nRPRyactIDHHu5yXE">例：<code data-page-node-id="Tus3yVjbHI65ejlE0RdGtX">execute if entity @e[type=zombie,r=10] run say 附近有僵尸！</code></td>
           </tr>
-          <tr>
-            <td><code>if/unless block &lt;x y z&gt; &lt;方块&gt;</code></td>
-            <td>某位置是不是指定方块。<br>例：<code>execute if block ~ ~-1 ~ minecraft:gold_block run say 脚下是金块！</code></td>
+          <tr data-page-node-id="9BbFo0P11KdDOZ2YxAEThP">
+            <td data-page-node-id="iAqfaeK8UIPDa9BXvI3Gn3"><code data-page-node-id="a26F5Ad0ldg2GTRxaqj8bi">if/unless block &lt;x y z&gt; &lt;方块&gt;</code></td>
+            <td data-page-node-id="FeLM0guPaXB7BiRcxWK7w4">某位置是不是指定方块。<br data-page-node-id="baJ5Qw6bdV25OpzzRjs9Fi">例：<code data-page-node-id="z4V3ORhhCtcqFzIchWypCY">execute if block ~ ~-1 ~ minecraft:gold_block run say 脚下是金块！</code></td>
           </tr>
-          <tr>
-            <td><code>if/unless blocks &lt;x1 y1 z1&gt; &lt;x2 y2 z2&gt; &lt;x y z&gt; all|masked</code></td>
-            <td>两个区域方块是否一致。<code>all</code>=全比，<code>masked</code>=只比非空气。</td>
+          <tr data-page-node-id="xIyNokY7xhMaWu63yjWPsh">
+            <td data-page-node-id="10DrJUY7PGPT40tltHkKyD"><code data-page-node-id="3f32ZPhI3INLOnW2nd2RkT">if/unless blocks &lt;x1 y1 z1&gt; &lt;x2 y2 z2&gt; &lt;x y z&gt; all|masked</code></td>
+            <td data-page-node-id="m2EmEdaI2BKZnRbub5nQGJ">两个区域方块是否一致。<code data-page-node-id="HYrZBsVKQiEtDMnTVRHAWB">all</code>=全比，<code data-page-node-id="loZYYJfQ8f9ukmtYnSSUYk">masked</code>=只比非空气。</td>
           </tr>
-          <tr>
-            <td><code>if/unless items entity &lt;选择器&gt; &lt;槽位&gt; &lt;物品&gt;</code></td>
-            <td>实体某槽位是否有某物品。槽位如 <code>weapon.mainhand</code>、<code>armor.head</code>、<code>hotbar.0</code>。<br>例：<code>execute if items entity @s weapon.mainhand minecraft:diamond run say 手持钻石！</code></td>
+          <tr data-page-node-id="IcrXQLcvYbCdkhVpP8toAH">
+            <td data-page-node-id="ahw0R9iOCTcCpACDC0XL8G"><code data-page-node-id="aoLmohf6p69nEQOBqA2JIV">if/unless items entity &lt;选择器&gt; &lt;槽位&gt; &lt;物品&gt;</code></td>
+            <td data-page-node-id="8LE9berKEE8XOZP0CMfkgV">实体某槽位是否有某物品。槽位如 <code data-page-node-id="hJ6OILuwamLQky23sEAEyv">weapon.mainhand</code>、<code data-page-node-id="F8jBzljmk8DV37BEHf9d9c">armor.head</code>、<code data-page-node-id="687hcRJCN9VUaS0MGSFXVZ">hotbar.0</code>。<br data-page-node-id="OGg7MxIIg2MIAHUWHdFoX6">例：<code data-page-node-id="laxnFhurMkbq1mP2zboP4I">execute if items entity @s weapon.mainhand minecraft:diamond run say 手持钻石！</code></td>
           </tr>
-          <tr>
-            <td><code>if/unless predicate &lt;谓词&gt;</code></td>
-            <td>数据包谓词条件（高级，用于复杂判定）。</td>
+          <tr data-page-node-id="Ve06jKrGOFXaUngSApx1uj">
+            <td data-page-node-id="rvaxqxEXDo0UpsHXG7s53j"><code data-page-node-id="n2TXKhDESYcFbBOIJmKBlS">if/unless predicate &lt;谓词&gt;</code></td>
+            <td data-page-node-id="AOnBBGY0F4nDLTHPTFVVmV">数据包谓词条件（高级，用于复杂判定）。</td>
           </tr>
-          <tr>
-            <td><code>if/unless score &lt;目标&gt; &lt;记分项&gt; &lt;操作符&gt; &lt;值&gt;</code></td>
-            <td>记分板分数比较。操作符：<code>=</code> <code>></code> <code>>=</code> <code><</code> <code><=</code>，或 <code>matches 范围</code>。<br>例：<code>execute if score @s money matches 100.. run say 我有100块以上！</code></td>
+          <tr data-page-node-id="9PQmvI4rN2LEfSQGmvrrMf">
+            <td data-page-node-id="AGYHXrSvQAu8MBZolqAVsd"><code data-page-node-id="TvgB131EWrSplstgJXWo8N">if/unless score &lt;目标&gt; &lt;记分项&gt; &lt;操作符&gt; &lt;值&gt;</code></td>
+            <td data-page-node-id="Iy5f6fLbyNCH0VHmOJXVwF">记分板分数比较。操作符：<code data-page-node-id="29Yld6aaQvkTGPEY8B4QVJ">=</code> <code data-page-node-id="DiWcZE8cw9R4t9PGO0rxiy">&gt;</code> <code data-page-node-id="9GTuoa87HxJr0TraIT80FB">&gt;=</code> <code data-page-node-id="x1WanLGhlIAQPLkSRbEZeU">&lt;</code> <code data-page-node-id="BeDqFwAzTSlitsJ5cBPBsv">&lt;=</code>，或 <code data-page-node-id="jPUih9mOpDOfuvT34ghXgo">matches 范围</code>。<br data-page-node-id="x5JWhPlh4OWbhwCmDsQmY0">例：<code data-page-node-id="cO6t5jiroEHYrqWJL9QXwC">execute if score @s money matches 100.. run say 我有100块以上！</code></td>
           </tr>
         </tbody>
       </table>
-      <div class="note note--warn">
-        <strong>纯判断"玩家在不在名单里"不要用 score。</strong>用字符串数组的 <code class="inl">arrayFind(key, 玩家名) >= 0</code> 更简单，无需建记分板目标。
+      
+
+      <h3 class="api-h" data-page-node-id="7TMsc1KAzi2QjkqIpD5bLW">三、存储子命令（把命令结果存下来）</h3>
+      <table class="api-table" data-page-node-id="ZKLoJFuTFWjDgnHBwvlLu2">
+        <thead data-page-node-id="eiucp42SXu3n2yrnp5YuIv"><tr data-page-node-id="WhAAdwcUqbSeHKywQ79n3X"><th style="width:30%" data-page-node-id="KhMDEdqr7oUpeGVn6nITy0">子命令</th><th data-page-node-id="bH6ovMHMxz2GeoyL7GMkBP">用途 + 示例</th></tr></thead>
+        <tbody data-page-node-id="PCHnBsAs1MH6xX9Hk66gun">
+          <tr data-page-node-id="uGZE48cUP0gyVRpuPaeU3J">
+            <td data-page-node-id="cZNx5oXLTw1P0EACABaGmn"><code data-page-node-id="0zcBgfFmswbXYRR654UpVU">store result score &lt;玩家&gt; &lt;记分项&gt; run &lt;命令&gt;</code></td>
+            <td data-page-node-id="brwvrVDyokahmSS6kNLd7G">把 run 后命令的<strong data-page-node-id="XimlCWCVJKFr7wMiK9q18Y">返回值</strong>存进记分板。<br data-page-node-id="HdYY6kKCzrBsLz91IlB1D0">例：<code data-page-node-id="DbAK9aJML9HEwBFwRUQUR7">execute store result score @s online run list</code> → 把在线人数存进 @s 的 online 分数。</td>
+          </tr>
+          <tr data-page-node-id="GVkw7IC3onWj0s8p0J1gBC">
+            <td data-page-node-id="XAOHuEFtnNku4ZrqfPvUEE"><code data-page-node-id="MyLgCU9F6DU7zDvY24hqCK">store success score &lt;玩家&gt; &lt;记分项&gt;</code></td>
+            <td data-page-node-id="0tAng6pZhhmQggfXbZHrAs">存命令是否成功（0/1）。</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note" data-page-node-id="B7TqUUj7sBQkcmw3F53xta">
+        <strong data-page-node-id="H949CuDITEdXp9oCzURktJ">返回值语义：</strong>0 = 失败/条件不成立，1 = 成功，其他 = 命令本身返回的数。
+        在代码方块里可以用 <code class="inl" data-page-node-id="5PmiDDvOp3ngGsL5l8n5ZF">ctx.executeCommandResult("execute ... run ...")</code> 直接拿到这个返回值，不用 store 到记分板。
       </div>
 
-      <h3 class="api-h">三、存储子命令（把命令结果存下来）</h3>
-      <table class="api-table">
-        <thead><tr><th style="width:30%">子命令</th><th>用途 + 示例</th></tr></thead>
-        <tbody>
-          <tr>
-            <td><code>store result score &lt;玩家&gt; &lt;记分项&gt; run &lt;命令&gt;</code></td>
-            <td>把 run 后命令的<strong>返回值</strong>存进记分板。<br>例：<code>execute store result score @s online run list</code> → 把在线人数存进 @s 的 online 分数。</td>
-          </tr>
-          <tr>
-            <td><code>store success score &lt;玩家&gt; &lt;记分项&gt;</code></td>
-            <td>存命令是否成功（0/1）。</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="note">
-        <strong>返回值语义：</strong>0 = 失败/条件不成立，1 = 成功，其他 = 命令本身返回的数。
-        在代码方块里可以用 <code class="inl">ctx.executeCommandResult("execute ... run ...")</code> 直接拿到这个返回值，不用 store 到记分板。
-      </div>
+      <h3 class="api-h" data-page-node-id="hz9EdOY6TU9u8svMjgnGXh">四、常用组合示例</h3>
+      <pre class="code" data-page-node-id="U95CpTmJ5z2aiBDvebH0Mc"><code data-page-node-id="eyKAXVX0rU4HnHf6k8HbAT"><span class="c" data-page-node-id="QCBhQWwFT6MqI7SGCFKIFT">// 1. 让所有玩家传送到代码方块位置</span>
+ctx.<span class="f" data-page-node-id="nR2cCWt7txcRgNpTV0AVcm">executeCommand</span>(<span class="s" data-page-node-id="gl2SpDudcbIJGd2pPkEzYJ">"execute as @a at @s run tp ~ ~ ~"</span>);
 
-      <h3 class="api-h">四、常用组合示例</h3>
-      <pre class="code"><code><span class="c">// 1. 让所有玩家传送到代码方块位置</span>
-ctx.<span class="f">executeCommand</span>(<span class="s">"execute as @a at @s run tp ~ ~ ~"</span>);
-
-<span class="c">// 2. 头顶是钻石块就给最近玩家发钻石</span>
-<span class="k">if</span> (ctx.<span class="f">executeCommandTest</span>(<span class="s">"execute if block ~ ~1 ~ minecraft:diamond_block"</span>)) {
-    ctx.<span class="f">executeCommand</span>(<span class="s">"give @p diamond 1"</span>);
+<span class="c" data-page-node-id="5qX0yW8Z7ouKyI2XgCzxRa">// 2. 头顶是钻石块就给最近玩家发钻石</span>
+<span class="k" data-page-node-id="lBKA4e5QJd9kp872lGc9jW">if</span> (ctx.<span class="f" data-page-node-id="AaQdB2177pxAegwgdf0BY9">executeCommandTest</span>(<span class="s" data-page-node-id="UG14P4AICjCnKqGYCF3uM2">"execute if block ~ ~1 ~ minecraft:diamond_block"</span>)) {
+    ctx.<span class="f" data-page-node-id="AUjHGGGgDrYLS9ZtcMl2ym">executeCommand</span>(<span class="s" data-page-node-id="C926ymkIuwGdx3BOfQG6eg">"give @p diamond 1"</span>);
 }
 
-<span class="c">// 3. 统计半径 5 格内的僵尸数量，存进记分板</span>
-<span class="k">int</span> zombieCount = ctx.<span class="f">executeCommandResult</span>(
-    <span class="s">"execute if entity @e[type=zombie,distance=..5]"</span>);
-ctx.<span class="f">sendMessage</span>(<span class="s">"附近僵尸数: "</span> + zombieCount);
+<span class="c" data-page-node-id="hsUo9zgKjTIziNV5foHJIa">// 3. 统计半径 5 格内的僵尸数量，存进记分板</span>
+<span class="k" data-page-node-id="1HVbisVcwkI6A3vxvJ0jmD">int</span> zombieCount = ctx.<span class="f" data-page-node-id="jQIRBNDBHfXwmX4j4iiyuC">executeCommandResult</span>(
+    <span class="s" data-page-node-id="C8RHbUmDxyIOcooBlhT0zq">"execute if entity @e[type=zombie,distance=..5]"</span>);
+ctx.<span class="f" data-page-node-id="bq7hbZeg4q06cEk4zmHjVF">sendMessage</span>(<span class="s" data-page-node-id="HDNQtygSX2VsEyXClOOon8">"附近僵尸数: "</span> + zombieCount);
 
-<span class="c">// 4. 对 VIP 名单里的每个玩家发奖励（用字符串数组，不用记分板）</span>
-<span class="k">for</span> (<span class="k">int</span> i = <span class="s">0</span>; i < ctx.<span class="f">arraySize</span>(<span class="s">"vip"</span>); i++) {
-    String p = ctx.<span class="f">arrayGet</span>(<span class="s">"vip"</span>, i);
-    ctx.<span class="f">executeCommand</span>(<span class="s">"give "</span> + p + <span class="s">" diamond 1"</span>);
+<span class="c" data-page-node-id="QunUPVRnAriTcSJmovyqyU">// 4. 对 VIP 名单里的每个玩家发奖励（用字符串数组，不用记分板）</span>
+<span class="k" data-page-node-id="XQS3BBGzQunEArhFKcriIn">for</span> (<span class="k" data-page-node-id="NWatN5mDOxsqTYu8N4IKfD">int</span> i = <span class="s" data-page-node-id="iPB2pjd1pKO7TtBLGL4dKo">0</span>; i &lt; ctx.<span class="f" data-page-node-id="EdTGIwd7cTtYhJo4myNKfK">arraySize</span>(<span class="s" data-page-node-id="3sG0Fe9d0fSiwBowPO703R">"vip"</span>); i++) {
+    String p = ctx.<span class="f" data-page-node-id="yzjmhIHs3g7hl13BKsW7ck">arrayGet</span>(<span class="s" data-page-node-id="whOJ30Lviz6OLbKOzGOJxa">"vip"</span>, i);
+    ctx.<span class="f" data-page-node-id="9peFLdC4jrh7vB4wQ6mh1m">executeCommand</span>(<span class="s" data-page-node-id="NXeRGnbzOAVExscv8jTISX">"give "</span> + p + <span class="s" data-page-node-id="6QobeS5Qx2G2fmWBxryvgg">" diamond 1"</span>);
 }
 
-<span class="c">// 5. 手持钻石剑才执行后续命令</span>
-ctx.<span class="f">executeCommand</span>(<span class="s">"execute if items entity @s weapon.mainhand minecraft:diamond_sword run effect give @s strength 10 1"</span>);</code></pre>
+<span class="c" data-page-node-id="dxBMlYI873rkDOKxH7KR5E">// 5. 手持钻石剑才执行后续命令</span>
+ctx.<span class="f" data-page-node-id="gPNtErZgG3OyACMMKscavo">executeCommand</span>(<span class="s" data-page-node-id="g2KBP9yVR1qTS5sjbHPBx4">"execute if items entity @s weapon.mainhand minecraft:diamond_sword run effect give @s strength 10 1"</span>);</code></pre>
 
-      <div class="note note--ok">
-        <strong>在编辑器里：</strong>以上都有对应积木，直接在 <code class="inl">[Exec] 执行/判断命令</code> 分类里拖，不用手敲命令字符串。带返回值的用「命令成立?」「取结果」积木。
+      <div class="note note--ok" data-page-node-id="808tA6t2ucqPTLOfVvMGxQ">
+        <strong data-page-node-id="JBxtsNBfAa779Zc6Ojdho4">在编辑器里：</strong>以上都有对应积木，直接在 <code class="inl" data-page-node-id="U8Q7oOyOsgIXS9Bxj8m5fZ">[Exec] 执行/判断命令</code> 分类里拖，不用手敲命令字符串。带返回值的用「命令成立?」「取结果」积木。
       </div>
     </div>
   </article>
 
   <!-- ============ 页脚 ============ -->
-  <article id="sec-footer" class="content menu-top">
-    <div class="doc-wrap" style="text-align:center; padding-bottom:60px;">
-      <p class="doc-p" style="margin-top:26px;">
-        <a href="index.html">← 回到 CodeBlock Mod 官网</a> ·
-        由 zhangky 用 ❤ 与红石制作 · MIT License
-      </p>
-      <p class="doc-p" style="font-size:12px; opacity:.7;">
-        文档对应 26.2 开发构建。命令功能（含最高权限与 execute 条件判断）、字符串/二维数组、精确"谁按的"玩家识别、记分板读写、钻石镐 30 秒消失 + 幽灵回归 + 成就「你被骗了」、游戏内改名界面均已实现。
-      </p>
+  <article id="sec-footer" class="content menu-top" data-page-node-id="TaSBHn6nnVYiNTMPeAZiKT">
+    <div class="doc-wrap" style="text-align:center; padding-bottom:60px;" data-page-node-id="AffJR8VpwfeoIIFwxKlHFp">
+      <p class="doc-p" style="margin-top: 26px;" data-page-node-id="5KRFBG2ODGcascGoS57b3H">
+        <a href="index.html" data-page-node-id="i1fedOLy4O0lfrkcI3cGCU">← 回到 CodeBlock Mod 官网</a> ·
+        由 zhangky 用 ❤ 与红石制作&nbsp;</p>
+      
     </div>
   </article>
 
-  <script>
+  <script data-page-node-id="dN0zDux2kXs3Q198I2rXGa">
   // 平滑滚动 + 当前章节高亮（不依赖模板的 jQuery 插件，避免滑块/作品集脚本报错）
   (function () {
     var links = Array.prototype.slice.call(document.querySelectorAll('#nav a[href^="#"]'));
@@ -707,5 +689,6 @@ ctx.<span class="f">executeCommand</span>(<span class="s">"execute if items enti
     if (sections[0]) setCurrent(sections[0].id);
   })();
   </script>
-</body>
-</html>
+
+
+</body></html>
