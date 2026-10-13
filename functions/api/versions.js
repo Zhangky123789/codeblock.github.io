@@ -1,11 +1,11 @@
 ﻿// CodeBlock Mod — 版本清单读写后台（Pages Functions）
-// 数据真身存于 Gitee 发布仓库的 versions.json；本函数服务端代理读写，
+// 数据真身存于 Gitee 开源主仓库 release/versions.json；本函数服务端代理读写，
 // 前端只与本函数同源通信，规避 CORS，Gitee 令牌也不暴露到浏览器。
 export async function onRequest(context) {
   const { request, env } = context;
   const GITEE_TOKEN = env.GITEE_TOKEN;
-  const REPO = "zsxydh/CodeBlock-mod-release";
-  const PATH = "versions.json";
+  const REPO = "zsxydh/CodeBlock-mod";
+  const PATH = "release/versions.json";
   const BRANCH = "master";
   const API = "https://gitee.com/api/v5/repos/" + REPO + "/contents/" + PATH;
 
@@ -45,7 +45,7 @@ export async function onRequest(context) {
         }
       } catch (_) {}
       return new Response(
-        JSON.stringify({ current: "v1", versions: [], gitee: "https://gitee.com/zsxydh/CodeBlock-mod-release" }),
+        JSON.stringify({ current: "v1", versions: [], gitee: "https://gitee.com/zsxydh/CodeBlock-mod" }),
         { status: 200, headers: { "content-type": "application/json; charset=utf-8" } }
       );
     }

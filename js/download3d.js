@@ -119,10 +119,10 @@
     var ver = versions.filter(function (v) { return v.id === data.current; })[0] || versions[0];
 
     var items = [{
-      tag: "镜像 · Gitee",
-      title: "Gitee 镜像仓库",
-      desc: "国内可直连的镜像仓库，编译好的 jar 都在 downloads/ 目录。GitHub 账号暂时被封，Gitee 是当前主下载源。",
-      href: data.gitee || "#",
+      tag: "开源 · Gitee",
+      title: "Gitee 开源仓库",
+      desc: "本项目已开源，源码与全部发布 jar 都在 Gitee 主仓库（release/downloads 目录），欢迎 Star 与 Issue。",
+      href: data.gitee || "https://gitee.com/zsxydh/CodeBlock-mod",
       file: false
     }];
 
@@ -224,13 +224,13 @@
     panelsEl.innerHTML = "";
     progEl.innerHTML = "";
     var a = el("a", "btn btn--primary");
-    a.href = (data && data.gitee) || "https://gitee.com/zsxydh/CodeBlock-mod-release";
+    a.href = (data && data.gitee) || "https://gitee.com/zsxydh/CodeBlock-mod";
     a.target = "_blank"; a.rel = "noopener"; a.textContent = "前往仓库下载";
     var art = el("article", "dl-panel is-active");
     art.setAttribute("data-i", "0");
-    art.appendChild(el("span", "dl-panel__tag", "镜像 · Gitee"));
-    art.appendChild(el("h3", null, "Gitee 镜像仓库"));
-    art.appendChild(el("p", null, "国内可直连的镜像仓库，编译好的 jar 都在 downloads/ 目录。"));
+    art.appendChild(el("span", "dl-panel__tag", "开源 · Gitee"));
+    art.appendChild(el("h3", null, "Gitee 开源仓库"));
+    art.appendChild(el("p", null, "源码与全部发布 jar（release/downloads 目录）都在 Gitee 开源仓库。"));
     art.appendChild(a);
     panelsEl.appendChild(art);
     progEl.appendChild(el("span", "dot is-active"));
@@ -251,7 +251,7 @@
     .catch(function (err) {
       console.error("versions.json 加载失败，使用 Gitee 兜底面板：", err);
       try {
-        var cached = { gitee: "https://gitee.com/zsxydh/CodeBlock-mod-release" };
+        var cached = { gitee: "https://gitee.com/zsxydh/CodeBlock-mod" };
         fallbackGitee(cached);
         start();
       } catch (e) { /* 忽略 */ }
